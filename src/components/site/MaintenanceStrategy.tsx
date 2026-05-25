@@ -1,7 +1,9 @@
 import { maintenanceStrategy } from "@/lib/data";
 
 import { SectionShell } from "@/components/site/SectionShell";
+import { enterprise, enterpriseModule, enterprisePanel } from "@/components/site/visual-system";
 import { SectionReveal } from "@/components/ui/SectionReveal";
+import { cn } from "@/lib/utils";
 
 export function MaintenanceStrategy() {
   return (
@@ -11,12 +13,13 @@ export function MaintenanceStrategy() {
       id="maintenance"
       title="Maintenance driven by operating truth, not blind calendars."
     >
-      <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-        <SectionReveal className="rounded-[2rem] border border-gold-300/20 bg-gold-300/[0.07] p-7 sm:p-8">
-          <p className="text-3xl font-semibold text-gold-100 sm:text-4xl">
+      <div className="grid gap-5 lg:grid-cols-[5fr_7fr]">
+        <SectionReveal className={enterprisePanel("p-6 sm:p-7")}>
+          <p className="display-serif text-3xl font-semibold leading-tight text-gold-200 sm:text-4xl">
             Runtime changes the economics of reliability.
           </p>
-          <p className="mt-6 leading-8 text-steel-200">
+          <div className={cn("my-6", enterprise.hairline)} />
+          <p className="leading-8 text-steel-200">
             When service decisions are tied to measured equipment behavior,
             communities can reduce surprise failures, improve fuel planning and
             make cleaner decisions about solar, battery and generation
@@ -30,11 +33,13 @@ export function MaintenanceStrategy() {
 
             return (
               <SectionReveal
-                className="rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-5 transition duration-300 hover:border-gold-300/35 hover:bg-white/[0.055]"
+                className={enterpriseModule("p-5")}
                 delay={index * 0.06}
                 key={item.title}
               >
-                <Icon className="h-5 w-5 text-gold-200" />
+                <div className={enterprise.iconAmber}>
+                  <Icon className="h-5 w-5" />
+                </div>
                 <h3 className="mt-5 text-lg font-semibold text-cream-50">
                   {item.title}
                 </h3>

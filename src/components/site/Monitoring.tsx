@@ -2,6 +2,7 @@ import { monitoringFeatures } from "@/lib/data";
 
 import { InfrastructureVisual } from "@/components/site/InfrastructureVisual";
 import { SectionShell } from "@/components/site/SectionShell";
+import { enterprise, enterpriseModule } from "@/components/site/visual-system";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 
 export function Monitoring() {
@@ -12,7 +13,7 @@ export function Monitoring() {
       id="monitoring"
       title="Operational clarity across every critical energy asset."
     >
-      <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+      <div className="grid items-stretch gap-5 lg:grid-cols-[5fr_7fr]">
         <SectionReveal>
           <InfrastructureVisual variant="monitoring" />
         </SectionReveal>
@@ -23,11 +24,13 @@ export function Monitoring() {
 
             return (
               <SectionReveal
-                className="rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-5 transition duration-300 hover:border-emerald-300/35 hover:bg-white/[0.055]"
+                className={enterpriseModule("p-5")}
                 delay={index * 0.05}
                 key={feature.title}
               >
-                <Icon className="h-5 w-5 text-emerald-200" />
+                <div className={enterprise.iconCyan}>
+                  <Icon className="h-5 w-5" />
+                </div>
                 <h3 className="mt-5 text-lg font-semibold text-cream-50">
                   {feature.title}
                 </h3>

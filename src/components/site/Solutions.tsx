@@ -1,28 +1,29 @@
 import { embeddedSolutions } from "@/lib/data";
 
 import { SectionShell } from "@/components/site/SectionShell";
+import { enterprise, enterpriseModule } from "@/components/site/visual-system";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 
 export function Solutions() {
   return (
     <SectionShell
-      className="border-y border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.035),rgba(255,255,255,0.015))]"
-      description="Purpose-designed infrastructure for estates and clustered facilities, combining power delivery assets with governance, service cadence and scalable monitoring."
-      eyebrow="Embedded Power Solutions"
+      className={enterprise.sectionBand}
+      description="Five integrated capabilities align physical power assets with visible performance, operating accountability and hybrid-energy readiness."
+      eyebrow="Infrastructure Capabilities"
       id="embedded-power"
-      title="From distribution backbone to daily operating rhythm."
+      title="The embedded energy platform for modern communities."
     >
-      <div className="grid gap-5 md:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         {embeddedSolutions.map((solution, index) => {
           const Icon = solution.icon;
 
           return (
             <SectionReveal delay={index * 0.07} key={solution.title}>
-              <article className="group h-full rounded-[1.75rem] border border-white/10 bg-ink-900/80 p-6 transition duration-300 hover:-translate-y-1 hover:border-gold-300/45 hover:bg-ink-800">
-                <div className="grid h-12 w-12 place-items-center rounded-2xl border border-gold-300/30 bg-gold-300/10 text-gold-100 transition group-hover:scale-105">
+              <article className={enterpriseModule("p-5")}>
+                <div className={enterprise.iconAmber}>
                   <Icon className="h-5 w-5" />
                 </div>
-                <h3 className="mt-8 text-xl font-semibold text-cream-50">
+                <h3 className="mt-6 text-lg font-semibold leading-snug text-cream-50">
                   {solution.title}
                 </h3>
                 <p className="mt-4 leading-7 text-steel-300">

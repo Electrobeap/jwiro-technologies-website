@@ -1,7 +1,4 @@
-"use client";
-
-import { motion, useReducedMotion } from "motion/react";
-
+import { enterprise, enterprisePanel } from "@/components/site/visual-system";
 import { cn } from "@/lib/utils";
 
 type InfrastructureVisualProps = {
@@ -11,22 +8,22 @@ type InfrastructureVisualProps = {
 
 const variantCopy = {
   estate: {
-    heading: "Estate power spine",
+    heading: "Estate energy architecture",
     label: "Embedded distribution",
     metric: "Managed uptime",
-    nodes: ["Gatehouse", "Residential", "Retail", "Water", "Security"]
+    nodes: ["Estate Loads", "Metering", "Distribution", "Monitoring", "Operations"]
   },
   monitoring: {
-    heading: "Live energy command",
-    label: "Smart monitoring",
-    metric: "Runtime intelligence",
-    nodes: ["Load", "Meters", "Alarms", "Fuel", "Reports"]
+    heading: "Remote monitoring layer",
+    label: "Operational intelligence",
+    metric: "Runtime visibility",
+    nodes: ["Meters", "Source Status", "Alerts", "Reports", "Service"]
   },
   hybrid: {
-    heading: "Hybrid source layer",
-    label: "Grid + generation + solar",
+    heading: "Hybrid energy pathway",
+    label: "Source integration",
     metric: "Source orchestration",
-    nodes: ["Grid", "Gas", "Solar", "Battery", "Priority"]
+    nodes: ["Grid", "Generation", "Solar", "Priority Loads", "Analytics"]
   }
 } satisfies Record<
   NonNullable<InfrastructureVisualProps["variant"]>,
@@ -42,19 +39,13 @@ export function InfrastructureVisual({
   variant = "estate",
   className
 }: InfrastructureVisualProps) {
-  const reduceMotion = useReducedMotion();
   const copy = variantCopy[variant];
 
   return (
-    <div
-      className={cn(
-        "relative overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(145deg,rgba(255,255,255,0.08),rgba(255,255,255,0.02))] p-4 shadow-2xl shadow-emerald-950/40",
-        className
-      )}
-    >
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(231,196,121,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(231,196,121,0.05)_1px,transparent_1px)] bg-[size:38px_38px]" />
-      <div className="relative rounded-[1.5rem] border border-white/10 bg-ink-950/80 p-5 sm:p-6">
-        <div className="flex items-center justify-between gap-4">
+    <div className={cn(enterprisePanel("relative overflow-hidden p-4"), className)}>
+      <div className={cn("absolute inset-0 opacity-50", enterprise.blueprint)} />
+      <div className={cn("relative p-5 sm:p-6", enterprise.inner)}>
+        <div className="flex items-start justify-between gap-4 border-b border-white/10 pb-5">
           <div>
             <p className="text-xs font-semibold uppercase text-gold-200">
               {copy.label}
@@ -63,86 +54,54 @@ export function InfrastructureVisual({
               {copy.heading}
             </h3>
           </div>
-          <div className="rounded-full border border-emerald-300/25 bg-emerald-300/10 px-3 py-1 text-xs font-semibold text-emerald-200">
-            Online
+          <div className="rounded-sm border border-technical-300/25 bg-technical-300/10 px-3 py-1 text-xs font-semibold text-steel-100">
+            Active
           </div>
         </div>
 
-        <div className="relative mt-8 min-h-[260px] overflow-hidden rounded-[1.25rem] border border-white/10 bg-[radial-gradient(circle_at_center,rgba(231,196,121,0.1),transparent_44%),linear-gradient(160deg,rgba(11,50,42,0.88),rgba(2,12,15,0.92))] p-5">
-          <div className="absolute left-1/2 top-1/2 h-px w-[82%] -translate-x-1/2 -translate-y-1/2 bg-gold-300/40" />
-          <div className="absolute left-1/2 top-[18%] h-[64%] w-px -translate-x-1/2 bg-emerald-300/35" />
-          <motion.div
-            animate={
-              reduceMotion
-                ? undefined
-                : {
-                    opacity: [0.25, 0.9, 0.25],
-                    scale: [0.88, 1.08, 0.88]
-                  }
-            }
-            className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold-300/40 bg-gold-300/10"
-            transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}
-          />
-          <div className="absolute left-1/2 top-1/2 grid h-20 w-20 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-gold-200/70 bg-ink-950 text-center shadow-[0_0_40px_rgba(231,196,121,0.18)]">
-              <span className="text-[10px] font-semibold uppercase text-gold-100">
-              Jirow
+        <div className={cn("relative mt-6 min-h-[248px] overflow-hidden p-5", enterprise.inner)}>
+          <div className="absolute left-[12%] right-[12%] top-1/2 h-px bg-gold-300/45" />
+          <div className="absolute bottom-[17%] left-1/2 top-[17%] w-px -translate-x-1/2 bg-technical-300/35" />
+          <div className="absolute left-1/2 top-1/2 grid h-20 w-28 -translate-x-1/2 -translate-y-1/2 place-items-center border border-gold-300/55 bg-ink-950 text-center">
+            <span className="text-[11px] font-semibold uppercase text-gold-200">
+              Jirow Core
             </span>
           </div>
 
           {copy.nodes.map((node, index) => {
             const positions = [
-              "left-[8%] top-[14%]",
-              "right-[9%] top-[18%]",
-              "left-[10%] bottom-[15%]",
-              "right-[11%] bottom-[14%]",
+              "left-[7%] top-[15%]",
+              "right-[7%] top-[15%]",
+              "left-[7%] bottom-[15%]",
+              "right-[7%] bottom-[15%]",
               "left-1/2 bottom-[5%] -translate-x-1/2"
             ];
 
             return (
-              <motion.div
-                animate={
-                  reduceMotion
-                    ? undefined
-                    : { y: index % 2 === 0 ? [0, -5, 0] : [0, 5, 0] }
-                }
+              <div
                 className={cn(
-                  "absolute rounded-2xl border border-white/10 bg-white/[0.06] px-3 py-2 text-xs font-medium text-steel-100 shadow-xl backdrop-blur",
+                  "absolute min-w-24 border border-white/10 bg-ink-900 px-3 py-2 text-center text-xs font-medium text-steel-100",
                   positions[index]
                 )}
                 key={node}
-                transition={{
-                  duration: 3.4 + index * 0.3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
               >
                 {node}
-              </motion.div>
+              </div>
             );
           })}
         </div>
 
-        <div className="mt-5 grid gap-3 sm:grid-cols-3">
-          {["Load balance", copy.metric, "Service logs"].map((label, index) => (
-            <div
-              className="rounded-2xl border border-white/10 bg-white/[0.04] p-4"
-              key={label}
-            >
-              <p className="text-xs text-steel-400">{label}</p>
-              <div className="mt-3 h-2 overflow-hidden rounded-full bg-white/10">
-                <motion.div
-                  animate={
-                    reduceMotion
-                      ? undefined
-                      : { width: [`${54 + index * 8}%`, `${78 + index * 5}%`] }
-                  }
-                  className="h-full rounded-full bg-gradient-to-r from-gold-300 to-emerald-300"
-                  transition={{
-                    duration: 3 + index * 0.35,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    ease: "easeInOut"
-                  }}
+        <div className="mt-4 grid gap-px bg-white/10 sm:grid-cols-3">
+          {["Load balance", copy.metric, "Service evidence"].map((label, index) => (
+            <div className="bg-ink-950 p-4" key={label}>
+              <p className="text-xs text-steel-300">{label}</p>
+              <div className="mt-3 h-1.5 bg-white/10">
+                <div
+                  className={cn(
+                    "h-full",
+                    index === 1 ? "bg-technical-300" : "bg-gold-300"
+                  )}
+                  style={{ width: `${62 + index * 10}%` }}
                 />
               </div>
             </div>

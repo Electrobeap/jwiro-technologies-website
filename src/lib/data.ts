@@ -9,7 +9,6 @@ import {
   HardHat,
   Landmark,
   LineChart,
-  Network,
   PlugZap,
   Radar,
   ShieldCheck,
@@ -31,8 +30,11 @@ export const siteConfig = {
   name: "Jirow Technologies Limited",
   shortName: "Jirow",
   email: "info@jirowtechnologies.com",
-  logo: "/brand/jirow-logo.png",
+  website: "jirowtechnologies.com",
+  websiteHref: "https://jirowtechnologies.com",
+  logo: "/brand/jirow-logo-transparent.png",
   brochureHref: "/brochure/jirow-technologies-profile.pdf",
+  brochureFilename: "Jirow-Technologies-Company-Profile.pdf",
   whatsappHref: whatsappNumber
     ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
     : `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`
@@ -43,7 +45,8 @@ export const navLinks = [
   { label: "Solutions", href: "#embedded-power" },
   { label: "Monitoring", href: "#monitoring" },
   { label: "Hybrid", href: "#hybrid" },
-  { label: "Operations", href: "#maintenance" }
+  { label: "Operations", href: "#maintenance" },
+  { label: "Profile", href: "#brochure" }
 ];
 
 export const heroStats = [
@@ -54,22 +57,34 @@ export const heroStats = [
 
 export const embeddedSolutions = [
   {
-    title: "Estate Power Architecture",
+    title: "Embedded Power Infrastructure",
     description:
       "Dedicated embedded infrastructure for residential estates, gated communities and commercial clusters.",
     icon: Building2
   },
   {
-    title: "Distribution & Metering",
+    title: "Smart Metering",
     description:
-      "Structured low-voltage distribution, smart metering, load segmentation and consumption accountability.",
-    icon: Network
+      "Metered visibility, usage accountability and clearer energy recovery across connected communities.",
+    icon: Gauge
   },
   {
-    title: "Managed Power Operations",
+    title: "Remote Monitoring",
+    description:
+      "Operational intelligence for runtime, source health, alarms and critical demand patterns.",
+    icon: Radar
+  },
+  {
+    title: "Managed Operations",
     description:
       "Operational oversight, fuel strategy, service response and performance reporting under one accountable model.",
     icon: HardHat
+  },
+  {
+    title: "Hybrid Energy Systems",
+    description:
+      "Grid, generation and solar integration structured around uptime, resilience and cleaner economics.",
+    icon: SolarPanel
   }
 ];
 

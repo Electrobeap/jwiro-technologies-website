@@ -2,30 +2,31 @@ import { hybridSystems } from "@/lib/data";
 
 import { InfrastructureVisual } from "@/components/site/InfrastructureVisual";
 import { SectionShell } from "@/components/site/SectionShell";
+import { enterprise, enterpriseModule } from "@/components/site/visual-system";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 
 export function HybridSystems() {
   return (
     <SectionShell
-      className="border-y border-white/10 bg-emerald-950/30"
+      className={enterprise.sectionBand}
       description="Jirow designs systems that can evolve from conventional embedded generation into cleaner and more intelligent source combinations over time."
       eyebrow="Hybrid Energy Systems"
       id="hybrid"
       title="Reliable power today, cleaner economics tomorrow."
     >
-      <div className="grid items-center gap-8 lg:grid-cols-[1fr_0.9fr]">
+      <div className="grid items-stretch gap-5 lg:grid-cols-[7fr_5fr]">
         <div className="grid gap-5">
           {hybridSystems.map((item, index) => {
             const Icon = item.icon;
 
             return (
               <SectionReveal
-                className="group rounded-[1.75rem] border border-white/10 bg-ink-950/70 p-6 transition duration-300 hover:-translate-y-1 hover:border-gold-300/40"
+                className={enterpriseModule("p-6")}
                 delay={index * 0.06}
                 key={item.title}
               >
                 <div className="flex gap-5">
-                  <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl border border-emerald-300/30 bg-emerald-300/10 text-emerald-100">
+                  <div className={enterprise.iconCyan}>
                     <Icon className="h-5 w-5" />
                   </div>
                   <div>

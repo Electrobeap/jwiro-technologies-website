@@ -1,51 +1,28 @@
-# Jirow Technologies Limited Landing Page
+# Jirow Technologies Limited Website
 
-Premium corporate landing page for Jirow Technologies Limited, built with Next.js App Router, Tailwind CSS v4 and Motion for React, the current Framer Motion package.
+Premium corporate landing page for Jirow Technologies Limited, built with
+Next.js App Router, TypeScript, Tailwind CSS v4 and Motion for React.
 
-## Folder Structure
+## Brand Assets
+
+- Official transparent logo master: `public/brand/jirow-logo-master.png`
+- Trimmed transparent website logo: `public/brand/jirow-logo-transparent.png`
+- Estate infrastructure hero image: `public/imagery/estate-energy-infrastructure.webp`
+- Delivered company profile PDF: `public/brochure/jirow-technologies-profile.pdf`
+
+The company profile is linked directly from the website. The legacy
+`/brochure/download` route serves the same official PDF for compatibility.
+
+## Structure
 
 ```text
-.
-├── public
-│   ├── brand
-│   │   └── jirow-logo.png
-│   └── brochure
-│       └── jirow-technologies-profile.pdf
-├── scripts
-│   └── generate-brochure.mjs
-├── src
-│   ├── app
-│   │   ├── globals.css
-│   │   ├── layout.tsx
-│   │   └── page.tsx
-│   ├── components
-│   │   ├── site
-│   │   │   ├── About.tsx
-│   │   │   ├── CTASection.tsx
-│   │   │   ├── Footer.tsx
-│   │   │   ├── Hero.tsx
-│   │   │   ├── HowItWorks.tsx
-│   │   │   ├── HybridSystems.tsx
-│   │   │   ├── InfrastructureVisual.tsx
-│   │   │   ├── MaintenanceStrategy.tsx
-│   │   │   ├── Monitoring.tsx
-│   │   │   ├── Navbar.tsx
-│   │   │   ├── SectionShell.tsx
-│   │   │   ├── Solutions.tsx
-│   │   │   └── WhyChoose.tsx
-│   │   └── ui
-│   │       ├── ButtonLink.tsx
-│   │       ├── Container.tsx
-│   │       ├── SectionReveal.tsx
-│   │       └── Tag.tsx
-│   └── lib
-│       ├── data.ts
-│       └── utils.ts
-├── eslint.config.mjs
-├── next.config.mjs
-├── package.json
-├── postcss.config.mjs
-└── tsconfig.json
+src/app/                 App Router pages, layout and brochure endpoint
+src/components/site/     Landing page sections and visual system
+src/components/ui/       Reusable interface primitives
+src/lib/data.ts          Contact details, links and section copy
+public/brand/            Brand logo assets
+public/imagery/          Optimized site imagery
+public/brochure/         Official downloadable company profile
 ```
 
 ## Local Development
@@ -57,31 +34,21 @@ npm run dev
 
 Open `http://localhost:3000`.
 
-## Production Build
+## Verification
 
 ```bash
 npm run lint
 npm run typecheck
 npm run build
-npm run start
 ```
 
 ## Deployment
 
-The project is ready for Vercel:
+Deploy with the default Next.js settings on Vercel or another Node-compatible
+host. Configure `NEXT_PUBLIC_WHATSAPP_NUMBER` with a country-code-prefixed
+number, using digits only, when a dedicated Jirow WhatsApp Business contact is
+available.
 
-1. Push the repository to GitHub, GitLab or Bitbucket.
-2. Import the project in Vercel.
-3. Use the default Next.js build settings.
-4. Add `NEXT_PUBLIC_WHATSAPP_NUMBER` if Jirow has a dedicated WhatsApp Business number. Use digits only with country code, for example `2348012345678`.
-5. Deploy.
-
-The WhatsApp CTA still works as a share/contact prompt when the number is not set. Replace `public/brochure/jirow-technologies-profile.pdf` with the final corporate brochure when it is available, or regenerate the current stub with:
-
-```bash
-npm run generate:brochure
-```
-
-## Expansion Notes
-
-The current component layout is intentionally ready for future routes such as smart energy dashboards, solar performance pages, analytics modules and a customer portal. Add new App Router routes under `src/app`, keep reusable UI primitives in `src/components/ui`, and keep business copy and capability data in `src/lib/data.ts`.
+The component structure supports future dashboard, analytics, solar
+integration and customer portal routes without changing the core branding
+system.

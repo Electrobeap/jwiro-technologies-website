@@ -8,8 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit",
-    "generate:brochure": "node scripts/generate-brochure.mjs"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "lucide-react": "latest",

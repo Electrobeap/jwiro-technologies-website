@@ -1,45 +1,30 @@
 import Image from "next/image";
-import { Mail, MessageCircle } from "lucide-react";
+import { ExternalLink, Mail, MessageCircle } from "lucide-react";
 
+import { DownloadBrochureButton } from "@/components/site/DownloadBrochureButton";
+import { enterprise } from "@/components/site/visual-system";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
 import { navLinks, siteConfig } from "@/lib/data";
-
-const platformLinks = [
-  "Smart dashboards",
-  "Solar integration",
-  "Energy analytics",
-  "Customer portal"
-];
+import { cn } from "@/lib/utils";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-black py-12">
+    <footer className="border-t border-gold-300/25 bg-[#071B3B] py-12 sm:py-16">
       <Container>
-        <div className="grid gap-10 lg:grid-cols-[1fr_0.7fr_0.7fr]">
+        <div className="grid gap-10 lg:grid-cols-[5fr_3fr_4fr]">
           <div>
-            <div className="flex items-center gap-4">
-              <span className="relative grid h-16 w-16 place-items-center overflow-hidden rounded-2xl border border-gold-300/30 bg-black">
-                <Image
-                  alt="Jirow Technologies Limited logo"
-                  className="object-cover"
-                  fill
-                  sizes="64px"
-                  src={siteConfig.logo}
-                />
-              </span>
-              <div>
-                <p className="font-semibold uppercase text-cream-50">
-                  Jirow
-                </p>
-                <p className="text-xs uppercase text-steel-400">
-                  Technologies Limited
-                </p>
-              </div>
-            </div>
+            <Image
+              alt="Jirow Technologies Limited official logo"
+              className="h-36 w-auto object-contain object-left sm:h-40"
+              height={232}
+              sizes="(min-width: 640px) 150px, 135px"
+              src={siteConfig.logo}
+              width={217}
+            />
             <p className="mt-6 max-w-xl leading-8 text-steel-300">
-              Embedded power infrastructure, hybrid energy systems, smart
-              monitoring and managed operations for modern communities.
+              Embedded energy infrastructure, managed estate power systems,
+              smart metering and operational reliability for modern communities.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <ButtonLink
@@ -61,7 +46,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="lg:border-l lg:border-white/10 lg:pl-7">
             <h3 className="text-sm font-semibold uppercase text-gold-100">
               Sections
             </h3>
@@ -78,21 +63,29 @@ export function Footer() {
             </div>
           </div>
 
-          <div>
+          <div className="lg:border-l lg:border-white/10 lg:pl-7">
             <h3 className="text-sm font-semibold uppercase text-gold-100">
-              Expansion Path
+              Company Profile
             </h3>
-            <div className="mt-5 grid gap-3">
-              {platformLinks.map((item) => (
-                <span className="text-sm text-steel-300" key={item}>
-                  {item}
-                </span>
-              ))}
-            </div>
+            <p className="mt-5 text-sm leading-7 text-steel-300">
+              Explore the embedded energy infrastructure model, monitoring
+              capabilities and managed operations approach.
+            </p>
+            <DownloadBrochureButton className="mt-6" label="Download Company Profile" variant="secondary" />
+            <a
+              className="mt-5 inline-flex items-center gap-2 text-sm text-steel-200 transition hover:text-gold-200"
+              href={siteConfig.websiteHref}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <ExternalLink className="h-4 w-4" />
+              {siteConfig.website}
+            </a>
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-steel-500 sm:flex-row sm:items-center sm:justify-between">
+        <div className={cn("mt-10", enterprise.hairline)} />
+        <div className="mt-6 flex flex-col gap-3 text-sm text-steel-500 sm:flex-row sm:items-center sm:justify-between">
           <p>
             &copy; {new Date().getFullYear()} Jirow Technologies Limited. All
             rights reserved.
