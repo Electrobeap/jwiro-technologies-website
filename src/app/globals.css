@@ -7,10 +7,10 @@
   --color-emerald-950: #091f43;
   --color-emerald-900: #0e2a5a;
   --color-emerald-300: #82adbf;
-  --color-gold-100: #f1dcad;
-  --color-gold-200: #d9b76a;
-  --color-gold-300: #c89b3c;
-  --color-gold-400: #a87822;
+  --color-gold-100: #eadbbd;
+  --color-gold-200: #ccb078;
+  --color-gold-300: #b18a47;
+  --color-gold-400: #8e6832;
   --color-steel-100: #f8f8f6;
   --color-steel-200: #d9dde5;
   --color-steel-300: #acb6c6;
@@ -65,8 +65,12 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+.brand-logo {
+  image-rendering: auto;
+}
+
 ::selection {
-  background: rgba(200, 155, 60, 0.38);
+  background: rgba(177, 138, 71, 0.36);
   color: #f8f8f6;
 }
 

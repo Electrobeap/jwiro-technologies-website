@@ -6,7 +6,10 @@ Next.js App Router, TypeScript, Tailwind CSS v4 and Motion for React.
 ## Brand Assets
 
 - Official transparent logo master: `public/brand/jirow-logo-master.png`
-- Trimmed transparent website logo: `public/brand/jirow-logo-transparent.png`
+- Dark-background readable web lockup derived from the master: `public/brand/jirow-logo-display.png`
+- Compact navigation/app mark derived from the master: `public/brand/jirow-logo-mark.png`
+- Branded social preview image: `public/brand/jirow-social-preview.png`
+- Next.js browser and Apple app icons: `src/app/icon.png`, `src/app/apple-icon.png`
 - Estate infrastructure hero image: `public/imagery/estate-energy-infrastructure.webp`
 - Delivered company profile PDF: `public/brochure/jirow-technologies-profile.pdf`
 

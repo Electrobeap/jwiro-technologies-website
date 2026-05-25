@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { Menu, MessageCircle, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 
+import { BrandLogo } from "@/components/site/BrandLogo";
 import { DownloadBrochureButton } from "@/components/site/DownloadBrochureButton";
 import { enterprisePanel } from "@/components/site/visual-system";
 import { ButtonLink } from "@/components/ui/ButtonLink";
@@ -17,22 +17,27 @@ export function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#071B3B]/94 backdrop-blur-md">
-      <Container className="flex h-20 items-center justify-between sm:h-24">
+      <Container className="flex h-20 items-center justify-between">
         <a
           aria-label="Jirow Technologies Limited home"
-          className="flex h-full items-center py-2"
+          className="flex h-full shrink-0 items-center gap-3 px-1 py-3 sm:px-2"
           href="#top"
           onClick={() => setOpen(false)}
         >
-          <Image
-            alt="Jirow Technologies Limited official logo"
-            className="h-[4.15rem] w-auto object-contain sm:h-[4.7rem]"
-            height={232}
+          <BrandLogo
+            className="h-11 shrink-0 sm:h-12"
             priority
-            sizes="(min-width: 640px) 74px, 66px"
-            src={siteConfig.logo}
-            width={217}
+            sizes="(min-width: 640px) 48px, 44px"
+            variant="mark"
           />
+          <span className="hidden border-l border-gold-300/35 pl-3 sm:block">
+            <span className="block text-sm font-semibold uppercase text-gold-100">
+              Jirow
+            </span>
+            <span className="mt-0.5 block text-[11px] font-medium uppercase text-steel-200">
+              Technologies Limited
+            </span>
+          </span>
         </a>
 
         <nav className="hidden items-center gap-2 lg:flex">

@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { ExternalLink, Mail, MessageCircle } from "lucide-react";
 
+import { BrandLogo } from "@/components/site/BrandLogo";
 import { DownloadBrochureButton } from "@/components/site/DownloadBrochureButton";
 import { enterprise } from "@/components/site/visual-system";
 import { ButtonLink } from "@/components/ui/ButtonLink";
@@ -14,13 +14,9 @@ export function Footer() {
       <Container>
         <div className="grid gap-10 lg:grid-cols-[5fr_3fr_4fr]">
           <div>
-            <Image
-              alt="Jirow Technologies Limited official logo"
-              className="h-36 w-auto object-contain object-left sm:h-40"
-              height={232}
-              sizes="(min-width: 640px) 150px, 135px"
-              src={siteConfig.logo}
-              width={217}
+            <BrandLogo
+              className="h-40 object-left sm:h-44"
+              sizes="(min-width: 640px) 168px, 152px"
             />
             <p className="mt-6 max-w-xl leading-8 text-steel-300">
               Embedded energy infrastructure, managed estate power systems,

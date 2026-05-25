@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { ExternalLink, FileText, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 
+import { BrandLogo } from "@/components/site/BrandLogo";
 import { DownloadBrochureButton } from "@/components/site/DownloadBrochureButton";
 import { enterprise, enterprisePanel } from "@/components/site/visual-system";
 import { ButtonLink } from "@/components/ui/ButtonLink";
@@ -34,13 +34,9 @@ function ProfileCover() {
         </div>
 
         <div className="flex flex-1 flex-col items-center justify-center text-center">
-          <Image
-            alt="Jirow Technologies Limited official logo"
-            className="h-32 w-auto object-contain sm:h-40"
-            height={232}
-            sizes="(min-width: 640px) 150px, 120px"
-            src={siteConfig.logo}
-            width={217}
+          <BrandLogo
+            className="h-36 sm:h-44"
+            sizes="(min-width: 640px) 170px, 138px"
           />
           <p className="display-serif mt-6 max-w-md text-2xl font-semibold leading-tight text-cream-50 sm:text-3xl">
             Reliable Estate Power.

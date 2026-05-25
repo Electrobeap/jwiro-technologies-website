@@ -14,7 +14,7 @@ export const buttonBaseClassName =
 
 export const buttonVariants: Record<ButtonVariant, string> = {
   primary:
-    "border-gold-300 bg-gold-300 text-[#101828] shadow-[0_12px_30px_rgba(200,155,60,0.16)] hover:bg-gold-200",
+    "border-gold-300 bg-gold-300 text-[#101828] shadow-[0_12px_30px_rgba(177,138,71,0.18)] hover:bg-gold-200",
   secondary:
     "border-gold-300/45 bg-transparent text-cream-50 hover:border-gold-300 hover:bg-gold-300/10",
   ghost:

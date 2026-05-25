@@ -32,7 +32,9 @@ export const siteConfig = {
   email: "info@jirowtechnologies.com",
   website: "jirowtechnologies.com",
   websiteHref: "https://jirowtechnologies.com",
-  logo: "/brand/jirow-logo-transparent.png",
+  logoMaster: "/brand/jirow-logo-master.png",
+  logo: "/brand/jirow-logo-display.png",
+  logoMark: "/brand/jirow-logo-mark.png",
   brochureHref: "/brochure/jirow-technologies-profile.pdf",
   brochureFilename: "Jirow-Technologies-Company-Profile.pdf",
   whatsappHref: whatsappNumber
