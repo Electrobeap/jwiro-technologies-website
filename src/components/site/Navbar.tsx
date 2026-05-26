@@ -16,28 +16,19 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#071B3B]/94 backdrop-blur-md">
-      <Container className="flex h-20 items-center justify-between">
+    <header className="fixed inset-x-0 top-0 z-50 overflow-visible border-b border-white/10 bg-[#071B3B]/94 backdrop-blur-md">
+      <Container className="flex h-24 items-center justify-between overflow-visible lg:h-[6.5rem]">
         <a
           aria-label="Jirow Technologies Limited home"
-          className="flex h-full shrink-0 items-center gap-3 px-1 py-3 sm:px-2"
+          className="flex h-full shrink-0 items-center overflow-visible px-1 py-2 sm:px-2"
           href="#top"
           onClick={() => setOpen(false)}
         >
           <BrandLogo
-            className="h-11 shrink-0 sm:h-12"
+            className="h-20 shrink-0 object-left lg:h-[5.5rem]"
             priority
-            sizes="(min-width: 640px) 48px, 44px"
-            variant="mark"
+            sizes="(min-width: 1024px) 85px, 78px"
           />
-          <span className="hidden border-l border-gold-300/35 pl-3 sm:block">
-            <span className="block text-sm font-semibold uppercase text-gold-100">
-              Jirow
-            </span>
-            <span className="mt-0.5 block text-[11px] font-medium uppercase text-steel-200">
-              Technologies Limited
-            </span>
-          </span>
         </a>
 
         <nav className="hidden items-center gap-2 lg:flex">

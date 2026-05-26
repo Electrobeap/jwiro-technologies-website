@@ -66,6 +66,8 @@ a {
 }
 
 .brand-logo {
+  display: block;
+  backface-visibility: hidden;
   image-rendering: auto;
 }
 

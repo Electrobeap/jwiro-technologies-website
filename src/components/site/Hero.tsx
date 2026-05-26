@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils";
 export function Hero() {
   return (
     <section
-      className="relative isolate min-h-[min(850px,100svh)] overflow-hidden border-b border-white/10 pt-20"
+      className="relative isolate min-h-[min(850px,100svh)] overflow-hidden border-b border-white/10 pt-24 lg:pt-[6.5rem]"
       id="top"
     >
       <Image
@@ -30,7 +30,7 @@ export function Hero() {
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(7,27,59,0.28),transparent_52%,rgba(7,27,59,0.92))]" />
       <div className={cn("absolute inset-0 -z-10 opacity-45", enterprise.blueprint)} />
 
-      <Container className="flex min-h-[calc(min(850px,100svh)-5rem)] flex-col justify-between py-12 sm:py-16 lg:py-20">
+      <Container className="flex min-h-[calc(min(850px,100svh)-6rem)] flex-col justify-between py-12 sm:py-16 lg:min-h-[calc(min(850px,100svh)-6.5rem)] lg:py-20">
         <motion.div
           animate={{ opacity: 1, y: 0 }}
           className="max-w-3xl"
@@ -39,9 +39,9 @@ export function Hero() {
         >
           <div className="border-l-2 border-gold-300 pl-5">
             <BrandLogo
-              className="h-32 object-left sm:h-36"
+              className="h-36 object-left sm:h-40"
               priority
-              sizes="(min-width: 640px) 140px, 124px"
+              sizes="(min-width: 640px) 154px, 138px"
             />
             <p className="mt-4 text-xs font-semibold uppercase text-gold-200">
               Embedded energy infrastructure
