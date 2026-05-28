@@ -25,10 +25,8 @@ export function LeadForm() {
       .filter(Boolean)
       .join("\n");
 
-    window.open(
-      `${siteConfig.whatsappBase}?text=${encodeURIComponent(message)}`,
-      "_blank",
-      "noopener,noreferrer"
+    window.location.assign(
+      `${siteConfig.whatsappBase}?text=${encodeURIComponent(message)}`
     );
   }
 
