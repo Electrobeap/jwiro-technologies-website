@@ -18,16 +18,16 @@ export function CTASection() {
             <div className="relative grid gap-8 lg:grid-cols-[8fr_4fr] lg:items-center">
               <div>
                 <p className="text-sm font-semibold uppercase text-gold-200">
-                  Start with a practical infrastructure conversation
+                  Consultation CTA
                 </p>
                 <h2 className="mt-5 max-w-3xl text-balance text-4xl font-semibold leading-tight text-cream-50 sm:text-5xl">
-                  Ready to make estate power more reliable, measurable and
-                  future-ready?
+                  Ready to make estate power reliable, measurable and scalable?
                 </h2>
                 <p className="mt-5 max-w-2xl leading-8 text-steel-200">
                   Share your estate or facility profile, current power
-                  challenges and desired operating model. Jirow can help map the
-                  infrastructure path.
+                  challenges and desired operating model. Jirow can help map an
+                  embedded energy infrastructure path built for uptime,
+                  monitoring and long-term expansion.
                 </p>
               </div>
 
@@ -38,13 +38,13 @@ export function CTASection() {
                   target="_blank"
                 >
                   <MessageCircle className="h-4 w-4" />
-                  WhatsApp Jirow
+                  Talk on WhatsApp
                 </ButtonLink>
                 <ButtonLink
                   href={`mailto:${siteConfig.email}?subject=Embedded%20Power%20Infrastructure%20Inquiry`}
                   variant="secondary"
                 >
-                  Send an inquiry
+                  Email Jirow
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                 </ButtonLink>
                 <DownloadBrochureButton variant="ghost" />

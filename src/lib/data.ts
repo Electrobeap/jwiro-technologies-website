@@ -5,31 +5,36 @@ import {
   ChartNoAxesCombined,
   CheckCircle2,
   CircuitBoard,
+  ClipboardCheck,
+  Factory,
   Gauge,
   HardHat,
   Landmark,
+  Leaf,
   LineChart,
   PlugZap,
   Radar,
+  Settings2,
   ShieldCheck,
   SolarPanel,
   TimerReset,
-  Workflow,
-  Zap
+  Workflow
 } from "lucide-react";
 
 const whatsappMessage =
-  "Hello Jirow Technologies Limited, I would like to discuss embedded power infrastructure for my estate or facility.";
+  "Hello Jirow Technologies, I would like to discuss embedded energy infrastructure solutions.";
 
-const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER?.replace(
-  /[^\d]/g,
-  ""
-);
+export const whatsappNumber = "2348137832844";
 
 export const siteConfig = {
   name: "Jirow Technologies Limited",
   shortName: "Jirow",
   email: "info@jirowtechnologies.com",
+  phone: "+234 813 783 2844",
+  phoneHref: "tel:+2348137832844",
+  location: "Lagos, Nigeria",
+  country: "Nigeria",
+  founderTitle: "Founder & Infrastructure Systems Lead",
   website: "jirowtechnologies.com",
   websiteHref: "https://jirowtechnologies.com",
   logoMaster: "/brand/jirow-logo-master.png",
@@ -37,56 +42,87 @@ export const siteConfig = {
   logoMark: "/brand/jirow-logo-mark.png",
   brochureHref: "/brochure/jirow-technologies-profile.pdf",
   brochureFilename: "Jirow-Technologies-Company-Profile.pdf",
-  whatsappHref: whatsappNumber
-    ? `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
-    : `https://wa.me/?text=${encodeURIComponent(whatsappMessage)}`
+  whatsappMessage,
+  whatsappBase: `https://wa.me/${whatsappNumber}`,
+  whatsappHref:
+    "https://wa.me/2348137832844?text=Hello%20Jirow%20Technologies,%20I%20would%20like%20to%20discuss%20embedded%20energy%20infrastructure%20solutions."
 };
 
 export const navLinks = [
   { label: "About", href: "#about" },
   { label: "Solutions", href: "#embedded-power" },
+  { label: "Approach", href: "#approach" },
   { label: "Monitoring", href: "#monitoring" },
-  { label: "Hybrid", href: "#hybrid" },
-  { label: "Operations", href: "#maintenance" },
-  { label: "Profile", href: "#brochure" }
+  { label: "Profile", href: "#brochure" },
+  { label: "Contact", href: "#contact" }
 ];
 
 export const heroStats = [
-  { value: "24/7", label: "Managed energy operations" },
-  { value: "Runtime", label: "Maintenance intelligence" },
-  { value: "Hybrid", label: "Grid, generator, solar and battery ready" }
+  { value: "Estate", label: "Embedded power infrastructure for communities" },
+  { value: "Hybrid", label: "Grid, generation, solar and battery ready" },
+  { value: "Visible", label: "Smart monitoring infrastructure for operators" }
 ];
 
 export const embeddedSolutions = [
   {
     title: "Embedded Power Infrastructure",
     description:
-      "Dedicated embedded infrastructure for residential estates, gated communities and commercial clusters.",
+      "Dedicated embedded energy infrastructure in Nigeria for estates, commercial clusters and managed communities.",
     icon: Building2
   },
   {
-    title: "Smart Metering",
+    title: "Estate Power Solutions",
     description:
-      "Metered visibility, usage accountability and clearer energy recovery across connected communities.",
+      "Reliable estate power systems structured around uptime, load visibility and resident-facing accountability.",
+    icon: Landmark
+  },
+  {
+    title: "Hybrid Power Systems",
+    description:
+      "Hybrid energy infrastructure combining grid, generation, solar and battery pathways for resilient operations.",
+    icon: PlugZap
+  },
+  {
+    title: "Smart Monitoring Systems",
+    description:
+      "Smart estate energy monitoring for runtime, alarms, demand behavior and operating performance.",
     icon: Gauge
   },
   {
-    title: "Remote Monitoring",
+    title: "Renewable Energy Integration",
     description:
-      "Operational intelligence for runtime, source health, alarms and critical demand patterns.",
-    icon: Radar
+      "Solar and storage integration designed into infrastructure plans without compromising reliability.",
+    icon: SolarPanel
+  },
+  {
+    title: "Energy Infrastructure Consulting",
+    description:
+      "Energy infrastructure consulting in Nigeria for developers, estates and commercial facility owners.",
+    icon: ClipboardCheck
+  },
+  {
+    title: "Power System Design",
+    description:
+      "Technical power distribution, source orchestration and load segmentation for modern estates.",
+    icon: CircuitBoard
+  },
+  {
+    title: "Commercial Energy Solutions",
+    description:
+      "Commercial energy infrastructure for retail, hospitality, healthcare and industrial clusters.",
+    icon: Factory
   },
   {
     title: "Managed Operations",
     description:
-      "Operational oversight, fuel strategy, service response and performance reporting under one accountable model.",
+      "Service governance, fuel strategy, response workflows and reporting under one accountable operator model.",
     icon: HardHat
   },
   {
-    title: "Hybrid Energy Systems",
+    title: "Sustainable Energy Systems",
     description:
-      "Grid, generation and solar integration structured around uptime, resilience and cleaner economics.",
-    icon: SolarPanel
+      "Sustainable energy systems Nigeria can scale from conventional assets toward cleaner hybrid economics.",
+    icon: Leaf
   }
 ];
 
@@ -110,9 +146,9 @@ export const monitoringFeatures = [
     icon: Radar
   },
   {
-    title: "Performance Reporting",
+    title: "Monitoring & Analytics",
     description:
-      "Board-ready summaries for uptime, cost, asset health and operational decisions.",
+      "Board-ready analytics for uptime, cost, asset health, smart monitoring infrastructure and capital decisions.",
     icon: LineChart
   }
 ];
@@ -127,7 +163,7 @@ export const hybridSystems = [
   {
     title: "Solar Integration Pathway",
     description:
-      "Design today with tomorrow's solar and battery economics in mind, without locking communities into one source.",
+      "Renewable energy integration designed around uptime first, then cleaner long-term economics.",
     icon: SolarPanel
   },
   {
@@ -141,27 +177,27 @@ export const hybridSystems = [
 export const processSteps = [
   {
     step: "01",
-    title: "Assess",
+    title: "Assess Demand",
     description:
-      "Map demand, asset conditions, estate growth plans, metering needs and uptime expectations."
+      "Map estate demand, existing assets, growth plans, metering gaps and uptime expectations."
   },
   {
     step: "02",
-    title: "Engineer",
+    title: "Engineer Architecture",
     description:
-      "Define the embedded power architecture, source mix, controls, monitoring and operations model."
+      "Define the embedded power architecture, source mix, controls, monitoring and commercial model."
   },
   {
     step: "03",
-    title: "Deploy",
+    title: "Deploy Infrastructure",
     description:
-      "Install, integrate and commission infrastructure with documentation and stakeholder sign-off."
+      "Install, integrate and commission infrastructure with documentation, testing and stakeholder sign-off."
   },
   {
     step: "04",
-    title: "Operate",
+    title: "Operate & Scale",
     description:
-      "Run energy operations with monitoring, maintenance cadence, reporting and response accountability."
+      "Run managed operations with monitoring, runtime maintenance, performance reporting and expansion planning."
   }
 ];
 
@@ -169,13 +205,13 @@ export const whyChoose = [
   {
     title: "Investor-Grade Delivery",
     description:
-      "Clear operating assumptions, documented infrastructure decisions and reporting that communities can govern.",
+      "Clear operating assumptions, documented infrastructure decisions and reporting that developers and partners can govern.",
     icon: Landmark
   },
   {
-    title: "Energy Systems Depth",
+    title: "Infrastructure Systems Depth",
     description:
-      "Practical understanding of embedded generation, monitoring, metering and runtime-led asset care.",
+      "Practical understanding of estate embedded power, distribution, smart metering, monitoring and runtime-led asset care.",
     icon: CircuitBoard
   },
   {
@@ -185,9 +221,9 @@ export const whyChoose = [
     icon: ShieldCheck
   },
   {
-    title: "Platform-Ready Roadmap",
+    title: "Scalable Platform Roadmap",
     description:
-      "Built for expansion into dashboards, solar analytics, resident portals and portfolio-scale insights.",
+      "Built for expansion into dashboards, solar analytics, resident portals and portfolio-scale energy intelligence.",
     icon: ChartNoAxesCombined
   }
 ];
@@ -203,7 +239,7 @@ export const maintenanceStrategy = [
     title: "Threshold Triggers",
     description:
       "Service actions are triggered by load stress, operating hours, fault patterns and health indicators.",
-    icon: Zap
+    icon: Settings2
   },
   {
     title: "Evidence Reports",

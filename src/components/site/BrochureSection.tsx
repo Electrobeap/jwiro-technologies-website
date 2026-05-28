@@ -16,8 +16,8 @@ import { cn } from "@/lib/utils";
 
 const profileSignals = [
   "Embedded energy infrastructure",
-  "Managed estate power systems",
-  "Smart monitoring and hybrid readiness"
+  "Estate power systems and hybrid power systems",
+  "Smart monitoring infrastructure and project delivery"
 ];
 
 function ProfileCover() {
@@ -70,9 +70,9 @@ export function BrochureSection() {
               Infrastructure capability, presented with clarity.
             </h2>
             <p className="mt-5 max-w-xl text-base leading-8 text-steel-200 sm:text-lg">
-              Explore Jirow Technologies Limited&apos;s embedded energy offering,
-              managed operating model and infrastructure-grade approach to
-              estate reliability.
+              Download the latest Jirow Technologies brochure for service
+              positioning, embedded energy infrastructure capabilities and the
+              operating model for estate and commercial energy reliability.
             </p>
 
             <div className="mt-8 grid gap-px border border-white/10 bg-white/10">

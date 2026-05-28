@@ -8,10 +8,10 @@ export function HowItWorks() {
   return (
     <SectionShell
       align="center"
-      description="A disciplined infrastructure workflow keeps the conversation practical, measurable and ready for long-term operations."
-      eyebrow="How It Works"
-      id="how-it-works"
-      title="A clear path from power problem to managed infrastructure."
+      description="A disciplined infrastructure approach keeps estate energy projects practical, measurable and ready for long-term operations."
+      eyebrow="Infrastructure Approach"
+      id="approach"
+      title="From estate power challenge to managed embedded infrastructure."
     >
       <div className="relative">
         <div className="absolute left-6 right-6 top-10 hidden h-px bg-gold-300/40 lg:block" />

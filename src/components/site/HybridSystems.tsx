@@ -9,10 +9,10 @@ export function HybridSystems() {
   return (
     <SectionShell
       className={enterprise.sectionBand}
-      description="Jirow designs systems that can evolve from conventional embedded generation into cleaner and more intelligent source combinations over time."
-      eyebrow="Hybrid Energy Systems"
+      description="Jirow designs hybrid power systems that can evolve from conventional embedded generation into cleaner and more intelligent source combinations over time."
+      eyebrow="Hybrid Power Systems"
       id="hybrid"
-      title="Reliable power today, cleaner economics tomorrow."
+      title="Reliable power today, renewable integration and cleaner economics tomorrow."
     >
       <div className="grid items-stretch gap-5 lg:grid-cols-[7fr_5fr]">
         <div className="grid gap-5">

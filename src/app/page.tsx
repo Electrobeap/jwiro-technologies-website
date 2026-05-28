@@ -1,5 +1,6 @@
 import { About } from "@/components/site/About";
 import { BrochureSection } from "@/components/site/BrochureSection";
+import { ContactSection } from "@/components/site/ContactSection";
 import { CTASection } from "@/components/site/CTASection";
 import { Footer } from "@/components/site/Footer";
 import { Hero } from "@/components/site/Hero";
@@ -25,6 +26,7 @@ export default function Home() {
         <WhyChoose />
         <MaintenanceStrategy />
         <BrochureSection />
+        <ContactSection />
         <CTASection />
       </main>
       <Footer />

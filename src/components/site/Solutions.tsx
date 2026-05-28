@@ -8,10 +8,10 @@ export function Solutions() {
   return (
     <SectionShell
       className={enterprise.sectionBand}
-      description="Five integrated capabilities align physical power assets with visible performance, operating accountability and hybrid-energy readiness."
-      eyebrow="Infrastructure Capabilities"
+      description="A structured capability stack for estate power systems, hybrid energy infrastructure, smart monitoring infrastructure and commercial energy infrastructure."
+      eyebrow="Services"
       id="embedded-power"
-      title="The embedded energy platform for modern communities."
+      title="Infrastructure services for reliable estate power and scalable commercial energy."
     >
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
         {embeddedSolutions.map((solution, index) => {

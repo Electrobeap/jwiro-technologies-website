@@ -8,10 +8,10 @@ import { cn } from "@/lib/utils";
 export function MaintenanceStrategy() {
   return (
     <SectionShell
-      description="Jirow's maintenance strategy is designed around how assets actually work in the field: runtime, load patterns, source behavior, fault evidence and service history."
-      eyebrow="Runtime-Based Maintenance Strategy"
+      description="Jirow's reliability model is designed around how assets actually work in the field: runtime, load patterns, source behavior, fault evidence and service history."
+      eyebrow="Reliability & Uptime"
       id="maintenance"
-      title="Maintenance driven by operating truth, not blind calendars."
+      title="Managed uptime driven by operating truth, not blind calendars."
     >
       <div className="grid gap-5 lg:grid-cols-[5fr_7fr]">
         <SectionReveal className={enterprisePanel("p-6 sm:p-7")}>

@@ -19,8 +19,9 @@ export function Footer() {
               sizes="(min-width: 640px) 168px, 152px"
             />
             <p className="mt-6 max-w-xl leading-8 text-steel-300">
-              Embedded energy infrastructure, managed estate power systems,
-              smart metering and operational reliability for modern communities.
+              Embedded energy infrastructure, estate power systems, hybrid
+              power systems, smart monitoring infrastructure and operational
+              reliability for modern communities.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <ButtonLink
@@ -61,11 +62,14 @@ export function Footer() {
 
           <div className="lg:border-l lg:border-white/10 lg:pl-7">
             <h3 className="text-sm font-semibold uppercase text-gold-100">
-              Company Profile
+              Contact
             </h3>
             <p className="mt-5 text-sm leading-7 text-steel-300">
-              Explore the embedded energy infrastructure model, monitoring
-              capabilities and managed operations approach.
+              {siteConfig.location}
+              <br />
+              {siteConfig.phone}
+              <br />
+              {siteConfig.email}
             </p>
             <DownloadBrochureButton className="mt-6" label="Download Company Profile" variant="secondary" />
             <a
