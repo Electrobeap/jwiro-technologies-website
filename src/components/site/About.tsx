@@ -5,33 +5,33 @@ import { siteConfig } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 const operatingModel = [
-  "Embedded energy infrastructure",
-  "Estate embedded power governance",
-  "Smart monitoring and analytics",
-  "Hybrid-ready operations roadmap"
+  "Energy intelligence assessments",
+  "Infrastructure monitoring strategy",
+  "Operational analytics and reporting",
+  "AI-ready platform roadmap"
 ];
 
 export function About() {
   return (
     <SectionShell
-      description="Jirow Technologies Limited is an embedded energy infrastructure company in Lagos, Nigeria, focused on reliable estate power, hybrid power systems and operational visibility for modern communities."
+      description="Jirow Technologies Limited is an energy intelligence and infrastructure technology company focused on improving how energy systems are monitored, managed and optimized."
       eyebrow="Company Overview"
       id="about"
-      title="Infrastructure-grade power delivery for estates, developers and commercial clusters."
+      title="Energy intelligence for organizations that need operational clarity before major infrastructure decisions."
     >
       <div className="grid gap-5 lg:grid-cols-[5fr_7fr]">
         <SectionReveal className={enterprisePanel("p-6 sm:p-7")}>
           <p className="text-2xl font-semibold leading-tight text-cream-50 sm:text-3xl">
-            Jirow is built for estate developers, facility managers,
-            infrastructure partners and commercial operators who need dependable
-            energy infrastructure with transparent operations behind it.
+            Jirow works with estates, commercial facilities, industrial
+            operations and infrastructure operators to create visibility across
+            energy performance, cost, reliability and improvement potential.
           </p>
           <div className={cn("my-6", enterprise.hairline)} />
           <p className="leading-8 text-steel-300">
-            The company connects physical power systems with monitoring,
-            reporting and service governance, creating a stronger foundation for
-            renewable energy integration, analytics platforms and customer
-            portals.
+            The company combines engineering understanding, operational data,
+            cloud-ready monitoring concepts and analytics-led advisory to help
+            clients reduce inefficiency, prepare for connected infrastructure
+            and make better energy decisions.
           </p>
           <p className="mt-5 text-sm font-semibold uppercase text-gold-200">
             {`Leadership: ${siteConfig.founderTitle}`}

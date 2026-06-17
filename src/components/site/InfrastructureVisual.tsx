@@ -8,22 +8,22 @@ type InfrastructureVisualProps = {
 
 const variantCopy = {
   estate: {
-    heading: "Estate energy architecture",
-    label: "Embedded distribution",
-    metric: "Managed uptime",
-    nodes: ["Estate Loads", "Metering", "Distribution", "Monitoring", "Operations"]
+    heading: "Energy intelligence model",
+    label: "Infrastructure visibility",
+    metric: "Performance insight",
+    nodes: ["Site Loads", "Metering", "Sources", "Monitoring", "Analytics"]
   },
   monitoring: {
-    heading: "Remote monitoring layer",
+    heading: "Monitoring and analytics layer",
     label: "Operational intelligence",
     metric: "Runtime visibility",
-    nodes: ["Meters", "Source Status", "Alerts", "Reports", "Service"]
+    nodes: ["Meters", "Source Status", "Alerts", "Reports", "Dashboards"]
   },
   hybrid: {
-    heading: "Hybrid energy pathway",
-    label: "Source integration",
-    metric: "Source orchestration",
-    nodes: ["Grid", "Generation", "Solar", "Priority Loads", "Analytics"]
+    heading: "Energy transition pathway",
+    label: "Advisory roadmap",
+    metric: "Transition readiness",
+    nodes: ["Grid", "Generators", "Solar", "Storage", "Analytics"]
   }
 } satisfies Record<
   NonNullable<InfrastructureVisualProps["variant"]>,
@@ -92,7 +92,7 @@ export function InfrastructureVisual({
         </div>
 
         <div className="mt-4 grid gap-px bg-white/10 sm:grid-cols-3">
-          {["Load balance", copy.metric, "Service evidence"].map((label, index) => (
+          {["Load profile", copy.metric, "Decision evidence"].map((label, index) => (
             <div className="bg-ink-950 p-4" key={label}>
               <p className="text-xs text-steel-300">{label}</p>
               <div className="mt-3 h-1.5 bg-white/10">

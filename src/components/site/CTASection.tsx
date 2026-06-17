@@ -21,31 +21,39 @@ export function CTASection() {
                   Consultation CTA
                 </p>
                 <h2 className="mt-5 max-w-3xl text-balance text-4xl font-semibold leading-tight text-cream-50 sm:text-5xl">
-                  Ready to make estate power reliable, measurable and scalable?
+                  Ready to understand where your energy infrastructure is
+                  losing reliability, efficiency or money?
                 </h2>
                 <p className="mt-5 max-w-2xl leading-8 text-steel-200">
-                  Share your estate or facility profile, current power
-                  challenges and desired operating model. Jirow can help map an
-                  embedded energy infrastructure path built for uptime,
-                  monitoring and long-term expansion.
+                  Share your estate, facility or industrial site profile.
+                  Jirow can help map the monitoring, analytics, optimization
+                  and transition opportunities that create better energy
+                  decisions.
                 </p>
               </div>
 
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
                 <ButtonLink
-                  href={siteConfig.whatsappHref}
-                  rel="noreferrer"
-                  target="_blank"
+                  href="/energy-intelligence-assessment"
                 >
-                  <MessageCircle className="h-4 w-4" />
-                  Talk on WhatsApp
+                  Request Assessment
+                  <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                 </ButtonLink>
                 <ButtonLink
-                  href={`mailto:${siteConfig.email}?subject=Embedded%20Power%20Infrastructure%20Inquiry`}
+                  href={`mailto:${siteConfig.email}?subject=Energy%20Intelligence%20Assessment%20Inquiry`}
                   variant="secondary"
                 >
                   Email Jirow
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                </ButtonLink>
+                <ButtonLink
+                  href={siteConfig.whatsappHref}
+                  rel="noreferrer"
+                  target="_blank"
+                  variant="ghost"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  WhatsApp
                 </ButtonLink>
                 <DownloadBrochureButton variant="ghost" />
               </div>

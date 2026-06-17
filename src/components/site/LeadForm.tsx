@@ -17,10 +17,10 @@ export function LeadForm() {
     event.preventDefault();
 
     const message = [
-      "Hello Jirow Technologies, I would like to discuss embedded energy infrastructure solutions.",
+      siteConfig.whatsappMessage,
       name ? `Name: ${name}` : "",
-      company ? `Company/Estate: ${company}` : "",
-      project ? `Project need: ${project}` : ""
+      company ? `Organization/Site: ${company}` : "",
+      project ? `Assessment need: ${project}` : ""
     ]
       .filter(Boolean)
       .join("\n");
@@ -51,14 +51,14 @@ export function LeadForm() {
           className="text-sm font-semibold text-steel-200"
           htmlFor="lead-company"
         >
-          Estate or organization
+          Organization or site
         </label>
         <input
           className={inputClassName}
           id="lead-company"
           name="company"
           onChange={(event) => setCompany(event.target.value)}
-          placeholder="Estate, developer, facility or company"
+          placeholder="Estate, facility, hotel, industrial site or company"
           type="text"
           value={company}
         />
@@ -68,14 +68,14 @@ export function LeadForm() {
           className="text-sm font-semibold text-steel-200"
           htmlFor="lead-project"
         >
-          Infrastructure need
+          Assessment need
         </label>
         <textarea
           className="min-h-28 w-full resize-none rounded-sm border border-white/10 bg-ink-950/65 px-4 py-3 text-sm leading-7 text-cream-50 outline-none transition placeholder:text-steel-500 focus:border-gold-300/70"
           id="lead-project"
           name="project"
           onChange={(event) => setProject(event.target.value)}
-          placeholder="Tell us about uptime, metering, hybrid power, monitoring or project planning needs."
+          placeholder="Tell us about monitoring, generator performance, fuel cost, reliability, energy efficiency or transition planning needs."
           value={project}
         />
       </div>
@@ -84,7 +84,7 @@ export function LeadForm() {
         type="submit"
       >
         <Send className="h-4 w-4" />
-        Send via WhatsApp
+        Send Assessment Request
       </button>
     </form>
   );

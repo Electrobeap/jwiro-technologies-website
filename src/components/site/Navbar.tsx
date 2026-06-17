@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { Menu, MessageCircle, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
@@ -18,10 +19,10 @@ export function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 overflow-visible border-b border-white/10 bg-[#071B3B]/94 backdrop-blur-md">
       <Container className="flex h-24 items-center justify-between overflow-visible lg:h-[6.5rem]">
-        <a
+        <Link
           aria-label="Jirow Technologies Limited home"
           className="flex h-full shrink-0 items-center overflow-visible px-1 py-2 sm:px-2"
-          href="#top"
+          href="/"
           onClick={() => setOpen(false)}
         >
           <BrandLogo
@@ -29,17 +30,17 @@ export function Navbar() {
             priority
             sizes="(min-width: 1024px) 85px, 78px"
           />
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-2 lg:flex">
           {navLinks.map((link) => (
-            <a
+            <Link
               className="rounded-sm px-4 py-2 text-sm font-medium text-steel-200 transition hover:bg-white/[0.05] hover:text-gold-200"
               href={link.href}
               key={link.href}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -81,7 +82,7 @@ export function Navbar() {
             <Container className="pb-5">
               <div className={enterprisePanel("p-3")}>
                 {navLinks.map((link) => (
-                  <a
+                  <Link
                     className={cn(
                       "block rounded-sm px-4 py-3 text-sm font-medium text-steel-200",
                       "transition hover:bg-white/[0.06] hover:text-cream-50"
@@ -91,7 +92,7 @@ export function Navbar() {
                     onClick={() => setOpen(false)}
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 ))}
                 <div className="mt-3 grid gap-3 sm:grid-cols-2">
                   <ButtonLink

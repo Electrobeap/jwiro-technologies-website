@@ -15,9 +15,9 @@ import { siteConfig } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 const profileSignals = [
-  "Embedded energy infrastructure",
-  "Estate power systems and hybrid power systems",
-  "Smart monitoring infrastructure and project delivery"
+  "Energy intelligence and infrastructure analytics",
+  "Monitoring, optimization and advisory services",
+  "Roadmap for connected and AI-enabled infrastructure"
 ];
 
 function ProfileCover() {
@@ -39,9 +39,9 @@ function ProfileCover() {
             sizes="(min-width: 640px) 170px, 138px"
           />
           <p className="display-serif mt-6 max-w-md text-2xl font-semibold leading-tight text-cream-50 sm:text-3xl">
-            Reliable Estate Power.
+            Embedded Energy Intelligence.
             <br />
-            Smarter Infrastructure.
+            Reliable Infrastructure.
           </p>
         </div>
 
@@ -66,13 +66,14 @@ export function BrochureSection() {
         <div className="grid gap-8 lg:grid-cols-[5fr_7fr] lg:items-center">
           <SectionReveal>
             <Tag>Company Profile</Tag>
-            <h2 className="mt-5 text-balance text-4xl font-semibold leading-tight text-cream-50 sm:text-5xl">
-              Infrastructure capability, presented with clarity.
+              <h2 className="mt-5 text-balance text-4xl font-semibold leading-tight text-cream-50 sm:text-5xl">
+              Energy intelligence capability, presented with clarity.
             </h2>
             <p className="mt-5 max-w-xl text-base leading-8 text-steel-200 sm:text-lg">
               Download the latest Jirow Technologies brochure for service
-              positioning, embedded energy infrastructure capabilities and the
-              operating model for estate and commercial energy reliability.
+              positioning, infrastructure analytics capabilities and the
+              roadmap for connected energy monitoring, optimization and future
+              AI-enabled infrastructure management.
             </p>
 
             <div className="mt-8 grid gap-px border border-white/10 bg-white/10">

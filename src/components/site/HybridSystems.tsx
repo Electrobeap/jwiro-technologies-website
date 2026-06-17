@@ -9,10 +9,10 @@ export function HybridSystems() {
   return (
     <SectionShell
       className={enterprise.sectionBand}
-      description="Jirow designs hybrid power systems that can evolve from conventional embedded generation into cleaner and more intelligent source combinations over time."
-      eyebrow="Hybrid Power Systems"
+      description="Jirow helps clients evaluate cleaner, more efficient energy pathways with evidence from current operations, load profiles and reliability constraints."
+      eyebrow="Energy Transition Advisory"
       id="hybrid"
-      title="Reliable power today, renewable integration and cleaner economics tomorrow."
+      title="Plan renewable integration and decarbonization from operational truth."
     >
       <div className="grid items-stretch gap-5 lg:grid-cols-[7fr_5fr]">
         <div className="grid gap-5">

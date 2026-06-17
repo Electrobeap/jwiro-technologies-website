@@ -1,55 +1,43 @@
 import type { Metadata, Viewport } from "next";
 
 import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
+import { companyPositioning, seoKeywords, siteConfig } from "@/lib/data";
 
 import "./globals.css";
 
 const siteUrl = "https://jirowtechnologies.com";
 const title =
-  "Jirow Technologies Limited | Embedded Energy Infrastructure Nigeria";
-const description =
-  "Jirow Technologies Limited delivers embedded energy infrastructure, estate power systems, hybrid power systems, smart monitoring infrastructure and sustainable energy operations in Lagos, Nigeria.";
-const keywords = [
-  "Embedded Energy Infrastructure Nigeria",
-  "Estate Power Systems",
-  "Hybrid Energy Infrastructure",
-  "Smart Estate Energy",
-  "Reliable Estate Power",
-  "Energy Infrastructure Consulting Nigeria",
-  "Estate Embedded Power",
-  "Smart Monitoring Infrastructure",
-  "Commercial Energy Infrastructure",
-  "Sustainable Energy Systems Nigeria"
-];
+  "Jirow Technologies Limited | Energy Intelligence & Infrastructure Analytics";
+const description = companyPositioning;
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Organization",
       "@id": `${siteUrl}/#organization`,
-      name: "Jirow Technologies Limited",
+      name: siteConfig.name,
       url: siteUrl,
       logo: `${siteUrl}/brand/jirow-logo-display.png`,
       description,
-      telephone: "+2348137832844",
-      email: "info@jirowtechnologies.com",
+      telephone: siteConfig.phone.replace(/\s/g, ""),
+      email: siteConfig.email,
       address: {
         "@type": "PostalAddress",
         addressLocality: "Lagos",
-        addressCountry: "Nigeria"
+        addressCountry: siteConfig.country
       },
-      slogan: "Reliable Estate Power. Smarter Infrastructure."
+      slogan: "Embedded Energy Intelligence. Reliable Infrastructure."
     },
     {
       "@type": "LocalBusiness",
       "@id": `${siteUrl}/#localbusiness`,
-      name: "Jirow Technologies Limited",
+      name: siteConfig.name,
       url: siteUrl,
       image: `${siteUrl}/brand/jirow-social-preview.png`,
       logo: `${siteUrl}/brand/jirow-logo-display.png`,
       description,
-      telephone: "+2348137832844",
-      email: "info@jirowtechnologies.com",
+      telephone: siteConfig.phone.replace(/\s/g, ""),
+      email: siteConfig.email,
       priceRange: "$$",
       address: {
         "@type": "PostalAddress",
@@ -67,12 +55,12 @@ const schema = {
           name: "Lagos"
         }
       ],
-      knowsAbout: keywords
+      knowsAbout: seoKeywords
     },
     {
       "@type": "WebSite",
       "@id": `${siteUrl}/#website`,
-      name: "Jirow Technologies Limited",
+      name: siteConfig.name,
       url: siteUrl,
       publisher: {
         "@id": `${siteUrl}/#organization`
@@ -85,11 +73,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title,
   description,
-  applicationName: "Jirow Technologies Limited",
-  authors: [{ name: "Jirow Technologies Limited" }],
-  category: "Energy Infrastructure",
-  creator: "Jirow Technologies Limited",
-  keywords,
+  applicationName: siteConfig.name,
+  authors: [{ name: siteConfig.name }],
+  category: "Energy Technology",
+  creator: siteConfig.name,
+  keywords: seoKeywords,
   alternates: {
     canonical: "/"
   },
@@ -110,7 +98,7 @@ export const metadata: Metadata = {
       }
     ],
     locale: "en_NG",
-    siteName: "Jirow Technologies Limited",
+    siteName: siteConfig.name,
     type: "website"
   },
   robots: {

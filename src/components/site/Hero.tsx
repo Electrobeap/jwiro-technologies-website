@@ -1,14 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { CalendarCheck, MessageCircle } from "lucide-react";
+import { CalendarCheck, ClipboardCheck } from "lucide-react";
 import { motion } from "motion/react";
 
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
 import { BrandLogo } from "@/components/site/BrandLogo";
 import { enterprise } from "@/components/site/visual-system";
-import { heroStats, siteConfig } from "@/lib/data";
+import { heroStats } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
@@ -18,7 +18,7 @@ export function Hero() {
       id="top"
     >
       <Image
-        alt="Modern estate with embedded power infrastructure and solar integration"
+        alt="Modern estate and commercial energy infrastructure with monitoring and analytics"
         className="absolute inset-0 -z-20 object-cover object-[72%_center]"
         fill
         priority
@@ -43,33 +43,30 @@ export function Hero() {
               sizes="(min-width: 640px) 110px, 96px"
             />
             <p className="mt-4 text-xs font-semibold uppercase text-gold-200">
-              Embedded Energy Infrastructure Nigeria
+              Embedded Energy Intelligence. Reliable Infrastructure.
             </p>
           </div>
 
           <h1 className="mt-7 max-w-5xl text-balance text-[2.45rem] font-semibold leading-[1.08] text-cream-50 sm:text-5xl lg:text-[3.35rem]">
-            Embedded Energy Infrastructure for Modern Estates & Commercial
-            Clusters
+            Intelligent Energy Infrastructure for Estates, Commercial
+            Facilities & Industrial Operations
           </h1>
 
           <p className="mt-6 max-w-2xl text-pretty text-lg leading-8 text-steel-100 sm:text-xl">
-            Reliable infrastructure-grade energy systems designed for uptime,
-            operational visibility and long-term scalability.
+            Jirow Technologies delivers energy intelligence, infrastructure
+            monitoring, and operational analytics that help organizations
+            reduce costs, improve reliability, and make better energy
+            decisions.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="#contact">
-              <CalendarCheck className="h-4 w-4" />
-              Book Consultation
+            <ButtonLink href="/energy-intelligence-assessment">
+              <ClipboardCheck className="h-4 w-4" />
+              Request an Energy Intelligence Assessment
             </ButtonLink>
-            <ButtonLink
-              href={siteConfig.whatsappHref}
-              rel="noreferrer"
-              target="_blank"
-              variant="secondary"
-            >
-              <MessageCircle className="h-4 w-4" />
-              Talk on WhatsApp
+            <ButtonLink href="#contact" variant="secondary">
+              <CalendarCheck className="h-4 w-4" />
+              Schedule a Consultation
             </ButtonLink>
           </div>
         </motion.div>

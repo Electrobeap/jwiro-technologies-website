@@ -8,10 +8,10 @@ export function HowItWorks() {
   return (
     <SectionShell
       align="center"
-      description="A disciplined infrastructure approach keeps estate energy projects practical, measurable and ready for long-term operations."
+      description="A disciplined intelligence workflow helps clients move from fragmented energy information to measured priorities and practical improvement plans."
       eyebrow="Infrastructure Approach"
       id="approach"
-      title="From estate power challenge to managed embedded infrastructure."
+      title="From infrastructure uncertainty to clear energy decisions."
     >
       <div className="relative">
         <div className="absolute left-6 right-6 top-10 hidden h-px bg-gold-300/40 lg:block" />

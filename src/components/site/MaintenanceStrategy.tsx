@@ -8,21 +8,21 @@ import { cn } from "@/lib/utils";
 export function MaintenanceStrategy() {
   return (
     <SectionShell
-      description="Jirow's reliability model is designed around how assets actually work in the field: runtime, load patterns, source behavior, fault evidence and service history."
+      description="Jirow's reliability intelligence model is designed around how assets behave in the field: runtime, load patterns, source behavior, fault evidence and cost history."
       eyebrow="Reliability & Uptime"
       id="maintenance"
-      title="Managed uptime driven by operating truth, not blind calendars."
+      title="Reliability planning driven by operating truth, not blind assumptions."
     >
       <div className="grid gap-5 lg:grid-cols-[5fr_7fr]">
         <SectionReveal className={enterprisePanel("p-6 sm:p-7")}>
           <p className="display-serif text-3xl font-semibold leading-tight text-gold-200 sm:text-4xl">
-            Runtime changes the economics of reliability.
+            Measured infrastructure changes the economics of reliability.
           </p>
           <div className={cn("my-6", enterprise.hairline)} />
           <p className="leading-8 text-steel-200">
-            When service decisions are tied to measured equipment behavior,
-            communities can reduce surprise failures, improve fuel planning and
-            make cleaner decisions about solar, battery and generation
+            When energy decisions are tied to measured equipment behavior,
+            organizations can reduce surprise failures, improve fuel planning
+            and make cleaner decisions about solar, storage and infrastructure
             investment.
           </p>
         </SectionReveal>

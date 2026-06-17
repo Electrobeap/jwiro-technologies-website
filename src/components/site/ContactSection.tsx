@@ -31,18 +31,18 @@ export function ContactSection() {
   return (
     <SectionShell
       className={enterprise.sectionBand}
-      description="Start with a focused consultation around current power reliability, estate growth plans, monitoring requirements and commercial operating structure."
+      description="Start with a focused consultation around energy performance, infrastructure visibility, generator monitoring, cost exposure and optimization opportunities."
       eyebrow="Contact"
       id="contact"
-      title="Book a consultation for estate or commercial energy infrastructure."
+      title="Request an energy intelligence consultation."
     >
       <div className="grid gap-6 lg:grid-cols-[5fr_7fr]">
         <div className={enterprisePanel("p-6 sm:p-7")}>
           <p className="text-xl font-semibold leading-8 text-cream-50">
-            Jirow Technologies Limited supports estate developers, facility
-            managers and infrastructure partners from Lagos with embedded power
-            systems, smart monitoring infrastructure and hybrid energy
-            consulting.
+            Jirow Technologies Limited supports estates, commercial facilities,
+            industrial operations and infrastructure partners from Lagos with
+            energy intelligence, monitoring strategy, analytics and
+            optimization advisory.
           </p>
           <div className="mt-7 grid gap-3">
             {contactItems.map((item) => {

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ExternalLink, Mail, MessageCircle } from "lucide-react";
 
 import { BrandLogo } from "@/components/site/BrandLogo";
@@ -19,9 +20,9 @@ export function Footer() {
               sizes="(min-width: 640px) 168px, 152px"
             />
             <p className="mt-6 max-w-xl leading-8 text-steel-300">
-              Embedded energy infrastructure, estate power systems, hybrid
-              power systems, smart monitoring infrastructure and operational
-              reliability for modern communities.
+              Energy intelligence, infrastructure monitoring, operational
+              analytics and optimization advisory for estates, commercial
+              facilities and industrial operations.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <ButtonLink
@@ -49,13 +50,13 @@ export function Footer() {
             </h3>
             <div className="mt-5 grid gap-3">
               {navLinks.map((link) => (
-                <a
+                <Link
                   className="text-sm text-steel-300 transition hover:text-cream-50"
                   href={link.href}
                   key={link.href}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -90,7 +91,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Jirow Technologies Limited. All
             rights reserved.
           </p>
-          <p>Innovate. Integrate. Elevate.</p>
+          <p>Embedded Energy Intelligence. Reliable Infrastructure.</p>
         </div>
       </Container>
     </footer>
