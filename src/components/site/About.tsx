@@ -6,32 +6,33 @@ import { cn } from "@/lib/utils";
 
 const operatingModel = [
   "Energy intelligence assessments",
-  "Infrastructure monitoring strategy",
-  "Operational analytics and reporting",
-  "AI-ready platform roadmap"
+  "Infrastructure analytics",
+  "Energy monitoring & reporting",
+  "Smart infrastructure visibility",
+  "AI-powered energy optimization"
 ];
 
 export function About() {
   return (
     <SectionShell
-      description="Jirow Technologies Limited is an energy intelligence and infrastructure technology company focused on improving how energy systems are monitored, managed and optimized."
+      description="Jirow Technologies Limited is an Energy Intelligence and Infrastructure Analytics company helping estates, commercial facilities and industrial operations improve energy performance, infrastructure reliability and operational efficiency."
       eyebrow="Company Overview"
       id="about"
-      title="Energy intelligence for organizations that need operational clarity before major infrastructure decisions."
+      title="Turning infrastructure data into actionable insight for smarter energy decisions."
     >
       <div className="grid gap-5 lg:grid-cols-[5fr_7fr]">
         <SectionReveal className={enterprisePanel("p-6 sm:p-7")}>
           <p className="text-2xl font-semibold leading-tight text-cream-50 sm:text-3xl">
-            Jirow works with estates, commercial facilities, industrial
-            operations and infrastructure operators to create visibility across
-            energy performance, cost, reliability and improvement potential.
+            Through monitoring, analytics and intelligent digital solutions,
+            Jirow transforms infrastructure data into actionable insights that
+            support better operational and investment decisions.
           </p>
           <div className={cn("my-6", enterprise.hairline)} />
           <p className="leading-8 text-steel-300">
-            The company combines engineering understanding, operational data,
-            cloud-ready monitoring concepts and analytics-led advisory to help
-            clients reduce inefficiency, prepare for connected infrastructure
-            and make better energy decisions.
+            Our long-term vision is to build Africa&apos;s leading Energy
+            Intelligence platform for smart infrastructure: combining
+            engineering expertise, cloud technologies, infrastructure analytics
+            and AI-powered optimization.
           </p>
           <p className="mt-5 text-sm font-semibold uppercase text-gold-200">
             {`Leadership: ${siteConfig.founderTitle}`}

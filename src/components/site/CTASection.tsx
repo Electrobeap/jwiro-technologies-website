@@ -21,14 +21,13 @@ export function CTASection() {
                   Consultation CTA
                 </p>
                 <h2 className="mt-5 max-w-3xl text-balance text-4xl font-semibold leading-tight text-cream-50 sm:text-5xl">
-                  Ready to understand where your energy infrastructure is
-                  losing reliability, efficiency or money?
+                  Ready to turn infrastructure data into business value?
                 </h2>
                 <p className="mt-5 max-w-2xl leading-8 text-steel-200">
-                  Share your estate, facility or industrial site profile.
-                  Jirow can help map the monitoring, analytics, optimization
-                  and transition opportunities that create better energy
-                  decisions.
+                  Start with an Energy Intelligence Assessment. Jirow will help
+                  measure performance, identify risks, map optimization
+                  opportunities and define the platform path toward smarter
+                  infrastructure.
                 </p>
               </div>
 

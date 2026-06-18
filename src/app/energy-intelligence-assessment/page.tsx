@@ -14,7 +14,7 @@ import { assessmentAreas, serviceDetails } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Energy Intelligence Assessment | Jirow Technologies",
   description:
-    "Jirow's Energy Intelligence Assessment reviews energy infrastructure, generator performance, fuel consumption, reliability risk, cost and optimization opportunities.",
+    "Jirow's Energy Intelligence Assessment transforms infrastructure data into actionable insights across performance, reliability, efficiency, risk and optimization opportunities.",
   alternates: {
     canonical: "/energy-intelligence-assessment"
   }
@@ -28,13 +28,13 @@ export default function EnergyIntelligenceAssessmentPage() {
       <Navbar />
       <main className="overflow-hidden">
         <PageHero
-          description="The Energy Intelligence Assessment is Jirow's flagship consulting service for understanding the performance, reliability, efficiency and operational cost of energy infrastructure."
+          description="The Energy Intelligence Assessment is Jirow's flagship service for transforming infrastructure data into actionable insights, improvement roadmaps and AI-ready operating intelligence."
           eyebrow="Flagship Consulting Service"
           primaryHref="/#contact"
           primaryLabel="Request an Energy Intelligence Assessment"
           secondaryHref="/services"
           secondaryLabel="View Services"
-          title="Understand where energy is consumed, where money is lost and how performance can improve."
+          title="From data to decision: measure, understand, optimize and transform."
         >
           <p className="text-sm leading-7 text-steel-300">
             Designed for estates, commercial facilities, hotels, industrial
@@ -51,13 +51,13 @@ export default function EnergyIntelligenceAssessmentPage() {
                   Overview
                 </p>
                 <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-4xl">
-                  A structured diagnostic for energy infrastructure performance.
+                  A structured diagnostic for smarter infrastructure decisions.
                 </h2>
                 <p className="mt-5 leading-8 text-steel-300">
-                  Jirow reviews how energy is sourced, consumed, monitored,
-                  maintained and reported. The output is a practical
-                  improvement roadmap covering cost, reliability, visibility and
-                  renewable integration opportunities.
+                  Jirow reviews how energy data is produced, consumed,
+                  monitored, analyzed and reported. The output is a practical
+                  roadmap covering performance, maturity, operating risk and
+                  AI-powered optimization opportunities.
                 </p>
                 <ButtonLink className="mt-7" href="/#contact">
                   Start Assessment Request

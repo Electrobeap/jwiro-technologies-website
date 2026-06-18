@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { CalendarCheck, ClipboardCheck } from "lucide-react";
+import { ClipboardCheck } from "lucide-react";
 import { motion } from "motion/react";
 
+import { DownloadBrochureButton } from "@/components/site/DownloadBrochureButton";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
 import { BrandLogo } from "@/components/site/BrandLogo";
@@ -43,20 +44,18 @@ export function Hero() {
               sizes="(min-width: 640px) 110px, 96px"
             />
             <p className="mt-4 text-xs font-semibold uppercase text-gold-200">
-              Embedded Energy Intelligence. Reliable Infrastructure.
+              Energy Intelligence. Smarter Infrastructure.
             </p>
           </div>
 
           <h1 className="mt-7 max-w-5xl text-balance text-[2.45rem] font-semibold leading-[1.08] text-cream-50 sm:text-5xl lg:text-[3.35rem]">
-            Intelligent Energy Infrastructure for Estates, Commercial
-            Facilities & Industrial Operations
+            Energy Intelligence for Smarter Infrastructure
           </h1>
 
           <p className="mt-6 max-w-2xl text-pretty text-lg leading-8 text-steel-100 sm:text-xl">
-            Jirow Technologies delivers energy intelligence, infrastructure
-            monitoring, and operational analytics that help organizations
-            reduce costs, improve reliability, and make better energy
-            decisions.
+            Helping estates, commercial facilities and industrial operations
+            improve energy performance through monitoring, infrastructure
+            analytics and AI-powered optimization.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -64,10 +63,10 @@ export function Hero() {
               <ClipboardCheck className="h-4 w-4" />
               Request an Energy Intelligence Assessment
             </ButtonLink>
-            <ButtonLink href="#contact" variant="secondary">
-              <CalendarCheck className="h-4 w-4" />
-              Schedule a Consultation
-            </ButtonLink>
+            <DownloadBrochureButton
+              label="Download Company Profile"
+              variant="secondary"
+            />
           </div>
         </motion.div>
 

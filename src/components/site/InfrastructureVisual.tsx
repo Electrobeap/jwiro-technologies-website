@@ -8,16 +8,16 @@ type InfrastructureVisualProps = {
 
 const variantCopy = {
   estate: {
-    heading: "Energy intelligence model",
+    heading: "Energy intelligence dashboard",
     label: "Infrastructure visibility",
     metric: "Performance insight",
-    nodes: ["Site Loads", "Metering", "Sources", "Monitoring", "Analytics"]
+    nodes: ["Energy Data", "Metering", "Assets", "Analytics", "Decisions"]
   },
   monitoring: {
-    heading: "Monitoring and analytics layer",
+    heading: "Smart infrastructure visibility",
     label: "Operational intelligence",
-    metric: "Runtime visibility",
-    nodes: ["Meters", "Source Status", "Alerts", "Reports", "Dashboards"]
+    metric: "Optimization potential",
+    nodes: ["Meters", "Assets", "Alerts", "Reports", "Dashboards"]
   },
   hybrid: {
     heading: "Energy transition pathway",
@@ -64,7 +64,7 @@ export function InfrastructureVisual({
           <div className="absolute bottom-[17%] left-1/2 top-[17%] w-px -translate-x-1/2 bg-technical-300/35" />
           <div className="absolute left-1/2 top-1/2 grid h-20 w-28 -translate-x-1/2 -translate-y-1/2 place-items-center border border-gold-300/55 bg-ink-950 text-center">
             <span className="text-[11px] font-semibold uppercase text-gold-200">
-              Jirow Core
+              Jirow AI
             </span>
           </div>
 

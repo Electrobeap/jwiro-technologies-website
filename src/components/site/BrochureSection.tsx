@@ -16,8 +16,8 @@ import { cn } from "@/lib/utils";
 
 const profileSignals = [
   "Energy intelligence and infrastructure analytics",
-  "Monitoring, optimization and advisory services",
-  "Roadmap for connected and AI-enabled infrastructure"
+  "Smart infrastructure visibility and energy monitoring",
+  "AWS + AI roadmap for AI-powered optimization"
 ];
 
 function ProfileCover() {
@@ -39,9 +39,9 @@ function ProfileCover() {
             sizes="(min-width: 640px) 170px, 138px"
           />
           <p className="display-serif mt-6 max-w-md text-2xl font-semibold leading-tight text-cream-50 sm:text-3xl">
-            Embedded Energy Intelligence.
+            Energy Intelligence
             <br />
-            Reliable Infrastructure.
+            for Smarter Infrastructure.
           </p>
         </div>
 
@@ -67,13 +67,12 @@ export function BrochureSection() {
           <SectionReveal>
             <Tag>Company Profile</Tag>
               <h2 className="mt-5 text-balance text-4xl font-semibold leading-tight text-cream-50 sm:text-5xl">
-              Energy intelligence capability, presented with clarity.
+              Download the latest Jirow Energy Intelligence company profile.
             </h2>
             <p className="mt-5 max-w-xl text-base leading-8 text-steel-200 sm:text-lg">
-              Download the latest Jirow Technologies brochure for service
-              positioning, infrastructure analytics capabilities and the
-              roadmap for connected energy monitoring, optimization and future
-              AI-enabled infrastructure management.
+              The profile presents Jirow&apos;s Energy Intelligence Assessment,
+              infrastructure analytics services, industries served, AWS + AI
+              platform roadmap and AI-powered optimization vision.
             </p>
 
             <div className="mt-8 grid gap-px border border-white/10 bg-white/10">

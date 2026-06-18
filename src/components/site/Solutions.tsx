@@ -1,4 +1,4 @@
-import { embeddedSolutions } from "@/lib/data";
+import { solutionServices } from "@/lib/data";
 
 import { SectionShell } from "@/components/site/SectionShell";
 import { enterprise, enterpriseModule } from "@/components/site/visual-system";
@@ -8,13 +8,13 @@ export function Solutions() {
   return (
     <SectionShell
       className={enterprise.sectionBand}
-      description="A structured capability stack for energy intelligence, infrastructure monitoring, generator analytics, optimization advisory and future connected energy platforms."
+      description="Immediate value through assessments, reporting and analytics, strengthened by smart metering, visibility, automation and future AI-powered optimization."
       eyebrow="Services"
-      id="embedded-power"
-      title="Energy technology services for visibility, reliability and better infrastructure decisions."
+      id="services"
+      title="Energy Intelligence and Infrastructure Analytics services for measurable impact."
     >
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-        {embeddedSolutions.map((solution, index) => {
+        {solutionServices.map((solution, index) => {
           const Icon = solution.icon;
 
           return (

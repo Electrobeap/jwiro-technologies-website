@@ -7,7 +7,7 @@ import "./globals.css";
 
 const siteUrl = "https://jirowtechnologies.com";
 const title =
-  "Jirow Technologies Limited | Energy Intelligence & Infrastructure Analytics";
+  "Jirow Technologies Limited | Energy Intelligence, Infrastructure Analytics & AI Optimization";
 const description = companyPositioning;
 const schema = {
   "@context": "https://schema.org",
@@ -26,7 +26,7 @@ const schema = {
         addressLocality: "Lagos",
         addressCountry: siteConfig.country
       },
-      slogan: "Embedded Energy Intelligence. Reliable Infrastructure."
+      slogan: "Energy Intelligence. Smarter Infrastructure."
     },
     {
       "@type": "LocalBusiness",

@@ -31,7 +31,7 @@ export function ContactSection() {
   return (
     <SectionShell
       className={enterprise.sectionBand}
-      description="Start with a focused consultation around energy performance, infrastructure visibility, generator monitoring, cost exposure and optimization opportunities."
+      description="Start with a focused consultation around energy monitoring, infrastructure analytics, smart infrastructure visibility and AI-powered optimization opportunities."
       eyebrow="Contact"
       id="contact"
       title="Request an energy intelligence consultation."
@@ -39,10 +39,10 @@ export function ContactSection() {
       <div className="grid gap-6 lg:grid-cols-[5fr_7fr]">
         <div className={enterprisePanel("p-6 sm:p-7")}>
           <p className="text-xl font-semibold leading-8 text-cream-50">
-            Jirow Technologies Limited supports estates, commercial facilities,
-            industrial operations and infrastructure partners from Lagos with
-            energy intelligence, monitoring strategy, analytics and
-            optimization advisory.
+            Jirow Technologies Limited supports estates, commercial facilities
+            and industrial operations with Energy Intelligence Assessments,
+            infrastructure analytics, energy monitoring and AI-powered
+            optimization roadmaps.
           </p>
           <div className="mt-7 grid gap-3">
             {contactItems.map((item) => {

@@ -20,9 +20,10 @@ export function Footer() {
               sizes="(min-width: 640px) 168px, 152px"
             />
             <p className="mt-6 max-w-xl leading-8 text-steel-300">
-              Energy intelligence, infrastructure monitoring, operational
-              analytics and optimization advisory for estates, commercial
-              facilities and industrial operations.
+              Energy Intelligence, Infrastructure Analytics, Energy Monitoring,
+              Smart Infrastructure Visibility and AI-Powered Energy
+              Optimization for estates, commercial facilities and industrial
+              operations.
             </p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <ButtonLink
@@ -91,7 +92,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Jirow Technologies Limited. All
             rights reserved.
           </p>
-          <p>Embedded Energy Intelligence. Reliable Infrastructure.</p>
+          <p>Energy Intelligence. Smarter Infrastructure.</p>
         </div>
       </Container>
     </footer>

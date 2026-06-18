@@ -71,7 +71,7 @@ export function PageHero({
           <div className="pt-5">
             {children ?? (
               <p className="text-sm leading-7 text-steel-300">
-                Embedded Energy Intelligence. Reliable Infrastructure.
+                Energy Intelligence. Smarter Infrastructure.
               </p>
             )}
           </div>

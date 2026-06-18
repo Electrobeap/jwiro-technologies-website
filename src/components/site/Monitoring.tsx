@@ -8,10 +8,10 @@ import { SectionReveal } from "@/components/ui/SectionReveal";
 export function Monitoring() {
   return (
     <SectionShell
-      description="Jirow turns energy infrastructure into measurable operating systems, giving facility teams and executives practical visibility into runtime, fuel, cost, source availability and asset behavior."
+      description="Jirow converts energy data into performance scores, maturity indicators, reliability intelligence and optimization opportunities for facility and executive teams."
       eyebrow="Monitoring & Analytics"
       id="monitoring"
-      title="Operational analytics for energy systems that cannot be managed by guesswork."
+      title="Smart infrastructure visibility across performance, risk and efficiency."
     >
       <div className="grid items-stretch gap-5 lg:grid-cols-[5fr_7fr]">
         <SectionReveal>

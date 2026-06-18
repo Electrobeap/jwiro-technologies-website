@@ -1,7 +1,7 @@
 import {
   Activity,
   BarChart3,
-  BatteryCharging,
+  BrainCircuit,
   Building2,
   ChartNoAxesCombined,
   CheckCircle2,
@@ -9,6 +9,7 @@ import {
   ClipboardCheck,
   Cloud,
   Database,
+  Eye,
   Factory,
   FileSearch,
   Fuel,
@@ -16,16 +17,20 @@ import {
   Landmark,
   Leaf,
   LineChart,
+  LockKeyhole,
   PlugZap,
+  Radio,
   SearchCheck,
+  Server,
   Settings2,
   ShieldCheck,
   SolarPanel,
+  Target,
   TimerReset,
   TrendingDown,
+  Waypoints,
   Workflow,
-  Wrench,
-  Zap
+  Wrench
 } from "lucide-react";
 
 const whatsappMessage =
@@ -35,8 +40,14 @@ export const whatsappNumber = "2348137832844";
 
 export const seoKeywords = [
   "Energy Intelligence",
+  "Infrastructure Analytics",
   "Energy Monitoring",
-  "Energy Analytics",
+  "Smart Infrastructure",
+  "Smart Infrastructure Visibility",
+  "AI-Powered Energy Optimization",
+  "AI-Powered Optimization",
+  "Energy Intelligence Assessment",
+  "Energy Monitoring and Reporting",
   "Industrial Energy Management",
   "Infrastructure Monitoring",
   "Energy Optimization",
@@ -75,57 +86,57 @@ export const siteConfig = {
 };
 
 export const companyPositioning =
-  "Jirow Technologies helps estates, commercial facilities, and industrial operations monitor, optimize, and improve energy infrastructure through analytics, intelligent monitoring, automation, and operational visibility.";
+  "Jirow Technologies Limited is an Energy Intelligence and Infrastructure Analytics company helping estates, commercial facilities and industrial operations improve energy performance, infrastructure reliability and operational efficiency through monitoring, analytics and intelligent digital solutions.";
 
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "Assessment", href: "/energy-intelligence-assessment" },
-  { label: "Roadmap", href: "/technology-roadmap" },
+  { label: "Platform", href: "/technology-roadmap" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/#contact" }
 ];
 
 export const heroStats = [
   {
-    value: "Visibility",
-    label: "Real-time insight into energy performance and infrastructure health"
+    value: "Monitor",
+    label: "Energy monitoring and smart infrastructure visibility"
   },
   {
-    value: "Reliability",
-    label: "Proactive monitoring and optimization to reduce downtime exposure"
+    value: "Analyze",
+    label: "Infrastructure analytics for performance, risk and efficiency"
   },
   {
-    value: "Intelligence",
-    label: "Energy data translated into stronger operational decisions"
+    value: "Optimize",
+    label: "AI-powered energy optimization and actionable decisions"
   }
 ];
 
 export const serviceDetails = [
   {
-    title: "Energy Intelligence Assessment",
+    title: "Energy Intelligence Assessments",
     summary:
-      "A professional assessment for estates, hotels, industrial sites, commercial facilities and infrastructure operators.",
+      "Comprehensive assessment of energy assets, consumption patterns, efficiency gaps and operational risks with clear improvement recommendations.",
     outcome:
-      "Understand where energy is consumed, where money is lost and how performance can be improved.",
+      "Understand your infrastructure, quantify hidden losses and identify the highest-impact improvement opportunities.",
     deliverables: [
-      "Energy infrastructure review",
-      "Generator performance assessment",
-      "Fuel consumption analysis",
-      "Grid reliability assessment",
-      "Operational risk analysis",
-      "Energy cost evaluation",
-      "Optimization recommendations",
-      "Renewable integration opportunities"
+      "Energy source review",
+      "Infrastructure asset assessment",
+      "Utility consumption review",
+      "Operational process review",
+      "Energy performance analysis",
+      "Infrastructure health review",
+      "Operational efficiency findings",
+      "Optimization recommendations"
     ],
     icon: FileSearch
   },
   {
-    title: "Energy Monitoring & Analytics",
+    title: "Energy Monitoring & Reporting",
     summary:
-      "Operational visibility across critical energy assets, generators, meters, source availability and site-level performance.",
+      "Real-time monitoring of energy systems with automated reports and dashboards for better visibility, performance tracking and compliance.",
     outcome:
-      "Move from manual reporting and assumptions to measured operating evidence.",
+      "Move from delayed manual reporting to current, decision-ready energy intelligence.",
     deliverables: [
       "Energy monitoring",
       "Generator monitoring",
@@ -133,129 +144,154 @@ export const serviceDetails = [
       "Fuel usage analytics",
       "Operational reporting",
       "Performance dashboards",
-      "Infrastructure visibility"
+      "Compliance visibility",
+      "Automated stakeholder reports"
     ],
     icon: BarChart3
   },
   {
-    title: "Infrastructure Optimization",
+    title: "Infrastructure Analytics",
     summary:
-      "Performance improvement work that reduces energy-related inefficiencies and strengthens site reliability.",
+      "Analysis of infrastructure performance, equipment health and operational data to identify issues, reduce downtime and improve efficiency.",
     outcome:
-      "Improve uptime, reduce waste and create a stronger basis for long-term capital planning.",
+      "See how assets perform, where reliability risk is building and which changes can improve operational outcomes.",
     deliverables: [
-      "Reliability improvement",
-      "Asset performance tracking",
-      "Downtime reduction",
-      "Operational optimization",
-      "Energy efficiency improvement"
+      "Asset performance analysis",
+      "Equipment health review",
+      "Reliability risk analysis",
+      "Downtime reduction roadmap",
+      "Infrastructure maturity scoring",
+      "Operational risk scoring",
+      "Performance benchmarking",
+      "Capital planning insights"
     ],
     icon: ChartNoAxesCombined
   },
   {
-    title: "Energy Transition Advisory",
+    title: "Smart Infrastructure Visibility",
     summary:
-      "Structured guidance for cleaner, more efficient and more resilient energy systems.",
+      "Centralized dashboards that provide a single view of energy assets, equipment status, infrastructure performance and improvement priorities.",
     outcome:
-      "Identify practical renewable integration, sustainability and decarbonization pathways without compromising reliability.",
+      "Create one operating picture for executives, facility teams and infrastructure partners.",
     deliverables: [
-      "Renewable integration studies",
-      "Solar feasibility assessments",
-      "Sustainability planning",
-      "Decarbonization advisory",
-      "Carbon strategy support"
+      "Facility visibility dashboards",
+      "Asset status tracking",
+      "Infrastructure performance views",
+      "Energy scorecards",
+      "Alert and event views",
+      "Action tracking",
+      "Site comparison views",
+      "Operational intelligence reports"
     ],
-    icon: Leaf
+    icon: Eye
+  },
+  {
+    title: "AI-Powered Energy Optimization",
+    summary:
+      "Future-ready AI capabilities for forecasting, anomaly detection, predictive maintenance and energy optimization.",
+    outcome:
+      "Prepare infrastructure data for intelligent recommendations, automated workflows and lower long-term operating cost.",
+    deliverables: [
+      "Energy forecasting",
+      "Anomaly detection",
+      "Predictive maintenance readiness",
+      "Load optimization",
+      "Asset performance insights",
+      "Intelligent reporting",
+      "AI recommendation roadmap",
+      "Automated workflow planning"
+    ],
+    icon: BrainCircuit
   }
 ];
 
-export const embeddedSolutions = [
+export const solutionServices = [
   {
-    title: "Energy Intelligence Assessment",
+    title: "Energy Intelligence Assessments",
     description:
-      "Structured site reviews that benchmark infrastructure health, operating cost, reliability and improvement opportunities.",
+      "Structured reviews that transform infrastructure data into actionable insights and improvement roadmaps.",
     icon: FileSearch
   },
   {
-    title: "Energy Monitoring",
+    title: "Energy Monitoring & Reporting",
     description:
-      "Visibility across generators, grid supply, metering points, critical loads and site-level energy behavior.",
+      "Automated visibility into energy performance, runtime, alerts, reports and operational outcomes.",
     icon: Activity
   },
   {
-    title: "Energy Analytics",
+    title: "Infrastructure Analytics",
     description:
-      "Operational analytics that translate runtime, load, fuel and cost data into decisions leaders can act on.",
+      "Analyze equipment health, infrastructure maturity, reliability risk and efficiency opportunities.",
     icon: BarChart3
   },
   {
-    title: "Generator Monitoring",
+    title: "Smart Metering & Data Acquisition",
     description:
-      "Runtime, fuel, status and performance monitoring for generator systems already serving facilities and estates.",
-    icon: Gauge
+      "Smart meters, IoT devices and data pipelines for accurate, high-resolution infrastructure data.",
+    icon: Radio
   },
   {
-    title: "Infrastructure Monitoring",
+    title: "Smart Infrastructure Visibility",
     description:
-      "Asset and infrastructure visibility for power rooms, distribution equipment, metering layers and site operations.",
-    icon: CircuitBoard
+      "Central dashboards that create a single source of truth for energy assets and facility performance.",
+    icon: Eye
   },
   {
-    title: "Infrastructure Optimization",
+    title: "Predictive Maintenance",
     description:
-      "Reliability, efficiency and cost optimization based on measured site conditions and operating evidence.",
-    icon: TrendingDown
+      "Predict equipment issues before they happen and reduce unplanned downtime.",
+    icon: Wrench
   },
   {
-    title: "Renewable Integration Advisory",
+    title: "Fault Detection",
     description:
-      "Solar, storage and hybrid feasibility studies for organizations planning cleaner energy transition pathways.",
-    icon: SolarPanel
+      "AI-assisted detection of anomalies, faults and abnormal behavior in energy systems.",
+    icon: ShieldCheck
   },
   {
-    title: "Industrial Energy Management",
+    title: "Load Forecasting",
     description:
-      "Energy performance reviews and reporting for industrial operations, commercial clusters and high-demand facilities.",
-    icon: Factory
+      "Forecast demand and consumption patterns to improve planning, cost control and reliability.",
+    icon: LineChart
   },
   {
-    title: "Cloud Platform Roadmap",
+    title: "AI-Powered Optimization",
     description:
-      "A future-ready foundation for dashboards, IoT monitoring, connected assets and scalable energy management tools.",
-    icon: Cloud
+      "Optimization models that improve energy use, reduce cost and support better infrastructure decisions.",
+    icon: BrainCircuit
   },
   {
-    title: "Predictive Maintenance Readiness",
+    title: "Intelligent Reporting",
     description:
-      "Data structures and monitoring practices that prepare sites for automated fault detection and predictive maintenance.",
-    icon: Database
+      "Automated insights, compliance reports and stakeholder dashboards for executive decision-making.",
+    icon: ClipboardCheck
   }
 ];
 
 export const monitoringFeatures = [
   {
-    title: "Real-Time Energy Visibility",
+    title: "Energy Score",
     description:
-      "Track energy performance, demand behavior, runtime events and source availability across connected infrastructure.",
-    icon: Activity
+      "Measure overall energy efficiency and operational performance across sites, sources and critical assets.",
+    icon: Gauge
   },
   {
-    title: "Generator & Fuel Analytics",
+    title: "Infrastructure Maturity",
     description:
-      "Measure runtime, consumption patterns, abnormal fuel variance and utilization against operational requirements.",
-    icon: Fuel
+      "Evaluate infrastructure readiness, reliability, resilience and future monitoring requirements.",
+    icon: Building2
   },
   {
-    title: "Operational Reporting",
+    title: "Reliability Index",
     description:
-      "Convert site activity, incidents and performance patterns into board-ready operational reports.",
-    icon: ClipboardCheck
+      "Track downtime exposure, recurring risks, asset condition and reliability improvement progress.",
+    icon: ShieldCheck
   },
   {
-    title: "Performance Dashboards",
+    title: "Optimization Potential",
     description:
-      "Create executive and facility-level dashboards for uptime, cost, energy usage, asset health and improvement plans.",
-    icon: LineChart
+      "Identify hidden cost, energy waste, performance gaps and AI-powered optimization opportunities.",
+    icon: TrendingDown
   }
 ];
 
@@ -276,81 +312,169 @@ export const hybridSystems = [
     title: "Load & Storage Feasibility",
     description:
       "Review load profiles, critical demand, battery assumptions and operational constraints before capital decisions.",
-    icon: BatteryCharging
+    icon: PlugZap
   }
 ];
 
 export const processSteps = [
   {
     step: "01",
-    title: "Assess Infrastructure",
+    title: "Discover",
     description:
-      "Review energy sources, generator performance, metering gaps, cost structure, reliability history and operational risk."
+      "Review energy sources, infrastructure assets, utility consumption and operational processes."
   },
   {
     step: "02",
-    title: "Instrument & Measure",
+    title: "Analyze",
     description:
-      "Define the monitoring approach, data points, reporting cadence and infrastructure visibility required for decisions."
+      "Measure energy performance, consumption trends, infrastructure health and operational efficiency."
   },
   {
     step: "03",
-    title: "Analyze Performance",
+    title: "Identify",
     description:
-      "Turn runtime, fuel, grid, maintenance and load data into insight on cost, reliability and improvement potential."
+      "Surface hidden costs, reliability risks, asset issues and optimization opportunities."
   },
   {
     step: "04",
-    title: "Optimize & Roadmap",
+    title: "Recommend",
     description:
-      "Recommend operating improvements, monitoring upgrades, renewable pathways and future platform integration steps."
+      "Deliver improvement roadmaps, technology recommendations, cost reduction strategies and operational improvements."
+  }
+];
+
+export const assessmentWorkflow = [
+  {
+    step: "01",
+    title: "Discover",
+    description:
+      "Review energy sources, infrastructure assets, utility consumption and operational processes.",
+    icon: SearchCheck
+  },
+  {
+    step: "02",
+    title: "Analyze",
+    description:
+      "Analyze energy performance, consumption trends, infrastructure health and operational efficiency.",
+    icon: BarChart3
+  },
+  {
+    step: "03",
+    title: "Identify",
+    description:
+      "Determine hidden costs, reliability risks, asset issues and optimization opportunities.",
+    icon: ShieldCheck
+  },
+  {
+    step: "04",
+    title: "Recommend",
+    description:
+      "Deliver improvement roadmaps, technology recommendations, cost reduction strategies and operational improvements.",
+    icon: Target
+  },
+  {
+    step: "05",
+    title: "Monitor",
+    description:
+      "Track performance KPIs, improvement progress, operational outcomes and infrastructure reliability.",
+    icon: LineChart
+  }
+];
+
+export const assessmentOutputs = [
+  {
+    title: "Energy Performance Score",
+    description: "Measures overall energy efficiency and performance.",
+    icon: Gauge
+  },
+  {
+    title: "Infrastructure Maturity Score",
+    description: "Evaluates readiness, reliability and resilience.",
+    icon: Building2
+  },
+  {
+    title: "Operational Risk Score",
+    description: "Identifies reliability vulnerabilities and operating risk.",
+    icon: ShieldCheck
+  },
+  {
+    title: "Optimization Roadmap",
+    description:
+      "Prioritized actions to improve efficiency, reduce cost and enhance performance.",
+    icon: Waypoints
   }
 ];
 
 export const whyChoose = [
   {
-    title: "Visibility",
+    title: "Focused Expertise",
     description:
-      "Gain real-time insight into energy performance, infrastructure health and operational efficiency.",
-    icon: Gauge
+      "Specialized in energy intelligence and infrastructure optimization for critical facilities and operations.",
+    icon: Target
   },
   {
-    title: "Reliability",
+    title: "Data-Driven Intelligence",
     description:
-      "Reduce downtime exposure and improve energy system reliability through proactive monitoring and optimization.",
+      "Turn complex infrastructure data into clear insights that drive better decisions and real results.",
+    icon: BrainCircuit
+  },
+  {
+    title: "Measurable Impact",
+    description:
+      "Solutions are designed for measurable outcomes: lower costs, higher reliability and improved efficiency.",
+    icon: ChartNoAxesCombined
+  },
+  {
+    title: "Reliability & Risk Focus",
+    description:
+      "Build resilient systems, reduce operational risks and support business continuity.",
     icon: ShieldCheck
   },
   {
-    title: "Intelligence",
+    title: "Client-Centric Partnership",
     description:
-      "Transform energy data into actionable business decisions using analytics and future AI-driven insights.",
-    icon: ChartNoAxesCombined
+      "Work as an extension of your team with a long-term partnership mindset.",
+    icon: Landmark
+  },
+  {
+    title: "Technology Agnostic",
+    description:
+      "Recommend the right technology for your needs, not the technology we want to sell.",
+    icon: Settings2
   }
+];
+
+export const differentiators = [
+  "Holistic approach across energy, infrastructure, operations and people",
+  "Proprietary Energy Intelligence Assessment framework",
+  "Experienced technical and operational team",
+  "End-to-end capability from assessment to continuous optimization",
+  "Enterprise-grade standards for security, compliance and governance"
 ];
 
 export const maintenanceStrategy = [
   {
-    title: "Runtime Signals",
+    title: "Predictive Maintenance",
     description:
-      "Use actual generator runtime and energy behavior to understand stress, utilization and service requirements.",
+      "Predict equipment failures before they happen and reduce unplanned downtime.",
     icon: TimerReset
   },
   {
-    title: "Condition Indicators",
+    title: "Anomaly Detection",
     description:
-      "Track operating hours, load stress, recurring faults and abnormal consumption patterns before issues escalate.",
-    icon: Settings2
+      "Detect abnormal energy use and equipment behavior in real time.",
+    icon: Activity
   },
   {
-    title: "Evidence Reports",
+    title: "Asset Performance",
     description:
-      "Give facility teams, estate boards and executives clear proof of performance, cost and improvement actions.",
+      "Monitor asset health and performance for extended lifecycle and stronger reliability.",
     icon: CheckCircle2
   },
   {
-    title: "Optimization Loop",
+    title: "Automated Workflows",
     description:
-      "Use measured trends to refine energy efficiency, reliability planning, renewable integration and capital decisions.",
+      "Prepare energy operations for alerts, recommendations and automated action tracking.",
     icon: Workflow
   }
 ];
@@ -358,74 +482,86 @@ export const maintenanceStrategy = [
 export const assessmentAreas = [
   {
     title: "Energy Sources",
-    description: "Grid supply, generator systems and renewable systems.",
+    description: "Grid supply, generator systems, renewable sources and third-party data.",
     icon: PlugZap
   },
   {
     title: "Operational Performance",
-    description: "Runtime analysis, availability assessment and reliability review.",
+    description: "Runtime, availability, energy performance and consumption trends.",
     icon: Activity
   },
   {
     title: "Cost Analysis",
-    description: "Fuel costs, energy costs and maintenance costs.",
+    description: "Fuel costs, energy costs, hidden losses and operational waste.",
     icon: Fuel
   },
   {
     title: "Risk Assessment",
-    description: "Infrastructure vulnerabilities, operational risks and downtime exposure.",
+    description: "Infrastructure vulnerabilities, reliability risks and downtime exposure.",
     icon: ShieldCheck
   },
   {
     title: "Improvement Opportunities",
     description:
-      "Cost reduction, reliability improvement, renewable integration and digital monitoring opportunities.",
+      "Cost reduction, reliability improvement, smart monitoring and AI optimization opportunities.",
     icon: TrendingDown
   }
 ];
 
 export const roadmapPhases = [
   {
-    phase: "Phase 1",
-    title: "Energy Intelligence",
-    status: "Current Focus",
+    phase: "Phase 01",
+    title: "Visibility",
+    status: "Current",
     description:
-      "Consulting-led energy intelligence services that create visibility before platform scale.",
+      "Create measurable energy and infrastructure visibility through assessments, reporting and analytics.",
     items: [
       "Energy Assessments",
-      "Infrastructure Reviews",
-      "Operational Analytics",
-      "Energy Reporting"
+      "Infrastructure Monitoring",
+      "Performance Reporting",
+      "Infrastructure Analytics"
     ],
-    icon: SearchCheck
+    icon: Eye
   },
   {
-    phase: "Phase 2",
-    title: "Connected Infrastructure",
+    phase: "Phase 02",
+    title: "Intelligence",
     status: "Upcoming",
     description:
-      "Remote monitoring and cloud-connected tools for facility teams and infrastructure operators.",
+      "Deploy automated dashboards, real-time monitoring and asset performance tracking.",
     items: [
-      "Remote Monitoring Platform",
-      "Client Dashboards",
-      "IoT-enabled Monitoring",
-      "Operational Visibility Tools"
+      "Automated Dashboards",
+      "Real-Time Monitoring",
+      "Asset Performance Tracking",
+      "Infrastructure Insights"
     ],
-    icon: Cloud
+    icon: BrainCircuit
   },
   {
-    phase: "Phase 3",
-    title: "Intelligent Infrastructure",
-    status: "Future Vision",
+    phase: "Phase 03",
+    title: "Predictive Operations",
+    status: "Future",
     description:
-      "AI-enabled infrastructure management built on measured site data and engineering context.",
+      "Use predictive maintenance, fault detection and load forecasting to reduce downtime and risk.",
     items: [
       "Predictive Maintenance",
-      "Automated Fault Detection",
-      "Energy Demand Forecasting",
+      "Fault Detection",
       "Load Forecasting",
-      "AI-driven Infrastructure Optimization",
-      "Intelligent Asset Management"
+      "Asset Health Monitoring"
+    ],
+    icon: Activity
+  },
+  {
+    phase: "Phase 04",
+    title: "Autonomous Intelligence",
+    status: "Vision",
+    description:
+      "Advance toward AI recommendations, automated optimization, digital twins and decision support.",
+    items: [
+      "AI Recommendations",
+      "Automated Optimization",
+      "Infrastructure Digital Twins",
+      "Intelligent Decision Support"
     ],
     icon: CircuitBoard
   }
@@ -433,28 +569,164 @@ export const roadmapPhases = [
 
 export const clientSegments = [
   {
-    title: "Estates",
-    description: "Private communities, managed estates and developer-led communities.",
-    icon: Landmark
-  },
-  {
     title: "Commercial Facilities",
-    description: "Hotels, retail centers, healthcare facilities and office portfolios.",
+    description: "Office towers, mixed-use developments, business parks and shopping centres.",
     icon: Building2
   },
   {
+    title: "Residential Estates",
+    description: "Gated communities, apartments, smart estates and property developers.",
+    icon: Landmark
+  },
+  {
     title: "Industrial Operations",
-    description: "Industrial sites, commercial clusters and high-demand operations.",
+    description: "Manufacturing plants, processing facilities, industrial clusters and logistics hubs.",
     icon: Factory
   },
   {
-    title: "Infrastructure Operators",
-    description: "Facility managers and operators responsible for reliability and cost control.",
+    title: "Public Infrastructure",
+    description: "Hospitals, universities, government facilities and utility environments.",
+    icon: ShieldCheck
+  },
+  {
+    title: "Hospitality & Hotels",
+    description: "Comfort, efficiency and reliability for guest-facing operations.",
+    icon: Building2
+  },
+  {
+    title: "Retail & Shopping Centres",
+    description: "Optimized energy visibility for retail operations and tenant-heavy facilities.",
+    icon: ClipboardCheck
+  }
+];
+
+export const industryChallenges = [
+  "Rising energy costs",
+  "Lack of visibility",
+  "Equipment failures",
+  "Poor energy performance",
+  "Reactive maintenance",
+  "Compliance reporting"
+];
+
+export const industryOutcomes = [
+  "10-30% energy cost reduction",
+  "20-40% reduction in downtime",
+  "15-25% operational efficiency gains",
+  "100% real-time visibility"
+];
+
+export const platformInputs = [
+  "IoT Devices",
+  "SCADA / EMS",
+  "Third Party Data",
+  "Manual Inputs"
+];
+
+export const platformPipeline = [
+  "Ingest",
+  "Store",
+  "Process",
+  "Analyze",
+  "Visualize"
+];
+
+export const platformBenefits = [
+  {
+    title: "Scalable & Elastic",
+    description: "AWS cloud scales with infrastructure and data growth.",
+    icon: Cloud
+  },
+  {
+    title: "Secure & Reliable",
+    description: "Enterprise-grade security, high availability and disaster recovery.",
+    icon: LockKeyhole
+  },
+  {
+    title: "AI-Powered Insights",
+    description: "AI models uncover patterns, predict issues and optimize performance.",
+    icon: BrainCircuit
+  },
+  {
+    title: "Real-Time Intelligence",
+    description: "Process and analyze data in real time for faster decisions.",
+    icon: TimerReset
+  },
+  {
+    title: "Cost Optimized",
+    description: "Use cloud cost optimization best practices as the platform scales.",
+    icon: TrendingDown
+  }
+];
+
+export const platformUseCases = [
+  {
+    title: "Energy Forecasting",
+    description: "Forecast consumption and demand for better planning.",
+    icon: LineChart
+  },
+  {
+    title: "Anomaly Detection",
+    description: "Detect abnormal usage and equipment behavior in real time.",
+    icon: ShieldCheck
+  },
+  {
+    title: "Predictive Maintenance",
+    description: "Predict equipment failures before they happen.",
     icon: Wrench
   },
   {
-    title: "Smart Energy Programs",
-    description: "Organizations planning dashboards, IoT monitoring and energy platforms.",
-    icon: Zap
+    title: "Load Optimization",
+    description: "Optimize load distribution and reduce energy wastage.",
+    icon: Gauge
+  },
+  {
+    title: "Asset Performance",
+    description: "Monitor asset health and performance for extended lifecycle.",
+    icon: Factory
+  },
+  {
+    title: "Intelligent Reporting",
+    description: "Automated reports and insights for stakeholders.",
+    icon: ClipboardCheck
+  }
+];
+
+export const awsServices = [
+  "Amazon S3",
+  "AWS IoT Core",
+  "Amazon Kinesis",
+  "AWS Lambda",
+  "Amazon Redshift",
+  "Amazon QuickSight",
+  "Amazon SageMaker",
+  "Amazon Bedrock"
+];
+
+export const platformArchitecture = [
+  {
+    title: "AWS Cloud Foundation",
+    description: "VPC, IAM, security, monitoring and cloud governance.",
+    icon: Cloud
+  },
+  {
+    title: "Data Ingestion",
+    description: "IoT, meters, sensors, BMS, PLCs, APIs and manual operating inputs.",
+    icon: Database
+  },
+  {
+    title: "Analytics Layer",
+    description: "Data lake, processing, infrastructure analytics and performance modeling.",
+    icon: Server
+  },
+  {
+    title: "AI / ML Layer",
+    description: "Forecasting, anomaly detection, recommendations and generative AI workflows.",
+    icon: BrainCircuit
+  },
+  {
+    title: "Actionable Intelligence",
+    description: "Alerts, reports, recommendations, dashboards and automated workflows.",
+    icon: Workflow
   }
 ];

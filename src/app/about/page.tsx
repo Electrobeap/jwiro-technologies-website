@@ -11,7 +11,7 @@ import { clientSegments, companyPositioning, siteConfig } from "@/lib/data";
 export const metadata: Metadata = {
   title: "About Jirow Technologies | Energy Intelligence Company",
   description:
-    "Jirow Technologies Limited is an energy intelligence and infrastructure technology company focused on monitoring, analytics, optimization and smarter infrastructure decisions.",
+    "Jirow Technologies Limited is an Energy Intelligence and Infrastructure Analytics company helping organizations improve energy performance, reliability and operational efficiency.",
   alternates: {
     canonical: "/about"
   }
@@ -29,7 +29,7 @@ export default function AboutPage() {
           primaryLabel="Explore Services"
           secondaryHref="/technology-roadmap"
           secondaryLabel="View Roadmap"
-          title="An energy intelligence and infrastructure technology company for modern operations."
+          title="Energy Intelligence and Infrastructure Analytics for smarter operations."
         >
           <p className="text-sm font-semibold uppercase text-gold-200">
             {siteConfig.location}
@@ -47,23 +47,23 @@ export default function AboutPage() {
                   Company Profile
                 </p>
                 <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-4xl">
-                  Improving how energy systems are monitored, managed and
-                  optimized.
+                  Transforming infrastructure data into actionable insight.
                 </h2>
               </div>
 
               <div className={enterprisePanel("p-6 sm:p-7")}>
                 <p className="leading-8 text-steel-300">
-                  Jirow Technologies Limited works with estates, commercial
-                  facilities, industrial operations and infrastructure operators
-                  to provide operational visibility, performance analytics and
-                  energy optimization solutions.
+                  Jirow Technologies Limited helps estates, commercial
+                  facilities and industrial operations improve energy
+                  performance, infrastructure reliability and operational
+                  efficiency through monitoring, analytics and intelligent
+                  digital solutions.
                 </p>
                 <p className="mt-5 leading-8 text-steel-300">
-                  The long-term vision is to build intelligent infrastructure
-                  platforms that combine engineering expertise, operational
-                  data, cloud technologies and artificial intelligence to create
-                  more reliable and efficient energy systems across Africa.
+                  The long-term vision is to build Africa&apos;s leading Energy
+                  Intelligence platform for smart infrastructure, combining
+                  engineering expertise, operational data, AWS cloud
+                  technologies and artificial intelligence.
                 </p>
               </div>
             </div>

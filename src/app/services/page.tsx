@@ -11,7 +11,7 @@ import { serviceDetails } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Services | Jirow Technologies Energy Intelligence",
   description:
-    "Energy Intelligence Assessment, energy monitoring, analytics, infrastructure optimization and energy transition advisory for estates, facilities and industrial operations.",
+    "Energy Intelligence Assessments, Infrastructure Analytics, Energy Monitoring, Smart Infrastructure Visibility and AI-Powered Energy Optimization for estates, facilities and industrial operations.",
   alternates: {
     canonical: "/services"
   }
@@ -23,13 +23,13 @@ export default function ServicesPage() {
       <Navbar />
       <main className="overflow-hidden">
         <PageHero
-          description="Jirow Technologies helps organizations understand, monitor and improve energy infrastructure through assessments, analytics, optimization and transition advisory."
+          description="Jirow Technologies helps organizations monitor performance, optimize operations and make smarter data-driven decisions through Energy Intelligence, Infrastructure Analytics and AI-powered optimization."
           eyebrow="Services"
           primaryHref="/energy-intelligence-assessment"
           primaryLabel="Request an Assessment"
           secondaryHref="/#contact"
           secondaryLabel="Schedule a Consultation"
-          title="Energy intelligence services for infrastructure decisions that need evidence."
+          title="Energy Intelligence services for smarter infrastructure decisions."
         >
           <div className="grid gap-3 text-sm text-steel-300">
             <p>Built for estates, commercial facilities, hotels and industrial sites.</p>

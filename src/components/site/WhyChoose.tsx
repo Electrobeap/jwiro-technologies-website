@@ -9,12 +9,12 @@ export function WhyChoose() {
   return (
     <SectionShell
       className={enterprise.sectionBand}
-      description="Jirow is built for decision makers who need technical credibility, energy visibility and a clear path toward connected, analytics-led infrastructure management."
+      description="Jirow combines deep domain expertise, advanced technology and a client-first approach to deliver measurable impact."
       eyebrow="Why Choose Jirow"
       id="why-jirow"
-      title="Three outcomes every serious energy operation needs."
+      title="Expertise, intelligence and impact for smarter infrastructure."
     >
-      <div className="grid gap-5 md:grid-cols-3">
+      <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {whyChoose.map((reason, index) => {
           const Icon = reason.icon;
 

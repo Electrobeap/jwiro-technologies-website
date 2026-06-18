@@ -10,9 +10,9 @@ import { Container } from "@/components/ui/Container";
 import { roadmapPhases } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Technology Roadmap | Jirow Energy Intelligence Platform",
+  title: "AWS + AI Platform Roadmap | Jirow Energy Intelligence",
   description:
-    "Jirow Technologies roadmap covers energy intelligence, connected infrastructure, remote monitoring, client dashboards, IoT monitoring, predictive maintenance and AI-driven optimization.",
+    "Jirow Technologies roadmap covers Energy Intelligence, smart infrastructure visibility, AWS cloud architecture, AI-powered insights, predictive maintenance and automated optimization.",
   alternates: {
     canonical: "/technology-roadmap"
   }
@@ -24,18 +24,18 @@ export default function TechnologyRoadmapPage() {
       <Navbar />
       <main className="overflow-hidden">
         <PageHero
-          description="Jirow's long-term technology vision connects engineering expertise, operational data, cloud technologies, IoT monitoring and AI-enabled infrastructure management."
-          eyebrow="Technology Roadmap"
+          description="Jirow's phased roadmap uses AWS cloud architecture, advanced analytics and AI models to build smarter energy intelligence for facilities and infrastructure operators."
+          eyebrow="Future Intelligence Roadmap"
           primaryHref="/energy-intelligence-assessment"
           primaryLabel="Start With Assessment"
           secondaryHref="/#contact"
           secondaryLabel="Discuss Roadmap"
-          title="From energy assessments to connected and intelligent infrastructure."
+          title="Building Africa's Energy Intelligence Platform."
         >
           <p className="text-sm leading-7 text-steel-300">
-            The roadmap is staged deliberately: build insight first, connect
-            infrastructure next, then apply automation and AI where the data is
-            credible enough to support operational decisions.
+            The roadmap is staged deliberately: visibility first, intelligence
+            next, predictive operations after that, and autonomous intelligence
+            when the data foundation can support automated recommendations.
           </p>
         </PageHero>
 
@@ -48,14 +48,14 @@ export default function TechnologyRoadmapPage() {
                   Platform Logic
                 </p>
                 <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-4xl">
-                  Intelligent infrastructure starts with trusted operating data.
+                  AI-powered infrastructure starts with trusted operating data.
                 </h2>
                 <p className="mt-5 leading-8 text-steel-300">
                   Jirow&apos;s approach avoids superficial dashboards. The roadmap
                   begins with assessments and reporting, then advances toward
-                  connected monitoring, client dashboards, predictive
-                  maintenance and AI-driven optimization as data quality
-                  matures.
+                  AWS-backed data ingestion, real-time monitoring, predictive
+                  maintenance, fault detection and automated optimization as
+                  data quality matures.
                 </p>
               </div>
             </div>
@@ -69,11 +69,11 @@ export default function TechnologyRoadmapPage() {
                 Roadmap Phases
               </p>
               <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-5xl">
-                A staged path from advisory intelligence to AI-enabled energy
-                infrastructure.
+                A staged path from infrastructure visibility to autonomous
+                intelligence.
               </h2>
             </div>
-            <div className="grid gap-5 lg:grid-cols-3">
+            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
               {roadmapPhases.map((phase) => {
                 const Icon = phase.icon;
 
