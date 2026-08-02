@@ -6,21 +6,33 @@ import { motion, useReducedMotion } from "motion/react";
 
 import { cn } from "@/lib/utils";
 
+type RevealElement = "div" | "li" | "article" | "section";
+
 type SectionRevealProps = {
   children: ReactNode;
   className?: string;
   delay?: number;
+  as?: RevealElement;
 };
+
+const motionElements = {
+  article: motion.article,
+  div: motion.div,
+  li: motion.li,
+  section: motion.section
+} as const;
 
 export function SectionReveal({
   children,
   className,
-  delay = 0
+  delay = 0,
+  as = "div"
 }: SectionRevealProps) {
   const reduceMotion = useReducedMotion();
+  const Component = motionElements[as];
 
   return (
-    <motion.div
+    <Component
       className={cn(className)}
       initial={reduceMotion ? false : { opacity: 0, y: 28 }}
       transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay }}
@@ -28,6 +40,6 @@ export function SectionReveal({
       whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
     >
       {children}
-    </motion.div>
+    </Component>
   );
 }

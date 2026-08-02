@@ -1,30 +1,28 @@
-import { About } from "@/components/site/About";
-import { AssessmentSection } from "@/components/site/AssessmentSection";
 import { BrochureSection } from "@/components/site/BrochureSection";
 import { ContactSection } from "@/components/site/ContactSection";
 import { CTASection } from "@/components/site/CTASection";
+import { DifferentiationSection } from "@/components/site/DifferentiationSection";
+import { ExecutiveSummary } from "@/components/site/ExecutiveSummary";
+import { FlagshipSection } from "@/components/site/FlagshipSection";
 import { Footer } from "@/components/site/Footer";
 import { Hero } from "@/components/site/Hero";
-import { IndustriesSection } from "@/components/site/IndustriesSection";
-import { Monitoring } from "@/components/site/Monitoring";
+import { MarketsSection } from "@/components/site/MarketsSection";
 import { Navbar } from "@/components/site/Navbar";
-import { PlatformSection } from "@/components/site/PlatformSection";
-import { Solutions } from "@/components/site/Solutions";
-import { WhyChoose } from "@/components/site/WhyChoose";
+import { ProblemSection } from "@/components/site/ProblemSection";
+import { ProductPortfolioSection } from "@/components/site/ProductPortfolioSection";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="overflow-hidden">
+      <main className="overflow-hidden" id="main">
         <Hero />
-        <About />
-        <Solutions />
-        <AssessmentSection />
-        <Monitoring />
-        <IndustriesSection />
-        <PlatformSection />
-        <WhyChoose />
+        <ExecutiveSummary />
+        <ProblemSection />
+        <ProductPortfolioSection />
+        <FlagshipSection />
+        <MarketsSection />
+        <DifferentiationSection />
         <BrochureSection />
         <ContactSection />
         <CTASection />

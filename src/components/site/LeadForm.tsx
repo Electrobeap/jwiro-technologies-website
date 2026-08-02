@@ -8,25 +8,36 @@ import { siteConfig } from "@/lib/data";
 const inputClassName =
   "min-h-12 w-full rounded-sm border border-white/10 bg-ink-950/65 px-4 py-3 text-sm text-cream-50 outline-none transition placeholder:text-steel-500 focus:border-gold-300/70";
 
+const interests = [
+  "NigeriaPowerData access",
+  "Data & API licensing",
+  "Jirow Energy Analytics (in development)",
+  "Research & reporting",
+  "Partnership or investment",
+  "Something else"
+];
+
 export function LeadForm() {
   const [name, setName] = useState("");
-  const [company, setCompany] = useState("");
-  const [project, setProject] = useState("");
+  const [organisation, setOrganisation] = useState("");
+  const [interest, setInterest] = useState(interests[0]);
+  const [message, setMessage] = useState("");
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const message = [
+    const body = [
       siteConfig.whatsappMessage,
       name ? `Name: ${name}` : "",
-      company ? `Organization/Site: ${company}` : "",
-      project ? `Assessment need: ${project}` : ""
+      organisation ? `Organisation: ${organisation}` : "",
+      interest ? `Interest: ${interest}` : "",
+      message ? `Details: ${message}` : ""
     ]
       .filter(Boolean)
       .join("\n");
 
     window.location.assign(
-      `${siteConfig.whatsappBase}?text=${encodeURIComponent(message)}`
+      `${siteConfig.whatsappBase}?text=${encodeURIComponent(body)}`
     );
   }
 
@@ -49,34 +60,55 @@ export function LeadForm() {
       <div>
         <label
           className="text-sm font-semibold text-steel-200"
-          htmlFor="lead-company"
+          htmlFor="lead-organisation"
         >
-          Organization or site
+          Organisation
         </label>
         <input
           className={inputClassName}
-          id="lead-company"
-          name="company"
-          onChange={(event) => setCompany(event.target.value)}
-          placeholder="Estate, facility, hotel, industrial site or company"
+          id="lead-organisation"
+          name="organisation"
+          onChange={(event) => setOrganisation(event.target.value)}
+          placeholder="Regulator, utility, investor, enterprise or institution"
           type="text"
-          value={company}
+          value={organisation}
         />
       </div>
       <div>
         <label
           className="text-sm font-semibold text-steel-200"
-          htmlFor="lead-project"
+          htmlFor="lead-interest"
         >
-          Assessment need
+          What are you interested in?
+        </label>
+        <select
+          className={inputClassName}
+          id="lead-interest"
+          name="interest"
+          onChange={(event) => setInterest(event.target.value)}
+          value={interest}
+        >
+          {interests.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      </div>
+      <div>
+        <label
+          className="text-sm font-semibold text-steel-200"
+          htmlFor="lead-message"
+        >
+          Details
         </label>
         <textarea
           className="min-h-28 w-full resize-none rounded-sm border border-white/10 bg-ink-950/65 px-4 py-3 text-sm leading-7 text-cream-50 outline-none transition placeholder:text-steel-500 focus:border-gold-300/70"
-          id="lead-project"
-          name="project"
-          onChange={(event) => setProject(event.target.value)}
-          placeholder="Tell us about monitoring, generator performance, fuel cost, reliability, energy efficiency or transition planning needs."
-          value={project}
+          id="lead-message"
+          name="message"
+          onChange={(event) => setMessage(event.target.value)}
+          placeholder="Tell us what visibility you need — jurisdiction, entities, sites or reporting obligations."
+          value={message}
         />
       </div>
       <button
@@ -84,8 +116,12 @@ export function LeadForm() {
         type="submit"
       >
         <Send className="h-4 w-4" />
-        Send Assessment Request
+        Send enquiry
       </button>
+      <p className="text-xs leading-6 text-steel-500">
+        Submitting opens WhatsApp with your enquiry pre-filled. You can also
+        email {siteConfig.email} directly.
+      </p>
     </form>
   );
 }

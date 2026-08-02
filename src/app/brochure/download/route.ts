@@ -11,7 +11,7 @@ export async function GET() {
   return new Response(pdf, {
     headers: {
       "Cache-Control": "public, max-age=300, stale-while-revalidate=86400",
-      "Content-Disposition": 'attachment; filename="Jirow-Technologies-Company-Profile.pdf"',
+      "Content-Disposition": 'attachment; filename="Jirow-Corporate-Profile-2026.pdf"',
       "Content-Type": "application/pdf",
       "X-Content-Type-Options": "nosniff"
     }

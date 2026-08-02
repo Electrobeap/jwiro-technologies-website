@@ -15,9 +15,9 @@ import { siteConfig } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 const profileSignals = [
-  "Energy intelligence and infrastructure analytics",
-  "Smart infrastructure visibility and energy monitoring",
-  "AWS + AI roadmap for AI-powered optimization"
+  "The intelligence gap, and why the Electricity Act 2023 made it regulatory",
+  "One architecture, three products — national, facility and decision layers",
+  "Data methodology, platform architecture, security posture and business model"
 ];
 
 function ProfileCover() {
@@ -27,27 +27,29 @@ function ProfileCover() {
       <div className="absolute inset-x-0 top-0 h-1 bg-gold-300" />
       <div className="relative flex h-full flex-col">
         <div className="flex items-center justify-between border-b border-white/10 pb-5">
-          <span className="text-xs font-semibold uppercase text-gold-200">
-            Company Profile
+          <span className="text-xs font-semibold uppercase tracking-[0.14em] text-gold-200">
+            Corporate profile / 2026
           </span>
-          <span className="text-xs text-steel-300">PDF</span>
+          <span className="text-xs text-steel-300">PDF · 18 pages</span>
         </div>
 
         <div className="flex flex-1 flex-col items-center justify-center text-center">
           <BrandLogo
-            className="h-36 sm:h-44"
-            sizes="(min-width: 640px) 170px, 138px"
+            className="h-32 sm:h-40"
+            sizes="(min-width: 640px) 160px, 128px"
           />
           <p className="display-serif mt-6 max-w-md text-2xl font-semibold leading-tight text-cream-50 sm:text-3xl">
-            Energy Intelligence
+            The Intelligence Layer
             <br />
-            for Smarter Infrastructure.
+            for Africa&apos;s Power Systems
           </p>
         </div>
 
         <div className="flex items-center justify-between border-t border-gold-300/35 pt-4 text-xs text-steel-300">
-          <span>Jirow Technologies Limited</span>
-          <span className="text-gold-200">Innovate | Integrate | Elevate</span>
+          <span>{siteConfig.name}</span>
+          <span className="uppercase tracking-[0.12em] text-gold-200">
+            {siteConfig.tagline}
+          </span>
         </div>
       </div>
     </div>
@@ -59,50 +61,51 @@ export function BrochureSection() {
 
   return (
     <section
-      className={cn("relative scroll-mt-28 py-16 sm:py-20 lg:py-24", enterprise.sectionBand)}
-      id="brochure"
+      className={cn("relative scroll-mt-28 py-16 sm:py-20 lg:py-24")}
+      id="profile"
     >
       <Container>
         <div className="grid gap-8 lg:grid-cols-[5fr_7fr] lg:items-center">
           <SectionReveal>
-            <Tag>Company Profile</Tag>
-              <h2 className="mt-5 text-balance text-4xl font-semibold leading-tight text-cream-50 sm:text-5xl">
-              Download the latest Jirow Energy Intelligence company profile.
+            <Tag>Corporate profile 2026</Tag>
+            <h2 className="mt-5 text-balance text-4xl font-semibold leading-tight text-cream-50 sm:text-5xl">
+              The full company profile, in one document.
             </h2>
             <p className="mt-5 max-w-xl text-base leading-8 text-steel-200 sm:text-lg">
-              The profile presents Jirow&apos;s Energy Intelligence Assessment,
-              infrastructure analytics services, industries served, AWS + AI
-              platform roadmap and AI-powered optimization vision.
+              The 2026 corporate profile sets out Jirow&apos;s positioning,
+              product portfolio, data methodology, platform architecture,
+              security posture, markets, business model, roadmap and governance
+              — the same material presented across this site.
             </p>
 
             <div className="mt-8 grid gap-px border border-white/10 bg-white/10">
               {profileSignals.map((signal) => (
                 <div
-                  className="flex items-center gap-4 bg-ink-900/70 px-5 py-4 text-sm text-steel-100"
+                  className="flex items-center gap-4 bg-ink-900/70 px-5 py-4 text-sm leading-6 text-steel-100"
                   key={signal}
                 >
-                  <span className="h-px w-7 bg-gold-300" />
+                  <span className="h-px w-7 shrink-0 bg-gold-300" />
                   {signal}
                 </div>
               ))}
             </div>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <DownloadBrochureButton label="Download Company Profile" />
+              <DownloadBrochureButton label="Download corporate profile" />
               <button
                 className="inline-flex min-h-12 items-center justify-center gap-2 rounded-sm border border-gold-300/45 px-5 py-3 text-sm font-semibold text-cream-50 transition hover:border-gold-300 hover:bg-gold-300/10"
                 onClick={() => setPreviewOpen(true)}
                 type="button"
               >
                 <FileText className="h-4 w-4" />
-                Preview brochure
+                Preview profile
               </button>
             </div>
           </SectionReveal>
 
           <SectionReveal delay={0.06}>
             <button
-              aria-label="Preview Jirow Technologies company profile brochure"
+              aria-label="Preview the Jirow Technologies 2026 corporate profile"
               className="block w-full text-left transition duration-300 hover:-translate-y-1"
               onClick={() => setPreviewOpen(true)}
               type="button"
@@ -125,9 +128,11 @@ export function BrochureSection() {
               <div className="mb-3 flex items-center justify-between gap-4 border-b border-white/10 pb-3">
                 <div>
                   <p className="text-sm font-semibold text-gold-200">
-                    Jirow Technologies Limited
+                    {siteConfig.name}
                   </p>
-                  <p className="mt-1 text-sm text-steel-300">Company Profile</p>
+                  <p className="mt-1 text-sm text-steel-300">
+                    Corporate Profile 2026
+                  </p>
                 </div>
                 <div className="flex gap-2">
                   <ButtonLink
@@ -141,7 +146,7 @@ export function BrochureSection() {
                     Open PDF
                   </ButtonLink>
                   <button
-                    aria-label="Close brochure preview"
+                    aria-label="Close profile preview"
                     className="grid h-11 w-11 place-items-center rounded-sm border border-white/15 text-cream-50 transition hover:border-gold-300/55"
                     onClick={() => setPreviewOpen(false)}
                     type="button"

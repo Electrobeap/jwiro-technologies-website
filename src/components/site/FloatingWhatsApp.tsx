@@ -6,7 +6,7 @@ export function FloatingWhatsApp() {
   return (
     <a
       aria-label="Talk to Jirow Technologies on WhatsApp"
-      className="fixed right-4 top-28 z-[45] inline-flex min-h-12 items-center justify-center gap-2 rounded-sm border border-gold-300 bg-gold-300 px-4 py-3 text-sm font-semibold text-[#101828] shadow-[0_18px_42px_rgba(2,12,30,0.35)] transition hover:bg-gold-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-200 sm:bottom-6 sm:right-6 sm:top-auto"
+      className="fixed bottom-5 right-4 z-[45] inline-flex min-h-12 items-center justify-center gap-2 rounded-sm border border-gold-300 bg-gold-300 px-4 py-3 text-sm font-semibold text-[#101828] shadow-[0_18px_42px_rgba(2,12,30,0.35)] transition hover:bg-gold-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-200 sm:bottom-6 sm:right-6"
       href={siteConfig.whatsappHref}
       rel="noreferrer"
       target="_blank"
