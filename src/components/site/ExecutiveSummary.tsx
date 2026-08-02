@@ -18,7 +18,7 @@ export function ExecutiveSummary() {
     >
       <div className="grid gap-5 lg:grid-cols-[5fr_7fr]">
         <SectionReveal className={enterprisePanel("flex flex-col p-6 sm:p-7")}>
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+          <p className={enterprise.eyebrow}>
             The thesis
           </p>
           <p className="display-serif mt-5 text-2xl leading-snug text-cream-50 sm:text-[1.7rem]">
@@ -38,11 +38,11 @@ export function ExecutiveSummary() {
         <div className="grid gap-4">
           <SectionReveal className={enterprisePanel("overflow-hidden")}>
             <div className="flex items-center justify-between gap-4 border-b border-white/10 px-6 py-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+              <p className={enterprise.eyebrow}>
                 The portfolio at a glance
               </p>
               <Link
-                className="group inline-flex items-center gap-2 text-sm font-semibold text-steel-200 transition hover:text-gold-200"
+                className="group inline-flex items-center gap-2 py-1 text-sm font-semibold text-steel-200 transition hover:text-gold-200"
                 href="/products"
               >
                 All products
@@ -88,7 +88,7 @@ export function ExecutiveSummary() {
             )}
             delay={0.06}
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+            <p className={enterprise.eyebrow}>
               Why the national layer came first
             </p>
             <p className="mt-4 leading-8 text-steel-200">

@@ -5,7 +5,8 @@ notes carried in the Jirow Corporate Profile 2026 PDF. None of them are
 rendered on the website; each is mirrored as a `TODO (corporate profile 2026
 — internal)` comment in the file that would carry the answer.
 
-Status legend: `open` = still outstanding · `resolved` = published on site.
+Status legend: `open` = still outstanding · `partly resolved` = some of it is
+now published · `resolved` = closed, nothing further needed on the site.
 
 ---
 
@@ -28,14 +29,21 @@ Jirow AI Energy Assistant.
 claims as a negative signal — a stated date that is later revised reads better
 than no date at all.
 
-## 3. Named upstream data sources — `open`
+## 3. Named upstream data sources — `partly resolved`
 
 **Profile page:** 08 (Data Methodology)
-**Site location:** `src/app/methodology/page.tsx` (Limits section),
+**Site location:** `/methodology` (Upstream sources), `dataSources` and
 `npdSourceNote` in `src/lib/data.ts`
-**Item:** Name the exact upstream data sources publicly, with any attribution or
-licensing wording those sources require. The current site note attributes NERC,
-NISO and TCN at figure level; confirm this is the full and licensed form.
+
+**Done:** the three upstream publishers named in the profile — NERC, NISO and
+TCN — are now published as a standing "Upstream sources" block on
+`/methodology`, alongside the existing figure-level attribution and retrieval
+timestamps.
+
+**Still open:** confirm the exact attribution or licensing wording each
+publisher requires, and add it if mandated. Also confirm the list is complete —
+if the platform draws on a fourth source, it belongs here.
+
 **Why it matters:** Unattributed data is the most common reason a sophisticated
 reader discounts a platform of this type.
 
@@ -79,12 +87,15 @@ procurement conversation — they are gating items, not optional detail.
 **Item:** Insert named reference customers, pilot institutions or platform usage
 figures as they become citable. Audited or client-attested figures only.
 
-## 8. Pricing tiers, revenue mix, traction — `open` (not for the public site)
+## 8. Pricing tiers, revenue mix, traction — `resolved as deliberate omission`
 
 **Profile page:** 14 (Business Model)
 **Site location:** `src/app/markets/page.tsx` (`#business-model`)
-**Item:** Specifics belong in the investor data room, not the public site. Keep
-the public page structural; prepare an investor-facing version separately.
+
+Decided: the public page stays structural — four revenue lines and the economic
+rationale, no numbers. Pricing, revenue mix and traction belong in the investor
+data room, which is named on `/platform#security` as available on request. No
+website change pending; prepare the investor-facing version separately.
 
 ## 9. Roadmap timeframes — `open`
 

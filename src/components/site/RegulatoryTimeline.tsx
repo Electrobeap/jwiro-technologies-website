@@ -1,3 +1,4 @@
+import { enterprise } from "@/components/site/visual-system";
 import { regulatoryTimeline } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
@@ -7,7 +8,7 @@ import { cn } from "@/lib/utils";
 export function RegulatoryTimeline({ className }: { className?: string }) {
   return (
     <div className={cn("", className)}>
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+      <p className={enterprise.eyebrow}>
         Decentralisation of regulatory oversight
       </p>
       <ol className="relative mt-7 grid gap-6 sm:grid-cols-4 sm:gap-4">

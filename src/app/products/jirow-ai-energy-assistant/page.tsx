@@ -14,16 +14,15 @@ import { DataBadge } from "@/components/ui/DataBadge";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { assistantBoundary, assistantExample, assistantPrinciples } from "@/lib/data";
+import { pageMetadata } from "@/lib/metadata";
 import { cn } from "@/lib/utils";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Jirow AI Energy Assistant | Natural-Language Energy Intelligence",
   description:
     "The Jirow AI Energy Assistant is a natural-language interface to Jirow's platform data — prioritised, sourced answers with provenance badges and timestamps. In development.",
-  alternates: {
-    canonical: "/products/jirow-ai-energy-assistant"
-  }
-};
+  path: "/products/jirow-ai-energy-assistant"
+});
 
 function InteractionPanel() {
   return (
@@ -97,7 +96,7 @@ export default function AiEnergyAssistantPage() {
           <Container>
             <div className="grid gap-6 lg:grid-cols-[6fr_6fr] lg:items-start">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                <p className={enterprise.eyebrow}>
                   The problem it solves
                 </p>
                 <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-4xl">
@@ -110,7 +109,7 @@ export default function AiEnergyAssistantPage() {
                   lead — do not. The assistant closes that gap.
                 </p>
                 <div className="mt-7 rounded-md border border-white/10 bg-ink-950/50 p-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                  <p className={enterprise.eyebrow}>
                     What it is not
                   </p>
                   <p className="mt-4 leading-8 text-steel-200">
@@ -127,7 +126,7 @@ export default function AiEnergyAssistantPage() {
         <section className={enterprise.sectionBand} id="principles">
           <Container className="py-16 sm:py-20 lg:py-24">
             <div className="mb-10 max-w-4xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+              <p className={enterprise.eyebrow}>
                 Design principles
               </p>
               <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-5xl">

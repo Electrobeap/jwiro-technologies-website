@@ -1,3 +1,4 @@
+import { enterprise } from "@/components/site/visual-system";
 import { products, sharedFoundation } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
@@ -14,7 +15,7 @@ const surfaces = [
 export function SharedFoundation({ className }: { className?: string }) {
   return (
     <div className={cn("", className)}>
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+      <p className={enterprise.eyebrow}>
         Shared foundation, differentiated surface
       </p>
 

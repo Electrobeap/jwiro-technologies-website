@@ -1,3 +1,4 @@
+import { AudienceRouter } from "@/components/site/AudienceRouter";
 import { BrochureSection } from "@/components/site/BrochureSection";
 import { ContactSection } from "@/components/site/ContactSection";
 import { CTASection } from "@/components/site/CTASection";
@@ -18,6 +19,7 @@ export default function Home() {
       <main className="overflow-hidden" id="main">
         <Hero />
         <ExecutiveSummary />
+        <AudienceRouter />
         <ProblemSection />
         <ProductPortfolioSection />
         <FlagshipSection />

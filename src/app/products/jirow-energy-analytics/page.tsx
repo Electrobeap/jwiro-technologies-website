@@ -17,16 +17,15 @@ import {
   analyticsSequenceRationale,
   analyticsSupplyMix
 } from "@/lib/data";
+import { pageMetadata } from "@/lib/metadata";
 import { cn } from "@/lib/utils";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Jirow Energy Analytics | Facility Energy Intelligence",
   description:
     "Jirow Energy Analytics is an energy management and analytics platform for commercial facilities, estates, industrial operations and enterprise portfolios — consolidating metering, asset and consumption data and reading it against national grid context. In development.",
-  alternates: {
-    canonical: "/products/jirow-energy-analytics"
-  }
-};
+  path: "/products/jirow-energy-analytics"
+});
 
 function ConceptPanel() {
   return (
@@ -45,7 +44,7 @@ function ConceptPanel() {
         <div className="mt-5 grid gap-px border border-white/10 bg-white/10 sm:grid-cols-3">
           {["Site load", "Blended cost", "Grid context"].map((label) => (
             <div className="bg-[#091F43] px-4 py-4" key={label}>
-              <p className="text-xs font-semibold uppercase tracking-[0.1em] text-steel-400">
+              <p className={enterprise.label}>
                 {label}
               </p>
               <p className="mt-3 font-mono text-lg text-steel-500">— — —</p>
@@ -54,7 +53,7 @@ function ConceptPanel() {
         </div>
 
         <div className={cn("mt-4 p-5", enterprise.inner)}>
-          <p className="text-xs font-semibold uppercase tracking-[0.1em] text-steel-400">
+          <p className={enterprise.label}>
             Supply mix by source
           </p>
           <div className="mt-4 grid gap-3">
@@ -78,7 +77,7 @@ function ConceptPanel() {
         </div>
 
         <div className={cn("mt-4 p-5", enterprise.inner)}>
-          <p className="text-xs font-semibold uppercase tracking-[0.1em] text-steel-400">
+          <p className={enterprise.label}>
             Asset health
           </p>
           <div className="mt-3 grid grid-cols-6 gap-1.5">
@@ -133,7 +132,7 @@ export default function EnergyAnalyticsPage() {
           <Container>
             <div className="grid gap-6 lg:grid-cols-[6fr_6fr] lg:items-start">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                <p className={enterprise.eyebrow}>
                   What it does
                 </p>
                 <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-4xl">
@@ -146,7 +145,7 @@ export default function EnergyAnalyticsPage() {
                   platform already maintains.
                 </p>
                 <div className={cn("my-7 max-w-sm", enterprise.hairline)} />
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                <p className={enterprise.eyebrow}>
                   Why the sequence matters
                 </p>
                 <p className="mt-4 leading-8 text-steel-300">
@@ -162,7 +161,7 @@ export default function EnergyAnalyticsPage() {
         <section className={enterprise.sectionBand} id="capability">
           <Container className="py-16 sm:py-20 lg:py-24">
             <div className="mb-10 max-w-4xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+              <p className={enterprise.eyebrow}>
                 Planned capability
               </p>
               <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-5xl">

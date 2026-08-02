@@ -12,18 +12,18 @@ import { Container } from "@/components/ui/Container";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import {
   conservativeClaimsNote,
+  dataSources,
   methodologyLimits,
   methodologyPipeline
 } from "@/lib/data";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Data Methodology | Jirow Technologies",
   description:
     "How Jirow separates measured signals from analytical estimates: provenance, retrieval timestamps, lineage, and the limits we state openly. The distinction is enforced in the product, not in a disclaimer.",
-  alternates: {
-    canonical: "/methodology"
-  }
-};
+  path: "/methodology"
+});
 
 export default function MethodologyPage() {
   return (
@@ -39,7 +39,7 @@ export default function MethodologyPage() {
           secondaryLabel="Platform architecture"
           title="Measured, modeled, and the line between them"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+          <p className={enterprise.eyebrow}>
             Why this matters commercially
           </p>
           <p className="mt-4 text-sm leading-7 text-steel-300">
@@ -63,7 +63,7 @@ export default function MethodologyPage() {
         <section className={enterprise.sectionBand} id="lineage">
           <Container className="py-16 sm:py-20 lg:py-24">
             <div className="mb-10 max-w-4xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+              <p className={enterprise.eyebrow}>
                 From source to published figure
               </p>
               <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-5xl">
@@ -73,6 +73,44 @@ export default function MethodologyPage() {
             </div>
 
             <ProcessFlow steps={methodologyPipeline} />
+
+            <SectionReveal className="mt-10">
+              <h3 className={enterprise.eyebrow}>
+                Upstream sources
+              </h3>
+              <p className="mt-4 max-w-3xl leading-8 text-steel-300">
+                Measured figures on NigeriaPowerData are drawn from the public
+                reporting of the market&apos;s own institutions. Every figure
+                carries its originating source and retrieval time at the point
+                of use; these are the standing publications behind them.
+              </p>
+              <dl className="mt-6 grid gap-4 md:grid-cols-3">
+                {dataSources.map((source) => (
+                  <div
+                    className="rounded-md border border-white/10 bg-[#0E2A5A]/70 p-5"
+                    key={source.name}
+                  >
+                    <dt>
+                      <span className="text-lg font-semibold text-cream-50">
+                        {source.name}
+                      </span>
+                      <span className="mt-1 block text-xs leading-6 text-steel-400">
+                        {source.full}
+                      </span>
+                    </dt>
+                    <dd className="mt-4 border-t border-white/10 pt-4 text-sm leading-7 text-steel-300">
+                      {source.provides}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+              {/*
+                TODO (corporate profile 2026 — internal): confirm the exact
+                attribution or licensing wording each of these publishers
+                requires, and add it here if mandated.
+                docs/internal/corporate-profile-open-items.md
+              */}
+            </SectionReveal>
           </Container>
         </section>
 
@@ -80,7 +118,7 @@ export default function MethodologyPage() {
           <Container>
             <div className="grid gap-6 lg:grid-cols-[7fr_5fr] lg:items-start">
               <SectionReveal className={enterprisePanel("p-6 sm:p-8")}>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                <p className={enterprise.eyebrow}>
                   Limits we state openly
                 </p>
                 <ul className="mt-6 grid gap-3">
@@ -91,7 +129,7 @@ export default function MethodologyPage() {
                     >
                       <Minus
                         aria-hidden
-                        className="mt-2 h-4 w-4 shrink-0 text-gold-300/70"
+                        className="mt-2 h-4 w-4 shrink-0 text-gold-300"
                       />
                       {limit}
                     </li>
@@ -101,7 +139,7 @@ export default function MethodologyPage() {
 
               <div className="grid gap-4">
                 <SectionReveal className="rounded-md border border-gold-300/25 bg-gold-300/[0.05] p-6 sm:p-7">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                  <p className={enterprise.eyebrow}>
                     Stating limits is a commercial asset
                   </p>
                   <p className="mt-4 leading-8 text-steel-200">
@@ -115,21 +153,13 @@ export default function MethodologyPage() {
                   className={enterprisePanel("p-6 sm:p-7")}
                   delay={0.06}
                 >
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                  <p className={enterprise.eyebrow}>
                     On claims
                   </p>
                   <p className="mt-4 leading-8 text-steel-300">
                     {conservativeClaimsNote}
                   </p>
                 </SectionReveal>
-                {/*
-                  TODO (corporate profile 2026 — internal): name the exact
-                  upstream data sources publicly, with any attribution or
-                  licensing wording those sources require. Unattributed data is
-                  the most common reason a sophisticated reader discounts a
-                  platform of this type.
-                  docs/internal/corporate-profile-open-items.md
-                */}
               </div>
             </div>
           </Container>

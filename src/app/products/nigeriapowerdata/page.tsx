@@ -27,16 +27,15 @@ import {
   npdSourceNote,
   siteConfig
 } from "@/lib/data";
+import { pageMetadata } from "@/lib/metadata";
 import { cn } from "@/lib/utils";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "NigeriaPowerData | Live National Electricity Intelligence",
   description:
     "NigeriaPowerData is Jirow's live energy intelligence platform for the Nigerian electricity market — national generation, DisCo allocation, entity performance and state-level analytics, each figure attributed and labelled measured or modeled.",
-  alternates: {
-    canonical: "/products/nigeriapowerdata"
-  }
-};
+  path: "/products/nigeriapowerdata"
+});
 
 export default function NigeriaPowerDataPage() {
   return (
@@ -54,7 +53,7 @@ export default function NigeriaPowerDataPage() {
         >
           <StatusBadge label="Live · in operation" status="live" />
           <a
-            className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-steel-200 transition hover:text-gold-200"
+            className="mt-4 inline-flex items-center gap-2 py-1 text-sm font-semibold text-steel-200 transition hover:text-gold-200"
             href={siteConfig.platformHref}
             rel="noreferrer"
             target="_blank"
@@ -76,7 +75,7 @@ export default function NigeriaPowerDataPage() {
                 <div className="grid gap-px border border-white/10 bg-white/10 sm:grid-cols-2 xl:grid-cols-4">
                   {npdHeadlineMetrics.map((metric) => (
                     <div className="bg-[#091F43] px-5 py-5" key={metric.label}>
-                      <p className="text-xs font-semibold uppercase tracking-[0.12em] text-steel-400">
+                      <p className={enterprise.label}>
                         {metric.label}
                       </p>
                       <p className="mt-3 font-mono text-2xl font-semibold text-cream-50">
@@ -126,7 +125,7 @@ export default function NigeriaPowerDataPage() {
 
               <div className="grid gap-4">
                 <SectionReveal className={enterprisePanel("p-6 sm:p-7")}>
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                  <p className={enterprise.eyebrow}>
                     The market it tracks
                   </p>
                   <div className="mt-6 grid gap-px border border-white/10 bg-white/10 sm:grid-cols-2">
@@ -147,7 +146,7 @@ export default function NigeriaPowerDataPage() {
                   className={enterprisePanel("p-6 sm:p-7")}
                   delay={0.06}
                 >
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                  <p className={enterprise.eyebrow}>
                     How to read the platform
                   </p>
                   <p className="mt-4 text-sm leading-7 text-steel-300">
@@ -176,7 +175,7 @@ export default function NigeriaPowerDataPage() {
         <section className={enterprise.sectionBand} id="modules">
           <Container className="py-16 sm:py-20 lg:py-24">
             <div className="mb-10 max-w-4xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+              <p className={enterprise.eyebrow}>
                 The six modules
               </p>
               <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-5xl">
@@ -215,14 +214,14 @@ export default function NigeriaPowerDataPage() {
           <Container>
             <div className="grid gap-6 lg:grid-cols-[4fr_8fr] lg:items-start">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                <p className={enterprise.eyebrow}>
                   Entity-level analysis
                 </p>
                 <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-4xl">
                   Down to the plant, the DisCo and the state.
                 </h2>
                 <Link
-                  className="group mt-6 inline-flex items-center gap-2 text-sm font-semibold text-gold-200"
+                  className="group mt-6 inline-flex items-center gap-2 py-1 text-sm font-semibold text-gold-200"
                   href="/methodology"
                 >
                   How indicators are calculated

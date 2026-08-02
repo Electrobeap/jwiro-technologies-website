@@ -23,16 +23,15 @@ import {
   procurementReadiness,
   securityPosture
 } from "@/lib/data";
+import { pageMetadata } from "@/lib/metadata";
 import { cn } from "@/lib/utils";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Platform Architecture, Security & Compliance | Jirow Technologies",
   description:
     "All three Jirow products run on a shared cloud-native architecture organised around five stages: ingestion, storage, processing, analysis and delivery — with encryption, access control, audit logging and lineage at every stage.",
-  alternates: {
-    canonical: "/platform"
-  }
-};
+  path: "/platform"
+});
 
 const statusStyles: Record<string, string> = {
   Operating: "border-gold-300/45 bg-gold-300/10 text-gold-100",
@@ -54,7 +53,7 @@ export default function PlatformPage() {
           secondaryLabel="Security & compliance"
           title="How the platform is built"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+          <p className={enterprise.eyebrow}>
             Inputs
           </p>
           <ul className="mt-4 grid gap-2">
@@ -72,7 +71,7 @@ export default function PlatformPage() {
         <section className="py-16 sm:py-20 lg:py-24" id="stages">
           <Container>
             <div className="mb-10 max-w-4xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+              <p className={enterprise.eyebrow}>
                 Five stages
               </p>
               <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-5xl">
@@ -97,7 +96,7 @@ export default function PlatformPage() {
                       <span className={enterprise.iconAmber}>
                         <Icon className="h-5 w-5" />
                       </span>
-                      <span className="font-mono text-2xl font-semibold text-gold-300/70">
+                      <span className="font-mono text-2xl font-semibold text-gold-200/70">
                         {stage.number}
                       </span>
                     </div>
@@ -119,7 +118,7 @@ export default function PlatformPage() {
 
             <SectionReveal className="mt-6 grid gap-6 lg:grid-cols-[7fr_5fr] lg:items-start">
               <div className={enterprisePanel("p-6 sm:p-7")}>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                <p className={enterprise.eyebrow}>
                   Operating principles
                 </p>
                 <ul className="mt-6 grid gap-3">
@@ -130,7 +129,7 @@ export default function PlatformPage() {
                     >
                       <Check
                         aria-hidden
-                        className="mt-1.5 h-4 w-4 shrink-0 text-gold-300/80"
+                        className="mt-1.5 h-4 w-4 shrink-0 text-gold-300"
                       />
                       {principle}
                     </li>
@@ -148,7 +147,7 @@ export default function PlatformPage() {
         <section className={enterprise.sectionBand} id="security">
           <Container className="py-16 sm:py-20 lg:py-24">
             <div className="mb-10 max-w-4xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+              <p className={enterprise.eyebrow}>
                 Security, compliance & governance
               </p>
               <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-5xl">
@@ -189,7 +188,7 @@ export default function PlatformPage() {
 
             <div className="mt-6 grid gap-5 lg:grid-cols-[7fr_5fr] lg:items-start">
               <SectionReveal className={enterprisePanel("p-6 sm:p-7")}>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                <p className={enterprise.eyebrow}>
                   Data protection
                 </p>
                 <p className="mt-4 leading-8 text-steel-300">
@@ -198,7 +197,7 @@ export default function PlatformPage() {
 
                 <div className={cn("my-7", enterprise.hairline)} />
 
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                <p className={enterprise.eyebrow}>
                   Procurement readiness
                 </p>
                 <dl className="mt-5 grid gap-3">
@@ -238,7 +237,7 @@ export default function PlatformPage() {
 
               <div className="grid gap-4">
                 <SectionReveal className="rounded-md border border-gold-300/25 bg-gold-300/[0.05] p-6 sm:p-7">
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                  <p className={enterprise.eyebrow}>
                     Our position
                   </p>
                   <p className="mt-4 leading-8 text-steel-200">
@@ -250,7 +249,7 @@ export default function PlatformPage() {
                   className={enterprisePanel("p-6 sm:p-7")}
                   delay={0.06}
                 >
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                  <p className={enterprise.eyebrow}>
                     Companion documents
                   </p>
                   <p className="mt-4 text-sm leading-7 text-steel-300">

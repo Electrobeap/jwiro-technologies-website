@@ -11,11 +11,16 @@
   --color-gold-200: #ccb078;
   --color-gold-300: #b18a47;
   --color-gold-400: #8e6832;
+  /*
+   * Muted text ladder. Each step is verified for WCAG AA (4.5:1) against the
+   * darkest surface it is used on (#0E2A5A panels): 300 = 6.85, 400 = 5.48,
+   * 500 = 4.58. Do not darken these without re-checking contrast.
+   */
   --color-steel-100: #f8f8f6;
   --color-steel-200: #d9dde5;
   --color-steel-300: #acb6c6;
-  --color-steel-400: #7c899e;
-  --color-steel-500: #65738a;
+  --color-steel-400: #95a3b8;
+  --color-steel-500: #8894aa;
   --color-cream-50: #f8f8f6;
   --color-cream-100: #e9e5db;
   --color-technical-300: #82adbf;

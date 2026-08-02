@@ -2,12 +2,13 @@ import { ArchitectureStack } from "@/components/site/ArchitectureStack";
 import { ProductCards } from "@/components/site/ProductCards";
 import { SectionShell } from "@/components/site/SectionShell";
 import { SectionReveal } from "@/components/ui/SectionReveal";
+import { enterprise } from "@/components/site/visual-system";
 import { sequenceRationale } from "@/lib/data";
 
 export function ProductPortfolioSection() {
   return (
     <SectionShell
-      description="Jirow's products share a single technical foundation: a governed data pipeline, an analytics layer and an AI layer. What differs is the altitude at which each operates."
+      description="Three products sit on one governed foundation, each observing the power system at a different altitude — the country, the facility, and the decision itself."
       eyebrow="Product portfolio"
       id="products"
       title="One architecture, three products"
@@ -16,14 +17,14 @@ export function ProductPortfolioSection() {
 
       <div className="mt-14 grid gap-6 lg:grid-cols-[7fr_5fr] lg:items-start">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+          <p className={enterprise.eyebrow}>
             The three-layer architecture
           </p>
           <ArchitectureStack className="mt-6" />
         </div>
 
         <SectionReveal className="rounded-md border border-white/10 bg-[#0E2A5A]/80 p-6 sm:p-7">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+          <p className={enterprise.eyebrow}>
             Why this sequence
           </p>
           <p className="mt-4 leading-8 text-steel-300">{sequenceRationale}</p>

@@ -40,7 +40,7 @@ export function DifferentiationSection() {
           className="rounded-md border border-gold-300/30 bg-gold-300/[0.06] p-6 sm:p-7"
           delay={0.25}
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+          <p className={enterprise.eyebrow}>
             The test
           </p>
           <p className="display-serif mt-4 text-xl leading-snug text-cream-50">

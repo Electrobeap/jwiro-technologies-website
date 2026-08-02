@@ -58,11 +58,11 @@ export function BuyerGroups({ className, compact = false }: BuyerGroupsProps) {
             </p>
 
             <div className="mt-6 border-t border-white/10 pt-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-steel-500">
+              <p className={enterprise.label}>
                 Entry product
               </p>
               <Link
-                className="mt-2 inline-block text-sm font-semibold text-gold-200 transition hover:text-gold-100"
+                className="mt-1 inline-block py-1 text-sm font-semibold text-gold-200 transition hover:text-gold-100"
                 href={group.entryHref}
               >
                 {group.entry}

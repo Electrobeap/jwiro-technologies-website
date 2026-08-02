@@ -44,7 +44,7 @@ export function Hero() {
               priority
               sizes="(min-width: 640px) 110px, 96px"
             />
-            <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+            <p className={cn("mt-4", enterprise.eyebrow)}>
               Energy technology · Software · Data infrastructure · AI
             </p>
           </div>
@@ -60,7 +60,7 @@ export function Hero() {
           </p>
 
           <div className="mt-8 inline-flex flex-wrap items-center gap-x-4 gap-y-3 rounded-md border border-white/10 bg-ink-950/70 px-5 py-4">
-            <span className="text-xs font-semibold uppercase tracking-[0.14em] text-steel-400">
+            <span className={enterprise.label}>
               Flagship platform
             </span>
             <span className="text-base font-semibold text-cream-50">

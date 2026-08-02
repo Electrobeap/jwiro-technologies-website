@@ -1,4 +1,5 @@
 import { DataBadge } from "@/components/ui/DataBadge";
+import { enterprise } from "@/components/site/visual-system";
 import { methodologyComparison } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
@@ -65,7 +66,7 @@ export function MethodologyTable({ className }: { className?: string }) {
             className="rounded-md border border-white/10 bg-[#0E2A5A]/70 p-5"
             key={row.dimension}
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-steel-400">
+            <p className={enterprise.label}>
               {row.dimension}
             </p>
             <div className="mt-4 border-l-2 border-gold-300/60 pl-4">

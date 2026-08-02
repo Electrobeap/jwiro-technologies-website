@@ -9,15 +9,14 @@ import { enterprise, enterprisePanel } from "@/components/site/visual-system";
 import { Container } from "@/components/ui/Container";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { roadmapBoundary, roadmapStages } from "@/lib/data";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Roadmap | Jirow Technologies",
   description:
     "Jirow's roadmap: the national reference layer is delivered; analytics are deepening; the facility platform and AI assistant follow; then additional African markets where comparable public data exists.",
-  alternates: {
-    canonical: "/roadmap"
-  }
-};
+  path: "/roadmap"
+});
 
 export default function RoadmapPage() {
   return (
@@ -55,6 +54,15 @@ export default function RoadmapPage() {
 
         <section className="py-16 sm:py-20 lg:py-24" id="stages">
           <Container>
+            <div className="mb-10 max-w-3xl">
+              <p className={enterprise.eyebrow}>
+                The stages
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-4xl">
+                Each stage anchored to a product outcome.
+              </h2>
+            </div>
+
             <RoadmapTimeline />
           </Container>
         </section>
@@ -62,7 +70,7 @@ export default function RoadmapPage() {
         <section className={enterprise.sectionBand}>
           <Container className="py-16 sm:py-20">
             <SectionReveal className={enterprisePanel("p-6 sm:p-8")}>
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+              <p className={enterprise.eyebrow}>
                 What we are not promising
               </p>
               <p className="mt-4 max-w-4xl text-lg leading-8 text-steel-200">

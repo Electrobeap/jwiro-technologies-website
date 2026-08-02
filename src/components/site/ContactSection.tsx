@@ -5,6 +5,7 @@ import { SectionShell } from "@/components/site/SectionShell";
 import { enterprise, enterprisePanel } from "@/components/site/visual-system";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { siteConfig } from "@/lib/data";
+import { cn } from "@/lib/utils";
 
 const contactItems = [
   {
@@ -95,7 +96,7 @@ export function ContactSection() {
         </div>
 
         <div className={enterprisePanel("p-6 sm:p-7")}>
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+          <p className={cn("mb-5", enterprise.eyebrow)}>
             Enquiry
           </p>
           <LeadForm />

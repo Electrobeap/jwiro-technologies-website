@@ -30,7 +30,7 @@ import {
 const whatsappMessage =
   "Hello Jirow Technologies, I would like to speak with your team about energy intelligence for our organisation.";
 
-export const whatsappNumber = "2348137832844";
+const whatsappNumber = "2348137832844";
 
 export const seoKeywords = [
   "Energy Intelligence",
@@ -66,16 +66,11 @@ export const siteConfig = {
     "3rd Floor, The Octagon, 32A Commercial Avenue",
     "Sabo, Yaba, Lagos, Nigeria"
   ],
-  location: "Lagos, Nigeria",
-  country: "Nigeria",
   founder: "Paul Atakere",
   founderTitle: "Founder & Infrastructure Systems Lead",
-  website: "jirowtechnologies.com",
-  websiteHref: "https://jirowtechnologies.com",
   platformName: "NigeriaPowerData",
   platformDomain: "nigeriapowerdata.com",
   platformHref: "https://nigeriapowerdata.com",
-  logoMaster: "/brand/jirow-logo-master.png",
   logo: "/brand/jirow-logo-display.png",
   logoMark: "/brand/jirow-logo-mark.png",
   brochureHref: "/brochure/jirow-technologies-profile.pdf",
@@ -173,6 +168,37 @@ export const heroStats = [
   }
 ];
 
+/**
+ * The profile's "read first if you are" router (page 02), mapped onto site
+ * routes rather than page numbers.
+ */
+export const audiences = [
+  {
+    label: "An investor",
+    stops: [
+      { label: "The problem", href: "/#problem" },
+      { label: "Business model", href: "/markets#business-model" },
+      { label: "Roadmap", href: "/roadmap" }
+    ]
+  },
+  {
+    label: "A regulator",
+    stops: [
+      { label: "The problem", href: "/#problem" },
+      { label: "NigeriaPowerData", href: "/products/nigeriapowerdata" },
+      { label: "Data methodology", href: "/methodology" }
+    ]
+  },
+  {
+    label: "A utility",
+    stops: [
+      { label: "NigeriaPowerData", href: "/products/nigeriapowerdata" },
+      { label: "Platform architecture", href: "/platform" },
+      { label: "Security & compliance", href: "/platform#security" }
+    ]
+  }
+];
+
 export type ProductStatus = "live" | "in-development";
 
 export const products = [
@@ -183,7 +209,6 @@ export const products = [
     status: "live" as ProductStatus,
     statusLabel: "Live",
     altitude: "National",
-    tagline: "National electricity intelligence",
     function:
       "National electricity intelligence — grid, GenCo, DisCo and state-level analytics",
     observes:
@@ -201,7 +226,6 @@ export const products = [
     status: "in-development" as ProductStatus,
     statusLabel: "In development",
     altitude: "Facility",
-    tagline: "Energy management for facilities and portfolios",
     function:
       "Energy management and analytics for individual facilities, estates and industrial sites",
     observes:
@@ -219,7 +243,6 @@ export const products = [
     status: "in-development" as ProductStatus,
     statusLabel: "In development",
     altitude: "Decision",
-    tagline: "Natural-language access to platform intelligence",
     function:
       "Natural-language interface turning platform data into prioritised guidance",
     observes: "Both platforms, translated into prioritised guidance",
@@ -517,6 +540,31 @@ export const methodologyPipeline = [
   { step: "Classification", note: "measured or modeled" },
   { step: "Lineage stored", note: "traceable to input" },
   { step: "Published", note: "labelled at point of use" }
+];
+
+/**
+ * Upstream publications the flagship platform draws on, as attributed in the
+ * corporate profile. Figure-level attribution still travels with each number;
+ * this is the standing list.
+ */
+export const dataSources = [
+  {
+    name: "NERC",
+    full: "Nigerian Electricity Regulatory Commission",
+    provides:
+      "Operational factsheets, plant availability and load factors, prescribed frequency band"
+  },
+  {
+    name: "NISO",
+    full: "Nigerian Independent System Operator",
+    provides:
+      "Available and dispatched capacity, generation and frequency signals, restoration events"
+  },
+  {
+    name: "TCN",
+    full: "Transmission Company of Nigeria",
+    provides: "Transmission wheeling capacity and network constraints"
+  }
 ];
 
 export const methodologyLimits = [

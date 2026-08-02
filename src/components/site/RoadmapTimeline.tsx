@@ -21,7 +21,7 @@ export function RoadmapTimeline({ className }: { className?: string }) {
           <div className="relative rounded-md border border-white/10 bg-[#0E2A5A]/80 p-6 transition duration-300 hover:border-gold-300/40 sm:p-7">
             <div className="grid gap-5 lg:grid-cols-[9rem_1fr] lg:gap-8">
               <div className="flex items-center gap-4 lg:flex-col lg:items-start lg:gap-3">
-                <span className="font-mono text-3xl font-semibold text-gold-300/70 sm:text-4xl">
+                <span className="font-mono text-3xl font-semibold text-gold-200/70 sm:text-4xl">
                   {stage.number}
                 </span>
                 <span

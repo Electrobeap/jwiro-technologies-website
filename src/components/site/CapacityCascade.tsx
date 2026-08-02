@@ -16,7 +16,7 @@ export function CapacityCascade({ className }: { className?: string }) {
   return (
     <figure className={cn("m-0", className)}>
       <figcaption className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 pb-4">
-        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+        <p className={enterprise.eyebrow}>
           The capacity cascade — MW
         </p>
         <p className="flex flex-wrap items-center gap-4 text-xs text-steel-400">

@@ -29,7 +29,7 @@ export function FlagshipSection() {
       <SectionReveal className="mb-8 flex flex-wrap items-center gap-4">
         <StatusBadge label="Live · in operation" status="live" />
         <a
-          className="inline-flex items-center gap-2 text-sm font-semibold text-steel-200 transition hover:text-gold-200"
+          className="inline-flex items-center gap-2 py-1 text-sm font-semibold text-steel-200 transition hover:text-gold-200"
           href={siteConfig.platformHref}
           rel="noreferrer"
           target="_blank"
@@ -44,7 +44,7 @@ export function FlagshipSection() {
           <div className="grid gap-px border border-white/10 bg-white/10 sm:grid-cols-2 xl:grid-cols-4">
             {npdHeadlineMetrics.map((metric) => (
               <div className="bg-[#091F43] px-5 py-5" key={metric.label}>
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-steel-400">
+                <p className={enterprise.label}>
                   {metric.label}
                 </p>
                 <p className="mt-3 font-mono text-2xl font-semibold text-cream-50">
@@ -69,7 +69,7 @@ export function FlagshipSection() {
 
         <div className="grid gap-4">
           <SectionReveal className={enterprisePanel("p-6 sm:p-7")} delay={0.05}>
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+            <p className={enterprise.eyebrow}>
               The market it tracks
             </p>
             <div className="mt-6 grid gap-px border border-white/10 bg-white/10 sm:grid-cols-2">
@@ -111,7 +111,7 @@ export function FlagshipSection() {
             className="rounded-md border border-gold-300/25 bg-gold-300/[0.05] p-6 sm:p-7"
             delay={0.1}
           >
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+            <p className={enterprise.eyebrow}>
               Measured, modeled, and the line between them
             </p>
             <p className="mt-4 leading-8 text-steel-200">
@@ -119,7 +119,7 @@ export function FlagshipSection() {
               and the platform states which.
             </p>
             <Link
-              className="group mt-5 inline-flex items-center gap-2 text-sm font-semibold text-gold-200"
+              className="group mt-5 inline-flex items-center gap-2 py-1 text-sm font-semibold text-gold-200"
               href="/methodology"
             >
               Read the data methodology

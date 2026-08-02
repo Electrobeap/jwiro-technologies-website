@@ -17,7 +17,7 @@ export function CTASection() {
             <div className={cn("absolute inset-0 opacity-70", enterprise.blueprint)} />
             <div className="relative grid gap-8 lg:grid-cols-[8fr_4fr] lg:items-center">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                <p className={enterprise.eyebrow}>
                   Explore the platform
                 </p>
                 <h2 className="mt-5 max-w-3xl text-balance text-4xl font-semibold leading-tight text-cream-50 sm:text-5xl">

@@ -36,7 +36,7 @@ export function ProductCards({ className }: { className?: string }) {
                 <StatusBadge label={product.statusLabel} status={product.status} />
               </div>
 
-              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.14em] text-steel-400">
+              <p className={cn("mt-6", enterprise.label)}>
                 {product.altitude} layer
               </p>
               <h3 className="mt-2 text-2xl font-semibold leading-tight text-cream-50">
@@ -48,13 +48,13 @@ export function ProductCards({ className }: { className?: string }) {
 
               <dl className="mt-6 grid gap-px border border-white/10 bg-white/10 text-sm">
                 <div className="bg-ink-950/70 px-4 py-3">
-                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-steel-500">
+                  <dt className={enterprise.label}>
                     Primary buyer
                   </dt>
                   <dd className="mt-1 text-steel-200">{product.buyer}</dd>
                 </div>
                 <div className="bg-ink-950/70 px-4 py-3">
-                  <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-steel-500">
+                  <dt className={enterprise.label}>
                     Availability
                   </dt>
                   <dd className="mt-1 text-steel-200">{product.availability}</dd>

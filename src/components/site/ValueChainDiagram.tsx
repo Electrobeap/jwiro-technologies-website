@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 export function ValueChainDiagram({ className }: { className?: string }) {
   return (
     <div className={cn("", className)}>
-      <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+      <p className={enterprise.eyebrow}>
         Position in the value chain
       </p>
       <ol className="mt-6 grid gap-3 lg:grid-cols-5">

@@ -24,16 +24,15 @@ import {
   vision,
   whatWeAreNot
 } from "@/lib/data";
+import { pageMetadata } from "@/lib/metadata";
 import { cn } from "@/lib/utils";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "About Jirow Technologies | Energy Technology Company in Lagos",
   description:
     "Jirow Technologies Limited is a Lagos-headquartered energy technology company building the software, data infrastructure and AI systems that make power systems legible. Mission, vision, operating principles and leadership.",
-  alternates: {
-    canonical: "/about"
-  }
-};
+  path: "/about"
+});
 
 export default function AboutPage() {
   return (
@@ -49,7 +48,7 @@ export default function AboutPage() {
           secondaryLabel="Contact Jirow"
           title="About Jirow Technologies"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+          <p className={enterprise.eyebrow}>
             Headquarters
           </p>
           <address className="mt-3 not-italic text-sm leading-7 text-steel-300">
@@ -69,14 +68,14 @@ export default function AboutPage() {
           <Container>
             <div className="grid gap-5 lg:grid-cols-[6fr_6fr]">
               <SectionReveal className={enterprisePanel("p-6 sm:p-8")}>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                <p className={enterprise.eyebrow}>
                   Mission
                 </p>
                 <p className="display-serif mt-5 text-2xl leading-snug text-cream-50 sm:text-3xl">
                   {mission}
                 </p>
                 <div className={cn("my-7", enterprise.hairline)} />
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                <p className={enterprise.eyebrow}>
                   Vision
                 </p>
                 <p className="mt-5 text-lg leading-8 text-steel-200">{vision}</p>
@@ -87,7 +86,7 @@ export default function AboutPage() {
                   className="rounded-md border border-gold-300/25 bg-gold-300/[0.05] p-6 sm:p-7"
                   delay={0.05}
                 >
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                  <p className={enterprise.eyebrow}>
                     The thesis
                   </p>
                   <p className="mt-4 text-lg leading-8 text-steel-100">
@@ -99,7 +98,7 @@ export default function AboutPage() {
                   className={enterprisePanel("p-6 sm:p-7")}
                   delay={0.1}
                 >
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                  <p className={enterprise.eyebrow}>
                     Company overview
                   </p>
                   <p className="mt-4 leading-8 text-steel-300">
@@ -114,7 +113,7 @@ export default function AboutPage() {
         <section className={enterprise.sectionBand} id="how-we-work">
           <Container className="py-16 sm:py-20 lg:py-24">
             <div className="mb-10 max-w-4xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+              <p className={enterprise.eyebrow}>
                 How we work
               </p>
               <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-5xl">
@@ -148,7 +147,7 @@ export default function AboutPage() {
             </div>
 
             <SectionReveal className="mt-6 rounded-md border border-white/10 bg-ink-950/50 p-6 sm:p-7">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+              <p className={enterprise.eyebrow}>
                 What we are not
               </p>
               <p className="mt-4 max-w-4xl leading-8 text-steel-200">
@@ -167,7 +166,7 @@ export default function AboutPage() {
         <section className={enterprise.sectionBand} id="leadership">
           <Container className="py-16 sm:py-20 lg:py-24">
             <div className="mb-10 max-w-4xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+              <p className={enterprise.eyebrow}>
                 Leadership & governance
               </p>
               <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-5xl">
@@ -234,7 +233,7 @@ export default function AboutPage() {
                 </div>
 
                 <SectionReveal className={enterprisePanel("p-6")}>
-                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                  <p className={enterprise.eyebrow}>
                     Governance
                   </p>
                   <dl className="mt-5 grid gap-3">

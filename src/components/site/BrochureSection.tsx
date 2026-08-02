@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ExternalLink, FileText, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 
@@ -30,7 +30,7 @@ function ProfileCover() {
           <span className="text-xs font-semibold uppercase tracking-[0.14em] text-gold-200">
             Corporate profile / 2026
           </span>
-          <span className="text-xs text-steel-300">PDF · 18 pages</span>
+          <span className="text-xs text-steel-300">PDF · 17 pages</span>
         </div>
 
         <div className="flex flex-1 flex-col items-center justify-center text-center">
@@ -58,6 +58,34 @@ function ProfileCover() {
 
 export function BrochureSection() {
   const [previewOpen, setPreviewOpen] = useState(false);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (!previewOpen) {
+      return;
+    }
+
+    openerRef.current = document.activeElement as HTMLElement | null;
+    closeButtonRef.current?.focus();
+
+    const { overflow } = document.body.style;
+    document.body.style.overflow = "hidden";
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setPreviewOpen(false);
+      }
+    }
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = overflow;
+      openerRef.current?.focus();
+    };
+  }, [previewOpen]);
 
   return (
     <section
@@ -120,9 +148,12 @@ export function BrochureSection() {
         {previewOpen ? (
           <motion.div
             animate={{ opacity: 1 }}
+            aria-labelledby="profile-preview-title"
+            aria-modal
             className="fixed inset-0 z-[80] bg-[#071B3B]/96 p-4 backdrop-blur-sm"
             exit={{ opacity: 0 }}
             initial={{ opacity: 0 }}
+            role="dialog"
           >
             <div className="mx-auto flex h-full max-w-6xl flex-col">
               <div className="mb-3 flex items-center justify-between gap-4 border-b border-white/10 pb-3">
@@ -130,7 +161,7 @@ export function BrochureSection() {
                   <p className="text-sm font-semibold text-gold-200">
                     {siteConfig.name}
                   </p>
-                  <p className="mt-1 text-sm text-steel-300">
+                  <p className="mt-1 text-sm text-steel-300" id="profile-preview-title">
                     Corporate Profile 2026
                   </p>
                 </div>
@@ -147,8 +178,9 @@ export function BrochureSection() {
                   </ButtonLink>
                   <button
                     aria-label="Close profile preview"
-                    className="grid h-11 w-11 place-items-center rounded-sm border border-white/15 text-cream-50 transition hover:border-gold-300/55"
+                    className="grid h-11 w-11 place-items-center rounded-sm border border-white/15 text-cream-50 transition hover:border-gold-300/55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-300"
                     onClick={() => setPreviewOpen(false)}
+                    ref={closeButtonRef}
                     type="button"
                   >
                     <X className="h-4 w-4" />

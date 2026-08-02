@@ -16,15 +16,14 @@ import {
   outcomeClaimsPosition,
   revenueLines
 } from "@/lib/data";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Markets, Customers & Business Model | Jirow Technologies",
   description:
     "Jirow serves regulators, capital and analysis, utilities and enterprise facilities — each entering through a different product. Revenue comes from four recurring software lines built on one data infrastructure.",
-  alternates: {
-    canonical: "/markets"
-  }
-};
+  path: "/markets"
+});
 
 export default function MarketsPage() {
   return (
@@ -40,7 +39,7 @@ export default function MarketsPage() {
           secondaryLabel="Talk to Jirow"
           title="Four buyer groups, four entry points"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+          <p className={enterprise.eyebrow}>
             Customer problems we address
           </p>
           <ul className="mt-4 grid gap-2">
@@ -51,7 +50,7 @@ export default function MarketsPage() {
               >
                 <Minus
                   aria-hidden
-                  className="mt-1.5 h-4 w-4 shrink-0 text-gold-300/70"
+                  className="mt-1.5 h-4 w-4 shrink-0 text-gold-300"
                 />
                 {problem}
               </li>
@@ -61,10 +60,19 @@ export default function MarketsPage() {
 
         <section className="py-16 sm:py-20 lg:py-24" id="buyers">
           <Container>
+            <div className="mb-10 max-w-3xl">
+              <p className={enterprise.eyebrow}>
+                Buyer groups
+              </p>
+              <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-4xl">
+                Who Jirow serves, and where each group starts.
+              </h2>
+            </div>
+
             <BuyerGroups />
 
             <SectionReveal className="mt-6 rounded-md border border-white/10 bg-ink-950/50 p-6 sm:p-7">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+              <p className={enterprise.eyebrow}>
                 Why we publish no outcome claims
               </p>
               <p className="mt-4 max-w-4xl leading-8 text-steel-300">
@@ -83,7 +91,7 @@ export default function MarketsPage() {
         <section className={enterprise.sectionBand} id="business-model">
           <Container className="py-16 sm:py-20 lg:py-24">
             <div className="mb-10 max-w-4xl">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+              <p className={enterprise.eyebrow}>
                 Business model
               </p>
               <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-5xl">
@@ -131,7 +139,7 @@ export default function MarketsPage() {
 
             <div className="mt-6 grid gap-5 lg:grid-cols-[7fr_5fr]">
               <SectionReveal className={enterprisePanel("p-6 sm:p-7")}>
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                <p className={enterprise.eyebrow}>
                   Why this structure
                 </p>
                 <p className="mt-4 leading-8 text-steel-300">
@@ -149,7 +157,7 @@ export default function MarketsPage() {
                 className="rounded-md border border-gold-300/25 bg-gold-300/[0.05] p-6 sm:p-7"
                 delay={0.06}
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+                <p className={enterprise.eyebrow}>
                   Design constraint
                 </p>
                 <p className="mt-4 leading-8 text-steel-200">

@@ -24,7 +24,7 @@ export function ProblemSection() {
             over time.
           </p>
           <div className={cn("my-6", enterprise.hairline)} />
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+          <p className={enterprise.eyebrow}>
             Consequence
           </p>
           <ul className="mt-5 grid gap-3">
@@ -35,7 +35,7 @@ export function ProblemSection() {
               >
                 <AlertTriangle
                   aria-hidden
-                  className="mt-1 h-4 w-4 shrink-0 text-gold-300/80"
+                  className="mt-1 h-4 w-4 shrink-0 text-gold-300"
                 />
                 {item}
               </li>
@@ -45,7 +45,7 @@ export function ProblemSection() {
 
         <div className="grid gap-4">
           <SectionReveal className={enterprisePanel("p-6 sm:p-7")} delay={0.05}>
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+            <p className={enterprise.eyebrow}>
               Why now
             </p>
             <p className="mt-5 leading-8 text-steel-300">
@@ -95,7 +95,7 @@ export function ProblemSection() {
           </p>
         </div>
         <div className="rounded-md border border-gold-300/25 bg-gold-300/[0.05] p-6 sm:p-7">
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+          <p className={enterprise.eyebrow}>
             Why this matters to Jirow
           </p>
           <p className="mt-4 leading-8 text-steel-200">

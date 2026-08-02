@@ -6,16 +6,16 @@ import { DifferentiationSection } from "@/components/site/DifferentiationSection
 import { Footer } from "@/components/site/Footer";
 import { Navbar } from "@/components/site/Navbar";
 import { PageHero } from "@/components/site/PageHero";
+import { enterprise } from "@/components/site/visual-system";
 import { siteConfig } from "@/lib/data";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Contact Jirow Technologies | Lagos, Nigeria",
   description:
     "Jirow works with regulators, utilities, enterprises, investors and development finance institutions bringing intelligence to the infrastructure they depend on. Contact the team in Lagos.",
-  alternates: {
-    canonical: "/contact"
-  }
-};
+  path: "/contact"
+});
 
 export default function ContactPage() {
   return (
@@ -23,7 +23,7 @@ export default function ContactPage() {
       <Navbar />
       <main className="overflow-hidden" id="main">
         <PageHero
-          description="Jirow works with regulators, utilities, enterprises, investors and development finance institutions bringing intelligence to the infrastructure they depend on."
+          description="Whether you need independent visibility into a jurisdiction, structured data for your own models, or site-level intelligence when it ships — start here. Enquiries reach the founding team directly."
           eyebrow="Contact"
           primaryHref="#contact"
           primaryLabel="Send an enquiry"
@@ -31,7 +31,7 @@ export default function ContactPage() {
           secondaryLabel="Open NigeriaPowerData"
           title="Start a conversation"
         >
-          <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-200">
+          <p className={enterprise.eyebrow}>
             Head office
           </p>
           <address className="mt-3 not-italic text-sm leading-7 text-steel-300">

@@ -42,7 +42,7 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:border-l lg:border-white/10 lg:pl-8">
+          <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-4 lg:border-l lg:border-white/10 lg:pl-8">
             {footerNav.map((group) => (
               <nav aria-label={group.title} key={group.title}>
                 <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-100">
@@ -52,7 +52,7 @@ export function Footer() {
                   {group.links.map((link) => (
                     <li key={link.href}>
                       <Link
-                        className="text-sm text-steel-300 transition hover:text-cream-50"
+                        className="inline-block py-1 text-sm text-steel-300 transition hover:text-cream-50"
                         href={link.href}
                       >
                         {link.label}
@@ -74,21 +74,21 @@ export function Footer() {
               </address>
               <div className="mt-4 grid gap-2">
                 <a
-                  className="inline-flex items-center gap-2 text-xs leading-6 text-steel-300 transition hover:text-gold-200"
+                  className="inline-flex min-w-0 items-center gap-2 break-words py-1 text-xs leading-6 text-steel-300 transition hover:text-gold-200"
                   href={siteConfig.phoneHref}
                 >
                   <Phone className="h-4 w-4 shrink-0" />
                   {siteConfig.phone}
                 </a>
                 <a
-                  className="inline-flex items-start gap-2 break-words text-xs leading-6 text-steel-300 transition hover:text-gold-200"
+                  className="inline-flex min-w-0 items-start gap-2 break-words py-1 text-xs leading-6 text-steel-300 transition hover:text-gold-200"
                   href={`mailto:${siteConfig.email}`}
                 >
                   <Mail className="mt-1 h-4 w-4 shrink-0" />
                   {siteConfig.email}
                 </a>
                 <a
-                  className="inline-flex items-center gap-2 text-xs leading-6 text-steel-300 transition hover:text-gold-200"
+                  className="inline-flex min-w-0 items-center gap-2 break-words py-1 text-xs leading-6 text-steel-300 transition hover:text-gold-200"
                   href={siteConfig.whatsappHref}
                   rel="noreferrer"
                   target="_blank"

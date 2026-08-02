@@ -7,10 +7,10 @@ import {
   seoKeywords,
   siteConfig
 } from "@/lib/data";
+import { siteUrl } from "@/lib/metadata";
 
 import "./globals.css";
 
-const siteUrl = "https://jirowtechnologies.com";
 const title =
   "Jirow Technologies | The Intelligence Layer for Africa's Power Systems";
 const description = companyPositioning;
@@ -175,8 +175,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
           type="application/ld+json"
         />
+        {/*
+          Tailwind's `not-sr-only` resets padding, so the focused size is
+          restored explicitly to keep the target above the 24px minimum.
+        */}
         <a
-          className="sr-only rounded-sm bg-gold-300 px-4 py-2 text-sm font-semibold text-[#101828] focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100]"
+          className="sr-only rounded-sm bg-gold-300 text-sm font-semibold text-[#101828] focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:inline-flex focus:min-h-11 focus:items-center focus:px-5 focus:py-3"
           href="#main"
         >
           Skip to content
