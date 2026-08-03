@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, MessageCircle, X } from "lucide-react";
+import { ExternalLink, Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 
 import { BrandLogo } from "@/components/site/BrandLogo";
@@ -18,7 +18,7 @@ export function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 overflow-visible border-b border-white/10 bg-[#071B3B]/94 backdrop-blur-md">
-      <Container className="flex h-24 items-center justify-between overflow-visible lg:h-[6.5rem]">
+      <Container className="flex h-24 items-center justify-between gap-4 overflow-visible lg:h-[6.5rem]">
         <Link
           aria-label="Jirow Technologies Limited home"
           className="flex h-full shrink-0 items-center overflow-visible px-1 py-2 sm:px-2"
@@ -32,10 +32,10 @@ export function Navbar() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-2 lg:flex">
+        <nav aria-label="Primary" className="hidden items-center lg:flex">
           {navLinks.map((link) => (
             <Link
-              className="rounded-sm px-4 py-2 text-sm font-medium text-steel-200 transition hover:bg-white/[0.05] hover:text-gold-200"
+              className="rounded-sm px-3 py-2 text-sm font-medium text-steel-200 transition hover:bg-white/[0.05] hover:text-gold-200 xl:px-4"
               href={link.href}
               key={link.href}
             >
@@ -45,15 +45,14 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <DownloadBrochureButton label="Company Profile" variant="ghost" />
           <ButtonLink
-            href={siteConfig.whatsappHref}
+            className="whitespace-nowrap"
+            href={siteConfig.platformHref}
             rel="noreferrer"
             target="_blank"
-            variant="secondary"
           >
-            <MessageCircle className="h-4 w-4" />
-            WhatsApp
+            <ExternalLink className="h-4 w-4" />
+            {siteConfig.platformName}
           </ButtonLink>
         </div>
 
@@ -97,20 +96,19 @@ export function Navbar() {
                 <div className="mt-3 grid gap-3 sm:grid-cols-2">
                   <ButtonLink
                     className="w-full"
-                    href={siteConfig.whatsappHref}
+                    href={siteConfig.platformHref}
                     onClick={() => setOpen(false)}
                     rel="noreferrer"
                     target="_blank"
-                    variant="secondary"
                   >
-                    <MessageCircle className="h-4 w-4" />
-                    WhatsApp
+                    <ExternalLink className="h-4 w-4" />
+                    {siteConfig.platformName}
                   </ButtonLink>
                   <DownloadBrochureButton
                     className="w-full"
-                    label="Company Profile"
+                    label="Corporate profile"
                     onDownloaded={() => setOpen(false)}
-                    variant="primary"
+                    variant="secondary"
                   />
                 </div>
               </div>

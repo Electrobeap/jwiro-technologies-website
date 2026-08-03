@@ -2,7 +2,7 @@ import type { AnchorHTMLAttributes, ReactNode } from "react";
 
 import { cn } from "@/lib/utils";
 
-export type ButtonVariant = "primary" | "secondary" | "ghost" | "dark";
+export type ButtonVariant = "primary" | "secondary" | "ghost";
 
 type ButtonLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   children: ReactNode;
@@ -18,9 +18,7 @@ export const buttonVariants: Record<ButtonVariant, string> = {
   secondary:
     "border-gold-300/45 bg-transparent text-cream-50 hover:border-gold-300 hover:bg-gold-300/10",
   ghost:
-    "border-white/15 bg-transparent text-cream-50 hover:border-gold-300/45 hover:bg-white/[0.04]",
-  dark:
-    "border-white/10 bg-ink-950 text-cream-50 hover:border-gold-300/50 hover:bg-ink-900"
+    "border-white/15 bg-transparent text-cream-50 hover:border-gold-300/45 hover:bg-white/[0.04]"
 };
 
 export function ButtonLink({

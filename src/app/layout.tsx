@@ -1,13 +1,18 @@
 import type { Metadata, Viewport } from "next";
 
 import { FloatingWhatsApp } from "@/components/site/FloatingWhatsApp";
-import { companyPositioning, seoKeywords, siteConfig } from "@/lib/data";
+import {
+  companyPositioning,
+  mission,
+  seoKeywords,
+  siteConfig
+} from "@/lib/data";
+import { siteUrl } from "@/lib/metadata";
 
 import "./globals.css";
 
-const siteUrl = "https://jirowtechnologies.com";
 const title =
-  "Jirow Technologies Limited | Energy Intelligence, Infrastructure Analytics & AI Optimization";
+  "Jirow Technologies | The Intelligence Layer for Africa's Power Systems";
 const description = companyPositioning;
 const schema = {
   "@context": "https://schema.org",
@@ -16,17 +21,46 @@ const schema = {
       "@type": "Organization",
       "@id": `${siteUrl}/#organization`,
       name: siteConfig.name,
+      alternateName: siteConfig.shortName,
       url: siteUrl,
       logo: `${siteUrl}/brand/jirow-logo-display.png`,
       description,
       telephone: siteConfig.phone.replace(/\s/g, ""),
       email: siteConfig.email,
+      foundingLocation: {
+        "@type": "Place",
+        name: "Lagos, Nigeria"
+      },
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Lagos",
-        addressCountry: siteConfig.country
+        streetAddress: siteConfig.addressLines[0],
+        addressLocality: "Yaba, Lagos",
+        addressRegion: "Lagos",
+        addressCountry: "NG"
       },
-      slogan: "Energy Intelligence. Smarter Infrastructure."
+      slogan: siteConfig.positioning,
+      knowsAbout: seoKeywords,
+      founder: {
+        "@type": "Person",
+        name: siteConfig.founder,
+        jobTitle: siteConfig.founderTitle
+      },
+      owns: {
+        "@id": `${siteUrl}/#nigeriapowerdata`
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${siteUrl}/#nigeriapowerdata`,
+      name: siteConfig.platformName,
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      url: siteConfig.platformHref,
+      description:
+        "A live energy intelligence platform for the Nigerian electricity market: national grid generation, distribution-company allocation, entity-level performance and state-level analytics, with measured and modeled data explicitly separated.",
+      provider: {
+        "@id": `${siteUrl}/#organization`
+      }
     },
     {
       "@type": "LocalBusiness",
@@ -41,7 +75,8 @@ const schema = {
       priceRange: "$$",
       address: {
         "@type": "PostalAddress",
-        addressLocality: "Lagos",
+        streetAddress: siteConfig.addressLines[0],
+        addressLocality: "Yaba, Lagos",
         addressRegion: "Lagos",
         addressCountry: "NG"
       },
@@ -51,8 +86,8 @@ const schema = {
           name: "Nigeria"
         },
         {
-          "@type": "City",
-          name: "Lagos"
+          "@type": "Place",
+          name: "Africa"
         }
       ],
       knowsAbout: seoKeywords
@@ -62,6 +97,7 @@ const schema = {
       "@id": `${siteUrl}/#website`,
       name: siteConfig.name,
       url: siteUrl,
+      description: mission,
       publisher: {
         "@id": `${siteUrl}/#organization`
       }
@@ -94,7 +130,7 @@ export const metadata: Metadata = {
         url: "/brand/jirow-social-preview.png",
         width: 1200,
         height: 630,
-        alt: "Jirow Technologies Limited"
+        alt: siteConfig.name
       }
     ],
     locale: "en_NG",
@@ -139,6 +175,16 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
           type="application/ld+json"
         />
+        {/*
+          Tailwind's `not-sr-only` resets padding, so the focused size is
+          restored explicitly to keep the target above the 24px minimum.
+        */}
+        <a
+          className="sr-only rounded-sm bg-gold-300 text-sm font-semibold text-[#101828] focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:inline-flex focus:min-h-11 focus:items-center focus:px-5 focus:py-3"
+          href="#main"
+        >
+          Skip to content
+        </a>
         {children}
         <FloatingWhatsApp />
       </body>

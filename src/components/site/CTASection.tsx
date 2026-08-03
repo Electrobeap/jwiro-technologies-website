@@ -1,4 +1,4 @@
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, ExternalLink, MessageCircle } from "lucide-react";
 
 import { DownloadBrochureButton } from "@/components/site/DownloadBrochureButton";
 import { enterprise, enterprisePanel } from "@/components/site/visual-system";
@@ -17,32 +17,30 @@ export function CTASection() {
             <div className={cn("absolute inset-0 opacity-70", enterprise.blueprint)} />
             <div className="relative grid gap-8 lg:grid-cols-[8fr_4fr] lg:items-center">
               <div>
-                <p className="text-sm font-semibold uppercase text-gold-200">
-                  Consultation CTA
+                <p className={enterprise.eyebrow}>
+                  Explore the platform
                 </p>
                 <h2 className="mt-5 max-w-3xl text-balance text-4xl font-semibold leading-tight text-cream-50 sm:text-5xl">
-                  Ready to turn infrastructure data into business value?
+                  NigeriaPowerData is live and open.
                 </h2>
                 <p className="mt-5 max-w-2xl leading-8 text-steel-200">
-                  Start with an Energy Intelligence Assessment. Jirow will help
-                  measure performance, identify risks, map optimization
-                  opportunities and define the platform path toward smarter
-                  infrastructure.
+                  Open the national dashboard to see generation, allocation and
+                  entity performance updating continuously — every figure
+                  attributed to its source and labelled measured or modeled.
                 </p>
               </div>
 
               <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
                 <ButtonLink
-                  href="/energy-intelligence-assessment"
+                  href={siteConfig.platformHref}
+                  rel="noreferrer"
+                  target="_blank"
                 >
-                  Request Assessment
-                  <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                  <ExternalLink className="h-4 w-4" />
+                  Open {siteConfig.platformName}
                 </ButtonLink>
-                <ButtonLink
-                  href={`mailto:${siteConfig.email}?subject=Energy%20Intelligence%20Assessment%20Inquiry`}
-                  variant="secondary"
-                >
-                  Email Jirow
+                <ButtonLink href="/contact" variant="secondary">
+                  Start a conversation
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                 </ButtonLink>
                 <ButtonLink
@@ -54,7 +52,10 @@ export function CTASection() {
                   <MessageCircle className="h-4 w-4" />
                   WhatsApp
                 </ButtonLink>
-                <DownloadBrochureButton variant="ghost" />
+                <DownloadBrochureButton
+                  label="Corporate profile"
+                  variant="ghost"
+                />
               </div>
             </div>
           </div>

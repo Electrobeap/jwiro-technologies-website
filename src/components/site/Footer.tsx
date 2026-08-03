@@ -1,98 +1,113 @@
 import Link from "next/link";
-import { ExternalLink, Mail, MessageCircle } from "lucide-react";
+import { ExternalLink, Mail, MessageCircle, Phone } from "lucide-react";
 
 import { BrandLogo } from "@/components/site/BrandLogo";
 import { DownloadBrochureButton } from "@/components/site/DownloadBrochureButton";
 import { enterprise } from "@/components/site/visual-system";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
-import { navLinks, siteConfig } from "@/lib/data";
+import { footerNav, shortPositioning, siteConfig } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export function Footer() {
   return (
     <footer className="border-t border-gold-300/25 bg-[#071B3B] py-12 sm:py-16">
       <Container>
-        <div className="grid gap-10 lg:grid-cols-[5fr_3fr_4fr]">
+        <div className="grid gap-10 lg:grid-cols-[5fr_7fr]">
           <div>
             <BrandLogo
-              className="h-40 object-left sm:h-44"
-              sizes="(min-width: 640px) 168px, 152px"
+              className="h-36 object-left sm:h-40"
+              sizes="(min-width: 640px) 160px, 140px"
             />
-            <p className="mt-6 max-w-xl leading-8 text-steel-300">
-              Energy Intelligence, Infrastructure Analytics, Energy Monitoring,
-              Smart Infrastructure Visibility and AI-Powered Energy
-              Optimization for estates, commercial facilities and industrial
-              operations.
+            <p className="mt-6 max-w-md leading-8 text-steel-300">
+              {shortPositioning}
             </p>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <p className="mt-5 text-sm font-semibold uppercase tracking-[0.16em] text-gold-200">
+              {siteConfig.positioning}
+            </p>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <ButtonLink
-                href={`mailto:${siteConfig.email}`}
-                variant="secondary"
-              >
-                <Mail className="h-4 w-4" />
-                {siteConfig.email}
-              </ButtonLink>
-              <ButtonLink
-                href={siteConfig.whatsappHref}
+                href={siteConfig.platformHref}
                 rel="noreferrer"
                 target="_blank"
-                variant="ghost"
+                variant="secondary"
               >
-                <MessageCircle className="h-4 w-4" />
-                WhatsApp
+                <ExternalLink className="h-4 w-4" />
+                {siteConfig.platformDomain}
               </ButtonLink>
+              <DownloadBrochureButton
+                label="Corporate profile"
+                variant="ghost"
+              />
             </div>
           </div>
 
-          <div className="lg:border-l lg:border-white/10 lg:pl-7">
-            <h3 className="text-sm font-semibold uppercase text-gold-100">
-              Sections
-            </h3>
-            <div className="mt-5 grid gap-3">
-              {navLinks.map((link) => (
-                <Link
-                  className="text-sm text-steel-300 transition hover:text-cream-50"
-                  href={link.href}
-                  key={link.href}
+          <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-4 lg:border-l lg:border-white/10 lg:pl-8">
+            {footerNav.map((group) => (
+              <nav aria-label={group.title} key={group.title}>
+                <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-100">
+                  {group.title}
+                </h2>
+                <ul className="mt-5 grid gap-3">
+                  {group.links.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        className="inline-block py-1 text-sm text-steel-300 transition hover:text-cream-50"
+                        href={link.href}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            ))}
+
+            <div>
+              <h2 className="text-xs font-semibold uppercase tracking-[0.16em] text-gold-100">
+                Contact
+              </h2>
+              <address className="mt-5 not-italic text-xs leading-6 text-steel-300">
+                {siteConfig.addressLines[0]}
+                <br />
+                {siteConfig.addressLines[1]}
+              </address>
+              <div className="mt-4 grid gap-2">
+                <a
+                  className="inline-flex min-w-0 items-center gap-2 break-words py-1 text-xs leading-6 text-steel-300 transition hover:text-gold-200"
+                  href={siteConfig.phoneHref}
                 >
-                  {link.label}
-                </Link>
-              ))}
+                  <Phone className="h-4 w-4 shrink-0" />
+                  {siteConfig.phone}
+                </a>
+                <a
+                  className="inline-flex min-w-0 items-start gap-2 break-words py-1 text-xs leading-6 text-steel-300 transition hover:text-gold-200"
+                  href={`mailto:${siteConfig.email}`}
+                >
+                  <Mail className="mt-1 h-4 w-4 shrink-0" />
+                  {siteConfig.email}
+                </a>
+                <a
+                  className="inline-flex min-w-0 items-center gap-2 break-words py-1 text-xs leading-6 text-steel-300 transition hover:text-gold-200"
+                  href={siteConfig.whatsappHref}
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  <MessageCircle className="h-4 w-4" />
+                  WhatsApp
+                </a>
+              </div>
             </div>
-          </div>
-
-          <div className="lg:border-l lg:border-white/10 lg:pl-7">
-            <h3 className="text-sm font-semibold uppercase text-gold-100">
-              Contact
-            </h3>
-            <p className="mt-5 text-sm leading-7 text-steel-300">
-              {siteConfig.location}
-              <br />
-              {siteConfig.phone}
-              <br />
-              {siteConfig.email}
-            </p>
-            <DownloadBrochureButton className="mt-6" label="Download Company Profile" variant="secondary" />
-            <a
-              className="mt-5 inline-flex items-center gap-2 text-sm text-steel-200 transition hover:text-gold-200"
-              href={siteConfig.websiteHref}
-              rel="noreferrer"
-              target="_blank"
-            >
-              <ExternalLink className="h-4 w-4" />
-              {siteConfig.website}
-            </a>
           </div>
         </div>
 
-        <div className={cn("mt-10", enterprise.hairline)} />
+        <div className={cn("mt-12", enterprise.hairline)} />
         <div className="mt-6 flex flex-col gap-3 text-sm text-steel-500 sm:flex-row sm:items-center sm:justify-between">
           <p>
-            &copy; {new Date().getFullYear()} Jirow Technologies Limited. All
-            rights reserved.
+            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
+            reserved.
           </p>
-          <p>Energy Intelligence. Smarter Infrastructure.</p>
+          <p className="uppercase tracking-[0.16em]">{siteConfig.tagline}</p>
         </div>
       </Container>
     </footer>

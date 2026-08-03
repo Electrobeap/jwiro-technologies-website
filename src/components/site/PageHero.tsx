@@ -5,6 +5,7 @@ import { enterprise } from "@/components/site/visual-system";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
 import { Tag } from "@/components/ui/Tag";
+import { siteConfig } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 type PageHeroProps = {
@@ -70,8 +71,8 @@ export function PageHero({
           </div>
           <div className="pt-5">
             {children ?? (
-              <p className="text-sm leading-7 text-steel-300">
-                Energy Intelligence. Smarter Infrastructure.
+              <p className="text-sm uppercase tracking-[0.16em] text-gold-200">
+                {siteConfig.tagline}
               </p>
             )}
           </div>

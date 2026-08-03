@@ -7,7 +7,7 @@ type LogoVariant = "lockup" | "mark";
 
 type BrandLogoProps = Omit<
   ImageProps,
-  "alt" | "height" | "src" | "unoptimized" | "width"
+  "alt" | "height" | "src" | "width"
 > & {
   variant?: LogoVariant;
 };
@@ -33,12 +33,15 @@ export function BrandLogo({
   const asset = logoAssets[variant];
 
   return (
+    // Served through the image optimizer: the source lockup is a ~220KB PNG
+    // rendered at 80–170px, so shipping it unoptimized on every page was a
+    // large and pointless cost. The optimizer keeps the alpha channel and
+    // emits a losslessly resized PNG, so the wordmark stays crisp.
     <Image
       alt="Jirow Technologies Limited official logo"
       className={cn("brand-logo w-auto object-contain", className)}
       height={asset.height}
       src={asset.src}
-      unoptimized
       width={asset.width}
       {...props}
     />

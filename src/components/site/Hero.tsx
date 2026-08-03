@@ -1,25 +1,26 @@
 "use client";
 
 import Image from "next/image";
-import { ClipboardCheck } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { motion } from "motion/react";
 
+import { BrandLogo } from "@/components/site/BrandLogo";
 import { DownloadBrochureButton } from "@/components/site/DownloadBrochureButton";
+import { enterprise } from "@/components/site/visual-system";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
-import { BrandLogo } from "@/components/site/BrandLogo";
-import { enterprise } from "@/components/site/visual-system";
-import { heroStats } from "@/lib/data";
+import { StatusBadge } from "@/components/ui/StatusBadge";
+import { heroStats, siteConfig } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
   return (
     <section
-      className="relative isolate min-h-[min(850px,100svh)] overflow-hidden border-b border-white/10 pt-24 lg:pt-[6.5rem]"
+      className="relative isolate min-h-[min(880px,100svh)] overflow-hidden border-b border-white/10 pt-24 lg:pt-[6.5rem]"
       id="top"
     >
       <Image
-        alt="Modern estate and commercial energy infrastructure with monitoring and analytics"
+        alt="Electricity transmission and distribution infrastructure at dusk"
         className="absolute inset-0 -z-20 object-cover object-[72%_center]"
         fill
         priority
@@ -30,7 +31,7 @@ export function Hero() {
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgba(7,27,59,0.28),transparent_52%,rgba(7,27,59,0.92))]" />
       <div className={cn("absolute inset-0 -z-10 opacity-45", enterprise.blueprint)} />
 
-      <Container className="flex min-h-[calc(min(850px,100svh)-6rem)] flex-col justify-between py-8 sm:py-10 lg:min-h-[calc(min(850px,100svh)-6.5rem)] lg:py-12">
+      <Container className="flex min-h-[calc(min(880px,100svh)-6rem)] flex-col justify-between py-10 sm:py-12 lg:min-h-[calc(min(880px,100svh)-6.5rem)] lg:py-14">
         <motion.div
           animate={{ opacity: 1, y: 0 }}
           className="max-w-3xl"
@@ -43,37 +44,55 @@ export function Hero() {
               priority
               sizes="(min-width: 640px) 110px, 96px"
             />
-            <p className="mt-4 text-xs font-semibold uppercase text-gold-200">
-              Energy Intelligence. Smarter Infrastructure.
+            <p className={cn("mt-4", enterprise.eyebrow)}>
+              Energy technology · Software · Data infrastructure · AI
             </p>
           </div>
 
-          <h1 className="mt-7 max-w-5xl text-balance text-[2.45rem] font-semibold leading-[1.08] text-cream-50 sm:text-5xl lg:text-[3.35rem]">
-            Energy Intelligence for Smarter Infrastructure
+          <h1 className="mt-8 max-w-4xl text-balance text-[2.4rem] font-semibold leading-[1.06] text-cream-50 sm:text-5xl lg:text-[3.4rem]">
+            The Intelligence Layer for Africa&apos;s Power Systems
           </h1>
 
           <p className="mt-6 max-w-2xl text-pretty text-lg leading-8 text-steel-100 sm:text-xl">
-            Helping estates, commercial facilities and industrial operations
-            improve energy performance through monitoring, infrastructure
-            analytics and AI-powered optimization.
+            Jirow Technologies builds the software, data infrastructure and AI
+            systems that make the performance of power infrastructure
+            measurable, comparable and continuously visible.
           </p>
 
+          <div className="mt-8 inline-flex flex-wrap items-center gap-x-4 gap-y-3 rounded-md border border-white/10 bg-ink-950/70 px-5 py-4">
+            <span className={enterprise.label}>
+              Flagship platform
+            </span>
+            <span className="text-base font-semibold text-cream-50">
+              {siteConfig.platformName}
+            </span>
+            <StatusBadge label="Live" status="live" />
+          </div>
+
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <ButtonLink href="/energy-intelligence-assessment">
-              <ClipboardCheck className="h-4 w-4" />
-              Request an Energy Intelligence Assessment
+            <ButtonLink
+              href={siteConfig.platformHref}
+              rel="noreferrer"
+              target="_blank"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Open the live platform
+            </ButtonLink>
+            <ButtonLink href="/products" variant="secondary">
+              Explore the portfolio
+              <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
             </ButtonLink>
             <DownloadBrochureButton
-              label="Download Company Profile"
-              variant="secondary"
+              label="Corporate profile"
+              variant="ghost"
             />
           </div>
         </motion.div>
 
-        <div className="mt-14 grid max-w-3xl gap-px border border-white/10 bg-white/10 sm:grid-cols-3">
+        <div className="mt-14 grid max-w-4xl gap-px border border-white/10 bg-white/10 sm:grid-cols-3">
           {heroStats.map((stat) => (
-            <div className="bg-ink-950/88 px-5 py-4" key={stat.label}>
-              <p className="text-2xl font-semibold text-gold-200">
+            <div className="bg-ink-950/88 px-5 py-4" key={stat.value}>
+              <p className="text-xl font-semibold text-gold-200">
                 {stat.value}
               </p>
               <p className="mt-2 text-sm leading-6 text-steel-200">
