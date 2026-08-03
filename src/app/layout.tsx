@@ -33,8 +33,7 @@ const schema = {
       },
       address: {
         "@type": "PostalAddress",
-        streetAddress: siteConfig.addressLines[0],
-        addressLocality: "Yaba, Lagos",
+        addressLocality: "Victoria Island",
         addressRegion: "Lagos",
         addressCountry: "NG"
       },
@@ -75,8 +74,7 @@ const schema = {
       priceRange: "$$",
       address: {
         "@type": "PostalAddress",
-        streetAddress: siteConfig.addressLines[0],
-        addressLocality: "Yaba, Lagos",
+        addressLocality: "Victoria Island",
         addressRegion: "Lagos",
         addressCountry: "NG"
       },

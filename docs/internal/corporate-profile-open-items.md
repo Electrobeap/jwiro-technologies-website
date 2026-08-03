@@ -131,6 +131,27 @@ address (info@jirowtechnologies.com), used in the navbar, contact page, footer
 and structured data. Confirm these remain the intended switchboard and general
 enquiries pair before wider distribution.
 
+## 12. Office address — `open` (site updated, PDF not)
+
+**Profile page:** 17 (Differentiation & Contact)
+**Site location:** `siteConfig.location` in `src/lib/data.ts`
+
+The site now publishes a district-level location only — **Victoria Island,
+Lagos, Nigeria** — because Jirow does not currently maintain a permanent public
+office. The previous street address (3rd Floor, The Octagon, 32A Commercial
+Avenue, Sabo, Yaba) has been removed from every surface: footer, contact page,
+about page, contact component, and both structured-data blocks. `streetAddress`
+is no longer emitted in JSON-LD at all.
+
+**Still open:** the downloadable corporate profile PDF
+(`public/brochure/jirow-technologies-profile.pdf`, page 17) **still carries the
+old street address**. Anyone who downloads the profile gets contact details that
+contradict the website. Regenerate the PDF with the corrected location before
+the profile is distributed further.
+
+Do not reintroduce a street address anywhere — including structured data —
+until a permanent office is officially established.
+
 ---
 
 ## Deliberate omissions (not TODOs)
