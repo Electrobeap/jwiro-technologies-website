@@ -4,7 +4,7 @@ import { LeadForm } from "@/components/site/LeadForm";
 import { SectionShell } from "@/components/site/SectionShell";
 import { enterprise, enterprisePanel } from "@/components/site/visual-system";
 import { ButtonLink } from "@/components/ui/ButtonLink";
-import { siteConfig } from "@/lib/data";
+import { shortPositioning, siteConfig } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
 const contactItems = [
@@ -23,9 +23,9 @@ const contactItems = [
     external: false
   },
   {
-    label: "Office",
-    value: siteConfig.addressLines.join(", "),
-    href: "https://maps.google.com/?q=The+Octagon+32A+Commercial+Avenue+Sabo+Yaba+Lagos",
+    label: "Location",
+    value: siteConfig.location,
+    href: "https://maps.google.com/?q=Victoria+Island+Lagos+Nigeria",
     icon: MapPin,
     external: true
   },
@@ -53,9 +53,7 @@ export function ContactSection() {
             {siteConfig.name}
           </p>
           <p className="mt-3 text-sm leading-7 text-steel-300">
-            {siteConfig.addressLines[0]}
-            <br />
-            {siteConfig.addressLines[1]}
+            {shortPositioning}
           </p>
 
           <div className="mt-7 grid gap-3">

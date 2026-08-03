@@ -68,9 +68,7 @@ export function Footer() {
                 Contact
               </h2>
               <address className="mt-5 not-italic text-xs leading-6 text-steel-300">
-                {siteConfig.addressLines[0]}
-                <br />
-                {siteConfig.addressLines[1]}
+                {siteConfig.location}
               </address>
               <div className="mt-4 grid gap-2">
                 <a

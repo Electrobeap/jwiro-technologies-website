@@ -49,12 +49,10 @@ export default function AboutPage() {
           title="About Jirow Technologies"
         >
           <p className={enterprise.eyebrow}>
-            Headquarters
+            Location
           </p>
           <address className="mt-3 not-italic text-sm leading-7 text-steel-300">
-            {siteConfig.addressLines[0]}
-            <br />
-            {siteConfig.addressLines[1]}
+            {siteConfig.location}
           </address>
           {/*
             TODO (corporate profile 2026 — internal): add year of incorporation

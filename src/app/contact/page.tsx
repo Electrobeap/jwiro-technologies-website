@@ -32,12 +32,10 @@ export default function ContactPage() {
           title="Start a conversation"
         >
           <p className={enterprise.eyebrow}>
-            Head office
+            Location
           </p>
           <address className="mt-3 not-italic text-sm leading-7 text-steel-300">
-            {siteConfig.addressLines[0]}
-            <br />
-            {siteConfig.addressLines[1]}
+            {siteConfig.location}
           </address>
           <p className="mt-4 text-sm leading-7 text-steel-300">
             {siteConfig.phone}

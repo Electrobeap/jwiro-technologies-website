@@ -62,10 +62,13 @@ export const siteConfig = {
   email: "info@jirowtechnologies.com",
   phone: "+234 813 783 2844",
   phoneHref: "tel:+2348137832844",
-  addressLines: [
-    "3rd Floor, The Octagon, 32A Commercial Avenue",
-    "Sabo, Yaba, Lagos, Nigeria"
-  ],
+  /**
+   * Jirow does not currently maintain a permanent public office, so the site
+   * publishes a district-level location only. Do not reintroduce a street
+   * address anywhere — including structured data — until a permanent office is
+   * officially established.
+   */
+  location: "Victoria Island, Lagos, Nigeria",
   founder: "Paul Atakere",
   founderTitle: "Founder & Infrastructure Systems Lead",
   platformName: "NigeriaPowerData",
