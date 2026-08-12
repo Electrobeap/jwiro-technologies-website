@@ -32,6 +32,13 @@ portfolio is:
 Nothing on the site may present the in-development products as purchasable, and
 no quantified client-outcome claims are published anywhere.
 
+Jirow also operates a second arm, **Global Trade & Export** (`/global-trade`) —
+a Nigerian B2B sourcing and export division. It complements the technology and
+energy business rather than replacing it: the site must not read as though
+Jirow is primarily an agricultural exporter. The same evidence discipline
+applies — that page claims no certifications, volumes, buyers or partnerships,
+and `tradeClaimsPosition` in `src/lib/data.ts` states so explicitly.
+
 ## Routes
 
 ```text
@@ -42,6 +49,7 @@ no quantified client-outcome claims are published anywhere.
 /products/jirow-ai-energy-assistant     Assistant layer (in development)
 /methodology                            Measured vs modeled, lineage, limits
 /platform                               Architecture + security & compliance (#security)
+/global-trade                           Global Trade & Export division (#categories, #how-it-works, #enquiry)
 /markets                                Buyer groups + business model (#business-model)
 /roadmap                                Five sequenced stages
 /about                                  Mission, vision, principles, leadership (#leadership)

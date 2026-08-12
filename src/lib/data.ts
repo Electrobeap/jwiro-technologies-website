@@ -1,14 +1,19 @@
 import {
   Activity,
   Banknote,
+  Boxes,
   BrainCircuit,
   Building2,
   ChartNoAxesCombined,
   ClipboardList,
   Cloud,
+  Container as ContainerIcon,
   Database,
   FileBarChart,
+  FileCheck2,
   Gauge,
+  Globe2,
+  Handshake,
   Landmark,
   Layers,
   LineChart,
@@ -18,11 +23,14 @@ import {
   Plug,
   Radar,
   ScrollText,
+  Search,
   Server,
   ShieldCheck,
   SlidersHorizontal,
   Sparkles,
+  Sprout,
   Target,
+  Wheat,
   Workflow,
   Zap
 } from "lucide-react";
@@ -53,7 +61,14 @@ export const seoKeywords = [
   "Energy Forecasting",
   "Energy Benchmarking",
   "Data Methodology",
-  "Regulatory Energy Reporting"
+  "Regulatory Energy Reporting",
+  // Global Trade & Export — the second operating division. Kept proportionate
+  // so the energy-intelligence focus is not diluted.
+  "Nigerian B2B Sourcing",
+  "Nigeria Export Company",
+  "Agricultural Commodity Sourcing",
+  "Agro-Processed Products Nigeria",
+  "Export Documentation Support"
 ];
 
 export const siteConfig = {
@@ -114,6 +129,7 @@ export const navLinks = [
   { label: "Platform", href: "/platform" },
   { label: "Methodology", href: "/methodology" },
   { label: "Markets", href: "/markets" },
+  { label: "Global Trade", href: "/global-trade" },
   { label: "Roadmap", href: "/roadmap" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" }
@@ -139,6 +155,15 @@ export const footerNav = [
       { label: "Data methodology", href: "/methodology" },
       { label: "Security & compliance", href: "/platform#security" },
       { label: "Roadmap", href: "/roadmap" }
+    ]
+  },
+  {
+    title: "Global Trade",
+    links: [
+      { label: "Trade & export", href: "/global-trade" },
+      { label: "Product categories", href: "/global-trade#categories" },
+      { label: "How it works", href: "/global-trade#how-it-works" },
+      { label: "Buyer & supplier enquiries", href: "/global-trade#enquiry" }
     ]
   },
   {
@@ -1059,3 +1084,174 @@ export const trustTest =
 
 export const conservativeClaimsNote =
   "Jirow makes no quantified client-outcome claims. Figures cited on this site are drawn from public regulatory and market sources and are attributed at the point of use.";
+
+/* ------------------------------------------------------ global trade & export */
+
+/*
+ * Jirow's second operating division. It sits alongside the technology and
+ * energy-intelligence business — it does not replace it, and no page should
+ * imply Jirow is primarily an agricultural exporter.
+ *
+ * Everything below describes capability and process only. Do NOT add
+ * certifications, export volumes, international offices, named buyers,
+ * supplier counts or partnership claims to this file until they can be
+ * substantiated and attributed, the same discipline the platform side applies
+ * to its published figures. See docs/internal/corporate-profile-open-items.md.
+ */
+
+export const tradePositioning =
+  "Connecting Nigerian Products and Solutions to Global Markets";
+
+export const tradeSummary =
+  "Jirow Global Trade & Export is Jirow's B2B sourcing and export division. We source qualified Nigerian products against a buyer's written specification, coordinate the suppliers who can meet it, verify quality before shipment, and support the export documentation the shipment requires.";
+
+export const tradeDivisionNote =
+  "Jirow operates across two arms: the software, data infrastructure and AI systems behind our energy platforms, and this B2B sourcing and export division. They share the same operating discipline — verify before you claim, document what you ship — and the same company behind them.";
+
+export const tradeCapabilities = [
+  {
+    title: "B2B sourcing",
+    description:
+      "Buyer-led sourcing against a written specification, not a fixed catalogue. What we look for is set by the requirement.",
+    icon: Search
+  },
+  {
+    title: "Supplier coordination",
+    description:
+      "Identifying and coordinating the Nigerian producers, processors and suppliers able to meet the specification and volume requested.",
+    icon: Handshake
+  },
+  {
+    title: "Quality & specification verification",
+    description:
+      "Checking grade, moisture, packaging, labelling and other agreed parameters against the buyer's specification before shipment.",
+    icon: FileCheck2
+  },
+  {
+    title: "Export documentation support",
+    description:
+      "Preparing and coordinating the commercial and regulatory paperwork an export shipment requires, working with the relevant Nigerian authorities and the buyer's clearing agent.",
+    icon: ScrollText
+  },
+  {
+    title: "Reliable supply",
+    description:
+      "Planning around harvest windows, production lead times and vessel schedules so agreed quantities and dates are realistic before they are committed.",
+    icon: Boxes
+  },
+  {
+    title: "International buyer fulfilment",
+    description:
+      "A single Nigerian counterparty accountable for the order from request through to shipment, with one point of contact throughout.",
+    icon: Globe2
+  }
+];
+
+export const tradeCategories = [
+  {
+    title: "Agricultural commodities",
+    description:
+      "Raw and bulk agricultural commodities sourced to the grade, moisture and packaging a buyer specifies.",
+    icon: Wheat
+  },
+  {
+    title: "Agro-processed products",
+    description:
+      "Processed and semi-processed agricultural goods where the processing step is part of the specification.",
+    icon: Sprout
+  },
+  {
+    title: "Food and agricultural products",
+    description:
+      "Packaged and consumer-facing food and agricultural lines, sourced against labelling and shelf-life requirements.",
+    icon: ContainerIcon
+  },
+  {
+    title: "Technology and industrial materials",
+    description:
+      "Industrial inputs, components and materials — the category closest to Jirow's engineering and infrastructure work.",
+    icon: SlidersHorizontal
+  },
+  {
+    title: "Other qualified Nigerian products",
+    description:
+      "Categories outside the list above are assessed on request. If we cannot source it to specification, we say so rather than accept the order.",
+    icon: Layers
+  }
+];
+
+export const tradeProcess = [
+  {
+    step: "Buyer request",
+    note: "specification, volume, destination, timeline"
+  },
+  { step: "Sourcing", note: "suppliers identified and coordinated" },
+  { step: "Quality verification", note: "checked against the specification" },
+  { step: "Documentation", note: "commercial and regulatory paperwork" },
+  { step: "Shipment", note: "dispatch and handover to the buyer's agent" }
+];
+
+export const tradeProcessDetail = [
+  {
+    number: "01",
+    title: "Buyer request",
+    description:
+      "The buyer sets out the product, specification, quantity, destination market and required timeline. Where a specification is still open, we work through it before quoting rather than after."
+  },
+  {
+    number: "02",
+    title: "Sourcing",
+    description:
+      "We identify Nigerian producers, processors and suppliers able to meet that specification at the requested volume, and coordinate them into a single supply arrangement."
+  },
+  {
+    number: "03",
+    title: "Quality verification",
+    description:
+      "Goods are checked against the agreed parameters — grade, moisture, packaging, labelling and any buyer-specified tests — before they are cleared for shipment."
+  },
+  {
+    number: "04",
+    title: "Documentation",
+    description:
+      "We prepare and coordinate the commercial and regulatory documentation the shipment requires, working with the relevant Nigerian authorities and the buyer's clearing agent."
+  },
+  {
+    number: "05",
+    title: "Shipment",
+    description:
+      "The consignment is dispatched on the agreed terms and handed over to the buyer's nominated agent, with documentation released as contracted."
+  }
+];
+
+export const tradeBuyerPoints = [
+  "One accountable Nigerian counterparty from request to shipment",
+  "Sourcing against your written specification, not a fixed catalogue",
+  "Quality and specification verified before goods ship",
+  "Export documentation prepared and coordinated"
+];
+
+export const tradeSupplierPoints = [
+  "Access to international B2B demand without building an export function",
+  "Specifications and volumes stated clearly before you commit",
+  "Coordination on grading, packaging and labelling requirements",
+  "A route to repeat orders where quality is consistent"
+];
+
+/*
+ * TODO (global trade — internal): once they exist and can be evidenced,
+ * publish the export licence and regulatory registrations this division holds
+ * (for example NEPC registration), plus any product certifications required by
+ * destination markets. Until then this page claims none, and the statement
+ * below says so explicitly.
+ */
+export const tradeClaimsPosition =
+  "This page describes how the division works, not a track record. Jirow publishes no export certifications, shipment volumes, buyer names or partnership claims it cannot evidence. Capability questions, references and documentation are answered directly during an enquiry.";
+
+export const tradeInquiryInterests = [
+  "International buyer — request a quote",
+  "International buyer — general enquiry",
+  "Nigerian supplier or producer — partnership",
+  "Technology or industrial materials",
+  "Something else"
+];

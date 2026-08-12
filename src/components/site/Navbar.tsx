@@ -32,10 +32,10 @@ export function Navbar() {
           />
         </Link>
 
-        <nav aria-label="Primary" className="hidden items-center lg:flex">
+        <nav aria-label="Primary" className="hidden items-center xl:flex">
           {navLinks.map((link) => (
             <Link
-              className="rounded-sm px-3 py-2 text-sm font-medium text-steel-200 transition hover:bg-white/[0.05] hover:text-gold-200 xl:px-4"
+              className="rounded-sm px-3 py-2 text-sm font-medium text-steel-200 transition hover:bg-white/[0.05] hover:text-gold-200"
               href={link.href}
               key={link.href}
             >
@@ -44,7 +44,7 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <ButtonLink
             className="whitespace-nowrap"
             href={siteConfig.platformHref}
@@ -60,7 +60,7 @@ export function Navbar() {
           aria-controls="mobile-menu"
           aria-expanded={open}
           aria-label="Toggle navigation"
-          className="grid h-11 w-11 place-items-center rounded-sm border border-white/10 bg-white/[0.04] text-cream-50 transition hover:border-gold-300/40 lg:hidden"
+          className="grid h-11 w-11 place-items-center rounded-sm border border-white/10 bg-white/[0.04] text-cream-50 transition hover:border-gold-300/40 xl:hidden"
           onClick={() => setOpen((value) => !value)}
           type="button"
         >
@@ -72,7 +72,7 @@ export function Navbar() {
         {open ? (
           <motion.div
             animate={{ opacity: 1, y: 0 }}
-            className="lg:hidden"
+            className="xl:hidden"
             exit={{ opacity: 0, y: -12 }}
             id="mobile-menu"
             initial={{ opacity: 0, y: -12 }}

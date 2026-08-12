@@ -11,6 +11,7 @@ import { MarketsSection } from "@/components/site/MarketsSection";
 import { Navbar } from "@/components/site/Navbar";
 import { ProblemSection } from "@/components/site/ProblemSection";
 import { ProductPortfolioSection } from "@/components/site/ProductPortfolioSection";
+import { TradeDivisionBand } from "@/components/site/TradeDivisionBand";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <FlagshipSection />
         <MarketsSection />
         <DifferentiationSection />
+        <TradeDivisionBand />
         <BrochureSection />
         <ContactSection />
         <CTASection />
