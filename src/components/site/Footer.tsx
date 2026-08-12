@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { ExternalLink, Mail, MessageCircle, Phone } from "lucide-react";
+import { ExternalLink, Mail, Phone } from "lucide-react";
 
 import { BrandLogo } from "@/components/site/BrandLogo";
 import { DownloadBrochureButton } from "@/components/site/DownloadBrochureButton";
+import { WhatsAppFooterLink } from "@/components/site/WhatsAppFooterLink";
 import { enterprise } from "@/components/site/visual-system";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
@@ -85,15 +86,7 @@ export function Footer() {
                   <Mail className="mt-1 h-4 w-4 shrink-0" />
                   {siteConfig.email}
                 </a>
-                <a
-                  className="inline-flex min-w-0 items-center gap-2 break-words py-1 text-xs leading-6 text-steel-300 transition hover:text-gold-200"
-                  href={siteConfig.whatsappHref}
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  WhatsApp
-                </a>
+                <WhatsAppFooterLink />
               </div>
             </div>
           </div>

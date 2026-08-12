@@ -35,10 +35,7 @@ import {
   Zap
 } from "lucide-react";
 
-const whatsappMessage =
-  "Hello Jirow Technologies, I would like to speak with your team about energy intelligence for our organisation.";
-
-const whatsappNumber = "2348137832844";
+import { whatsappBase } from "@/lib/whatsapp";
 
 export const seoKeywords = [
   "Energy Intelligence",
@@ -95,11 +92,12 @@ export const siteConfig = {
   brochureFilename: "Jirow-Corporate-Profile-2026.pdf",
   positioning: "The Intelligence Layer for Africa's Power Systems",
   tagline: "Measured. Attributed. Actionable.",
-  whatsappMessage,
-  whatsappBase: `https://wa.me/${whatsappNumber}`,
-  whatsappHref: `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    whatsappMessage
-  )}`
+  /**
+   * WhatsApp entry points are routed per division in src/lib/whatsapp.ts —
+   * one number, a different pre-filled message for energy and for trade. Use
+   * the WhatsAppCTA component rather than building an href here.
+   */
+  whatsappBase
 };
 
 /*
@@ -111,6 +109,34 @@ export const siteConfig = {
 
 export const companyPositioning =
   "Jirow Technologies Limited is a Lagos-headquartered energy technology company. We build the software, data infrastructure and AI systems that make the performance of power infrastructure measurable, comparable and continuously visible. Our flagship platform, NigeriaPowerData, is live.";
+
+/**
+ * Broader framing used on the About page only, now that Global Trade & Export
+ * is an established division. `companyPositioning` above stays energy-led and
+ * remains the site-wide meta description and structured-data description, so
+ * the technology positioning is not diluted.
+ */
+export const companyStructurePositioning =
+  "Jirow Technologies Limited is a Nigerian technology, energy, sourcing and trading company. We build and support technology-driven energy solutions while connecting qualified Nigerian products and suppliers with local and international markets.";
+
+export const businessAreas = [
+  {
+    title: "Technology & Energy",
+    description:
+      "Software, data, energy analytics, IoT and technology-enabled infrastructure solutions.",
+    href: "/products",
+    linkLabel: "Product portfolio",
+    icon: BrainCircuit
+  },
+  {
+    title: "Global Trade & Export",
+    description:
+      "B2B sourcing and export of selected Nigerian agricultural, agro-processed, industrial and technology-related products.",
+    href: "/global-trade",
+    linkLabel: "Global Trade & Export",
+    icon: Globe2
+  }
+];
 
 export const shortPositioning =
   "Energy technology company building the software, data infrastructure and AI systems behind Africa's power intelligence.";

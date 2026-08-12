@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 import { CTASection } from "@/components/site/CTASection";
 import { Footer } from "@/components/site/Footer";
@@ -13,7 +15,9 @@ import {
 import { Container } from "@/components/ui/Container";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import {
+  businessAreas,
   companyPositioning,
+  companyStructurePositioning,
   governance,
   leadership,
   leadershipDisciplines,
@@ -40,7 +44,7 @@ export default function AboutPage() {
       <Navbar />
       <main className="overflow-hidden" id="main">
         <PageHero
-          description="Jirow Technologies Limited is an energy technology company registered and headquartered in Lagos, Nigeria. We build and operate the software and data infrastructure that makes power systems legible — to the institutions that regulate them, the enterprises that depend on them, and the capital that finances them."
+          description={companyStructurePositioning}
           eyebrow="The company"
           primaryHref="/products"
           primaryLabel="Product portfolio"
@@ -104,6 +108,56 @@ export default function AboutPage() {
                   </p>
                 </SectionReveal>
               </div>
+            </div>
+          </Container>
+        </section>
+
+        <section className="py-16 sm:py-20 lg:py-24" id="business-areas">
+          <Container>
+            <div className="mb-10 max-w-3xl">
+              <p className={enterprise.eyebrow}>Business areas</p>
+              <h2 className="mt-4 text-3xl font-semibold leading-tight text-cream-50 sm:text-4xl">
+                Two complementary arms, one company.
+              </h2>
+              <p className="mt-5 leading-8 text-steel-300">
+                Jirow operates through complementary business areas sharing the
+                same discipline: verify before you claim, and document what you
+                deliver.
+              </p>
+            </div>
+
+            <div className="grid gap-5 lg:grid-cols-2">
+              {businessAreas.map((area, index) => {
+                const Icon = area.icon;
+
+                return (
+                  <SectionReveal
+                    as="article"
+                    className={enterprisePanel(
+                      "flex flex-col p-6 transition duration-300 hover:border-gold-300/35 sm:p-7"
+                    )}
+                    delay={index * 0.06}
+                    key={area.title}
+                  >
+                    <span className={enterprise.iconAmber}>
+                      <Icon className="h-5 w-5" />
+                    </span>
+                    <h3 className="mt-6 text-xl font-semibold text-cream-50">
+                      {area.title}
+                    </h3>
+                    <p className="mt-4 flex-1 leading-8 text-steel-300">
+                      {area.description}
+                    </p>
+                    <Link
+                      className="group mt-6 inline-flex items-center gap-2 py-1 text-sm font-semibold text-gold-200"
+                      href={area.href}
+                    >
+                      {area.linkLabel}
+                      <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                    </Link>
+                  </SectionReveal>
+                );
+              })}
             </div>
           </Container>
         </section>

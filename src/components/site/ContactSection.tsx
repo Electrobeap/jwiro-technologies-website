@@ -1,9 +1,9 @@
-import { ExternalLink, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
 
 import { LeadForm } from "@/components/site/LeadForm";
 import { SectionShell } from "@/components/site/SectionShell";
+import { WhatsAppCTA } from "@/components/site/WhatsAppCTA";
 import { enterprise, enterprisePanel } from "@/components/site/visual-system";
-import { ButtonLink } from "@/components/ui/ButtonLink";
 import { shortPositioning, siteConfig } from "@/lib/data";
 import { cn } from "@/lib/utils";
 
@@ -82,15 +82,7 @@ export function ContactSection() {
             })}
           </div>
 
-          <ButtonLink
-            className="mt-6 w-full"
-            href={siteConfig.whatsappHref}
-            rel="noreferrer"
-            target="_blank"
-          >
-            <MessageCircle className="h-4 w-4" />
-            Talk on WhatsApp
-          </ButtonLink>
+          <WhatsAppCTA className="mt-6 w-full" useIntentLabel />
         </div>
 
         <div className={enterprisePanel("p-6 sm:p-7")}>
