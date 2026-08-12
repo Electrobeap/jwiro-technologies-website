@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Check, Mail, MessageCircle, Phone } from "lucide-react";
+import { ArrowRight, Check, Mail, Phone } from "lucide-react";
 
 import { CTASection } from "@/components/site/CTASection";
 import { Footer } from "@/components/site/Footer";
@@ -8,6 +8,7 @@ import { LeadForm } from "@/components/site/LeadForm";
 import { Navbar } from "@/components/site/Navbar";
 import { PageHero } from "@/components/site/PageHero";
 import { ProcessFlow } from "@/components/site/ProcessFlow";
+import { WhatsAppCTA } from "@/components/site/WhatsAppCTA";
 import {
   enterprise,
   enterpriseModule,
@@ -30,6 +31,7 @@ import {
   tradeSupplierPoints
 } from "@/lib/data";
 import { pageMetadata } from "@/lib/metadata";
+import { whatsappIntents } from "@/lib/whatsapp";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = pageMetadata({
@@ -38,14 +40,6 @@ export const metadata: Metadata = pageMetadata({
     "Jirow Global Trade & Export is a Nigerian B2B sourcing and export division connecting international buyers with qualified Nigerian products — agricultural commodities, agro-processed and food products, and technology and industrial materials.",
   path: "/global-trade"
 });
-
-const whatsappBuyer = `${siteConfig.whatsappBase}?text=${encodeURIComponent(
-  "Hello Jirow Global Trade & Export, I am an international buyer and would like to discuss a sourcing requirement."
-)}`;
-
-const whatsappSupplier = `${siteConfig.whatsappBase}?text=${encodeURIComponent(
-  "Hello Jirow Global Trade & Export, I am a Nigerian supplier or producer interested in a partnership."
-)}`;
 
 export default function GlobalTradePage() {
   return (
@@ -238,15 +232,7 @@ export default function GlobalTradePage() {
                     Send a buyer enquiry
                     <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                   </ButtonLink>
-                  <ButtonLink
-                    href={whatsappBuyer}
-                    rel="noreferrer"
-                    target="_blank"
-                    variant="secondary"
-                  >
-                    <MessageCircle className="h-4 w-4" />
-                    WhatsApp
-                  </ButtonLink>
+                  <WhatsAppCTA intent="trade-buyer" variant="secondary" />
                 </div>
               </SectionReveal>
 
@@ -279,15 +265,7 @@ export default function GlobalTradePage() {
                     Register your interest
                     <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                   </ButtonLink>
-                  <ButtonLink
-                    href={whatsappSupplier}
-                    rel="noreferrer"
-                    target="_blank"
-                    variant="ghost"
-                  >
-                    <MessageCircle className="h-4 w-4" />
-                    WhatsApp
-                  </ButtonLink>
+                  <WhatsAppCTA intent="trade-supplier" variant="ghost" />
                 </div>
               </SectionReveal>
             </div>
@@ -363,7 +341,7 @@ export default function GlobalTradePage() {
                 <LeadForm
                   detailsPlaceholder="Product and specification, quantity, destination market and required timeline — or, if you are a supplier, what you produce and at what scale."
                   interests={tradeInquiryInterests}
-                  intro="Hello Jirow Global Trade & Export, I would like to discuss a sourcing or supply requirement."
+                  intro={whatsappIntents["trade-buyer"].message}
                   submitLabel="Send trade enquiry"
                 />
               </div>

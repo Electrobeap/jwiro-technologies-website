@@ -1,6 +1,7 @@
-import { ArrowRight, ExternalLink, MessageCircle } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 
 import { DownloadBrochureButton } from "@/components/site/DownloadBrochureButton";
+import { WhatsAppCTA } from "@/components/site/WhatsAppCTA";
 import { enterprise, enterprisePanel } from "@/components/site/visual-system";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Container } from "@/components/ui/Container";
@@ -43,15 +44,7 @@ export function CTASection() {
                   Start a conversation
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                 </ButtonLink>
-                <ButtonLink
-                  href={siteConfig.whatsappHref}
-                  rel="noreferrer"
-                  target="_blank"
-                  variant="ghost"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  WhatsApp
-                </ButtonLink>
+                <WhatsAppCTA useIntentLabel variant="ghost" />
                 <DownloadBrochureButton
                   label="Corporate profile"
                   variant="ghost"

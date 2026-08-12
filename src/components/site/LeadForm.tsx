@@ -4,6 +4,7 @@ import { FormEvent, useState } from "react";
 import { Send } from "lucide-react";
 
 import { siteConfig } from "@/lib/data";
+import { whatsappHref, whatsappIntents } from "@/lib/whatsapp";
 
 const inputClassName =
   "min-h-12 w-full rounded-sm border border-white/10 bg-ink-950/65 px-4 py-3 text-sm text-cream-50 outline-none transition placeholder:text-steel-500 focus:border-gold-300/70";
@@ -29,7 +30,7 @@ type LeadFormProps = {
 
 export function LeadForm({
   interests = defaultInterests,
-  intro = siteConfig.whatsappMessage,
+  intro = whatsappIntents.energy.message,
   detailsPlaceholder = "Tell us what visibility you need — jurisdiction, entities, sites or reporting obligations.",
   submitLabel = "Send enquiry"
 }: LeadFormProps = {}) {
@@ -52,7 +53,7 @@ export function LeadForm({
       .join("\n");
 
     window.location.assign(
-      `${siteConfig.whatsappBase}?text=${encodeURIComponent(body)}`
+      whatsappHref(body)
     );
   }
 
