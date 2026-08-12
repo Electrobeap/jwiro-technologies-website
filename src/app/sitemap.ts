@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { priority: 0.85, url: `${siteUrl}/platform` },
     { priority: 0.8, url: `${siteUrl}/products/jirow-energy-analytics` },
     { priority: 0.8, url: `${siteUrl}/products/jirow-ai-energy-assistant` },
+    { priority: 0.85, url: `${siteUrl}/global-trade` },
     { priority: 0.8, url: `${siteUrl}/markets` },
     { priority: 0.8, url: `${siteUrl}/roadmap` },
     { priority: 0.8, url: `${siteUrl}/about` },

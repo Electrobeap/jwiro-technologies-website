@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/data";
 const inputClassName =
   "min-h-12 w-full rounded-sm border border-white/10 bg-ink-950/65 px-4 py-3 text-sm text-cream-50 outline-none transition placeholder:text-steel-500 focus:border-gold-300/70";
 
-const interests = [
+const defaultInterests = [
   "NigeriaPowerData access",
   "Data & API licensing",
   "Jirow Energy Analytics (in development)",
@@ -17,7 +17,22 @@ const interests = [
   "Something else"
 ];
 
-export function LeadForm() {
+type LeadFormProps = {
+  /** Options for the interest selector. Defaults to the platform enquiry list. */
+  interests?: readonly string[];
+  /** First line of the pre-filled WhatsApp message. */
+  intro?: string;
+  /** Placeholder for the free-text field. */
+  detailsPlaceholder?: string;
+  submitLabel?: string;
+};
+
+export function LeadForm({
+  interests = defaultInterests,
+  intro = siteConfig.whatsappMessage,
+  detailsPlaceholder = "Tell us what visibility you need — jurisdiction, entities, sites or reporting obligations.",
+  submitLabel = "Send enquiry"
+}: LeadFormProps = {}) {
   const [name, setName] = useState("");
   const [organisation, setOrganisation] = useState("");
   const [interest, setInterest] = useState(interests[0]);
@@ -27,7 +42,7 @@ export function LeadForm() {
     event.preventDefault();
 
     const body = [
-      siteConfig.whatsappMessage,
+      intro,
       name ? `Name: ${name}` : "",
       organisation ? `Organisation: ${organisation}` : "",
       interest ? `Interest: ${interest}` : "",
@@ -107,7 +122,7 @@ export function LeadForm() {
           id="lead-message"
           name="message"
           onChange={(event) => setMessage(event.target.value)}
-          placeholder="Tell us what visibility you need — jurisdiction, entities, sites or reporting obligations."
+          placeholder={detailsPlaceholder}
           value={message}
         />
       </div>
@@ -116,7 +131,7 @@ export function LeadForm() {
         type="submit"
       >
         <Send className="h-4 w-4" />
-        Send enquiry
+        {submitLabel}
       </button>
       <p className="text-xs leading-6 text-steel-500">
         Submitting opens WhatsApp with your enquiry pre-filled. You can also
